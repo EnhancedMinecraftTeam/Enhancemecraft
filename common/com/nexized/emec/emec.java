@@ -36,7 +36,17 @@ public class emec {
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
     {
-		
+		// @CommonLoader init
+		CommonLoader.init();
+		// @CommonLoader add
+		CommonLoader.addBlocks(commonConfiguration);
+		CommonLoader.addItems(commonConfiguration);
+		// @CommonLoader addNames
+		CommonLoader.addNames();
+		// @CommonLoader addRecipes
+		CommonLoader.addRecipes();
+		// CommonLoader postInit
+		CommonLoader.postInit();
     }
 	
 	@EventHandler

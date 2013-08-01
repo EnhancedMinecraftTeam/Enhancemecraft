@@ -9,8 +9,11 @@ public class ConfigurationHandler {
 	Configuration commonConfiguration;
 	
 	// @BlockID
+	public int orePlatinumID = 500;
+	public int blockPlatinumID = 501;
 	
 	// @ItemID
+	public int ingotPlatinumID = 3000;
 	
 	// @Constructor
 	public ConfigurationHandler(FMLPreInitializationEvent event) {
@@ -19,7 +22,8 @@ public class ConfigurationHandler {
 		// @Load
 		commonConfiguration.load();
 		// @getConfiguration
-		
+		this.blockPlatinumID = commonConfiguration.getBlock("Platinum Block", blockPlatinumID).getInt();
+		this.orePlatinumID = commonConfiguration.getBlock("Platinum Ore", orePlatinumID).getInt();
 		// @Save
 		commonConfiguration.save();
 	}
