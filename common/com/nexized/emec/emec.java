@@ -23,10 +23,14 @@ public class emec {
 	@Instance
     public emec instance;
 	
+	// @ConfgurationHandler
+	ConfigurationHandler commonConfiguration;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
     {
-		
+		// @ConfigurationHandler
+		commonConfiguration = new ConfigurationHandler(event);
     }
 	
 	@EventHandler
@@ -40,4 +44,5 @@ public class emec {
     {
 		
     }
+	
 }
