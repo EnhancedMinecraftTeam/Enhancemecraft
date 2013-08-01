@@ -40,7 +40,7 @@ public class emec {
     {
 		// @CommonLoader init
 		System.out.println("[" + modInfo.MODID+ "]" + "- Initialisation...");
-		CommonLoader.init();
+		CommonLoader.materialInit();
 		// @CommonLoader add
 		System.out.println("[" + modInfo.MODID+ "]" + "- Adding blocks...");
 		CommonLoader.addBlocks(commonConfiguration);

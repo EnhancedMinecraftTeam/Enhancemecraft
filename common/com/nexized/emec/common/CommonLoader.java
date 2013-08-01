@@ -11,7 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.nexized.emec.blocks.*;
 import com.nexized.emec.items.*;
 import com.nexized.emec.items.tools.*;
-import com.nexized.emec.items.weapons.swordPlatinum;
+import com.nexized.emec.items.weapons.*;
 import com.nexized.emec.world.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -26,14 +26,17 @@ public class CommonLoader {
 	public static Block OreSilver;
 	public static Block OreTin;
 	
-	// @Blocks
-	public static Block BlockFosil;
+	// @Ingot Blocks
 	public static Block BlockAluminium;
 	public static Block BlockCopper;
 	public static Block BlockPlatinum;
+	public static Block BlockSteel;
 	public static Block BlockSilver;
 	public static Block BlockTin;
-		
+	
+	// @Additional Blocks
+	public static Block BlockFosil;
+	
 	// @Items
 	public static Item IngotAluminium;
 	public static Item IngotCopper;
@@ -82,37 +85,119 @@ public class CommonLoader {
 	public static Item SwordSteel;
 	public static Item SwordTin;
 	
-	public static void init() {
+	public static void materialInit() {
+		// @Add Materials
 		ALUMINIUM = EnumHelper.addToolMaterial("ALUMINIUM", 2, 150, 4.0F, 3.0F, 16);
 		COPPER = EnumHelper.addToolMaterial("COPPER", 2, 200, 4.5F, 3.0F, 16);
 		PLATINUM = EnumHelper.addToolMaterial("PLATINUM", 4, 300, 6.5F, 4.0F, 16);
 		SILVER = EnumHelper.addToolMaterial("SILVER", 3, 250, 5.0F, 3.0F, 16);
 		STEEL = EnumHelper.addToolMaterial("STEEL", 4, 400, 7.0F, 5.0F, 16);
 		TIN = EnumHelper.addToolMaterial("TIN", 2, 200, 4.5F, 3.0F, 16);
-		
 	}
 	
 	public static void addBlocks(ConfigurationHandler common) {
-		// @Add Blocks
+		// @Add Block Ores
 		OreAluminium = (new oreAluminium(common.oreAluminiumID));
+		OreCopper = (new oreCopper(common.oreCopperID));
 		OrePlatinum = (new orePlatinum(common.orePlatinumID));
+		OreSilver = (new oreSilver(common.oreSilverID));
+		OreTin = (new oreTin(common.oreTinID));
+		
+		// @Add Ingot Blocks
+		BlockAluminium = (new blockAluminium(common.blockAluminiumID, Material.iron));
+		BlockCopper = (new blockCopper(common.blockCopperID, Material.iron));
 		BlockPlatinum = (new blockPlatinum(common.blockPlatinumID, Material.iron)); 
-		// @Register Blocks
+		BlockSilver = (new blockSilver(common.blockSilverID, Material.iron));
+		BlockSteel = (new blockSteel(common.blockSteelID, Material.iron));
+		BlockTin = (new blockTin(common.blockTinID, Material.iron));
+		
+		// @Add Additional Blocks
+		BlockFosil = (new blockFosil(common.blockFosilID, Material.iron));
+		
+		// @Register Ores
+		GameRegistry.registerBlock(OreAluminium, "AluminiumOre");
+		GameRegistry.registerBlock(OreCopper, "CopperOre");
 		GameRegistry.registerBlock(OrePlatinum, "PlatinumOre");
+		GameRegistry.registerBlock(OreSilver, "SilverOre");
+		GameRegistry.registerBlock(OreTin, "TinOre");
+		
+		// @Register Ingot Blocks
+		GameRegistry.registerBlock(BlockAluminium, "AluminiumBlock");
+		GameRegistry.registerBlock(BlockCopper, "CopperBlock");
 		GameRegistry.registerBlock(BlockPlatinum, "PlatinumBlock");
+		GameRegistry.registerBlock(BlockSilver, "SilverBlock");
+		GameRegistry.registerBlock(BlockSteel, "SteelBlock");
+		GameRegistry.registerBlock(BlockTin, "TinBlock");
+		
+		// @Register Additional Blocks
+		GameRegistry.registerBlock(BlockFosil, "Fosil Block");
+				
 		// @BlockHarvest
+		MinecraftForge.setBlockHarvestLevel(OreAluminium, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(OreCopper, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(OrePlatinum, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(OreSilver, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(OreTin, "Pickaxe", 2);
+		
+		MinecraftForge.setBlockHarvestLevel(BlockAluminium, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(BlockCopper, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(BlockPlatinum, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(BlockSilver, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(BlockSteel, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(BlockTin, "Pickaxe", 2);
 	}
 	
 	public static void addItems(ConfigurationHandler common) {
-		// @Add Items
+		// @Add Ingot
+		IngotAluminium = (new ingotAluminium(common.ingotAluminiumID).setUnlocalizedName("Aluminium Ingot"));
+		IngotCopper = (new ingotCopper(common.ingotCopperID).setUnlocalizedName("Copper Ingot"));
 		IngotPlatinum = (new ingotPlatinum(common.ingotPlatinumID).setUnlocalizedName("Platinum Ingot"));
+		IngotSilver = (new ingotSilver(common.ingotSilverID).setUnlocalizedName("Silver Ingot"));
+		IngotSteel = (new ingotSteel(common.ingotSteelID).setUnlocalizedName("Steel Ingot"));
+		IngotTin = (new ingotTin(common.ingotTinID).setUnlocalizedName("Tin Ingot"));
+		
+		// @Add Tools Aluminium
+		AxeAluminium = (new axeAluminium(common.axeAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Axe"));
+		HoeAluminium = (new hoeAluminium(common.hoeAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Hoe"));
+		PickAluminium = (new pickAluminium(common.pickAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Pickaxe"));
+		ShovelAluminium = (new shovelAluminium(common.shovelAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Shovel"));
+		SwordAluminium = (new swordAluminium(common.swordAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Sword"));
+		
+		// @Add Tools Copper
+		AxeCopper = (new axeCopper(common.axeCopperID, COPPER).setUnlocalizedName("Copper Axe"));
+		HoeCopper = (new hoeCopper(common.hoeCopperID, COPPER).setUnlocalizedName("Copper Hoe"));
+		PickCopper = (new pickCopper(common.pickCopperID, COPPER).setUnlocalizedName("Copper Pickaxe"));
+		ShovelCopper = (new shovelCopper(common.shovelCopperID, COPPER).setUnlocalizedName("Copper Shovel"));
+		SwordCopper = (new swordCopper(common.swordCopperID, COPPER).setUnlocalizedName("Copper Sword"));
+		
+		// @Add Tools Platinum
 		AxePlatinum = (new axePlatinum(common.axePlatinumID, PLATINUM).setUnlocalizedName("Platinum Axe"));
 		HoePlatinum = (new hoePlatinum(common.hoePlatinumID, PLATINUM).setUnlocalizedName("Platinum Hoe"));
 		PickPlatinum = (new pickPlatinum(common.pickPlatinumID, PLATINUM).setUnlocalizedName("Platinum Pickaxe"));
 		ShovelPlatinum = (new shovelPlatinum(common.shovelPlatinumID, PLATINUM).setUnlocalizedName("Platinum Shovel"));
 		SwordPlatinum = (new swordPlatinum(common.swordPlatinumID, PLATINUM).setUnlocalizedName("Platinum Sword"));
+		
+		// @Add Tools Silver
+		AxeSilver = (new axeSilver(common.axeSilverID, SILVER).setUnlocalizedName("Silver Axe"));
+		HoeSilver = (new hoeSilver(common.hoeSilverID, SILVER).setUnlocalizedName("Silver Hoe"));
+		PickSilver = (new pickSilver(common.pickSilverID, SILVER).setUnlocalizedName("Silver Pickaxe"));
+		ShovelSilver = (new shovelSilver(common.shovelSilverID, SILVER).setUnlocalizedName("Silver Shovel"));
+		SwordSilver = (new swordSilver(common.swordSilverID, SILVER).setUnlocalizedName("Silver Sword"));
+		
+		// @Add Tools Steel
+		AxeSteel = (new axeSteel(common.axeSteelID, STEEL).setUnlocalizedName("Steel Axe"));
+		HoeSteel = (new hoeSteel(common.hoeSteelID, STEEL).setUnlocalizedName("Steel Hoe"));
+		PickSteel = (new pickSteel(common.pickSteelID, STEEL).setUnlocalizedName("Steel Pickaxe"));
+		ShovelSteel = (new shovelSteel(common.shovelSteelID, STEEL).setUnlocalizedName("Steel Shovel"));
+		SwordSteel = (new swordSteel(common.swordSteelID, STEEL).setUnlocalizedName("Steel Sword"));
+		
+		// @Add Tools Tin
+		AxePlatinum = (new axePlatinum(common.axePlatinumID, PLATINUM).setUnlocalizedName("Platinum Axe"));
+		HoePlatinum = (new hoePlatinum(common.hoePlatinumID, PLATINUM).setUnlocalizedName("Platinum Hoe"));
+		PickPlatinum = (new pickPlatinum(common.pickPlatinumID, PLATINUM).setUnlocalizedName("Platinum Pickaxe"));
+		ShovelPlatinum = (new shovelPlatinum(common.shovelPlatinumID, PLATINUM).setUnlocalizedName("Platinum Shovel"));
+		SwordPlatinum = (new swordPlatinum(common.swordPlatinumID, PLATINUM).setUnlocalizedName("Platinum Sword"));
+		
 		// @Register Items
 		GameRegistry.registerItem(IngotPlatinum, "Platinum Ingot");
 		GameRegistry.registerItem(AxePlatinum, "Platinum Axe");
