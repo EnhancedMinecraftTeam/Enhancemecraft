@@ -20,29 +20,81 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CommonLoader {
 
 	// @Block Ores
+	public static Block OreAluminium;
+	public static Block OreCopper;
 	public static Block OrePlatinum;
-	// @Blocks
-	public static Block BlockPlatinum;
+	public static Block OreSilver;
+	public static Block OreTin;
 	
+	// @Blocks
+	public static Block BlockFosil;
+	public static Block BlockAluminium;
+	public static Block BlockCopper;
+	public static Block BlockPlatinum;
+	public static Block BlockSilver;
+	public static Block BlockTin;
+		
 	// @Items
+	public static Item IngotAluminium;
+	public static Item IngotCopper;
 	public static Item IngotPlatinum;
+	public static Item IngotSilver;
+	public static Item IngotSteel;
+	public static Item IngotTin;
 	
 	// @Material 
+	public static EnumToolMaterial ALUMINIUM;
+	public static EnumToolMaterial COPPER;
 	public static EnumToolMaterial PLATINUM;
-	
+	public static EnumToolMaterial SILVER;
+	public static EnumToolMaterial STEEL;
+	public static EnumToolMaterial TIN;
+		
 	// @Tools
+	public static Item AxeAluminium;
+	public static Item AxeCopper;
 	public static Item AxePlatinum;
+	public static Item AxeSilver;
+	public static Item AxeSteel;
+	public static Item AxeTin;
+	public static Item HoeAluminium;
+	public static Item HoeCopper;
 	public static Item HoePlatinum;
+	public static Item HoeSilver;
+	public static Item HoeSteel;
+	public static Item HoeTin;
+	public static Item PickAluminium;
+	public static Item PickCopper;
 	public static Item PickPlatinum;
+	public static Item PickSilver;
+	public static Item PickSteel;
+	public static Item PickTin;
+	public static Item ShovelAluminium;
+	public static Item ShovelCopper;
 	public static Item ShovelPlatinum;
+	public static Item ShovelSilver;
+	public static Item ShovelSteel;
+	public static Item ShovelTin;
+	public static Item SwordAluminium;
+	public static Item SwordCopper;
 	public static Item SwordPlatinum;
+	public static Item SwordSilver;
+	public static Item SwordSteel;
+	public static Item SwordTin;
 	
 	public static void init() {
+		ALUMINIUM = EnumHelper.addToolMaterial("ALUMINIUM", 2, 150, 4.0F, 3.0F, 16);
+		COPPER = EnumHelper.addToolMaterial("COPPER", 2, 200, 4.5F, 3.0F, 16);
 		PLATINUM = EnumHelper.addToolMaterial("PLATINUM", 4, 300, 6.5F, 4.0F, 16);
+		SILVER = EnumHelper.addToolMaterial("SILVER", 3, 250, 5.0F, 3.0F, 16);
+		STEEL = EnumHelper.addToolMaterial("STEEL", 4, 400, 7.0F, 5.0F, 16);
+		TIN = EnumHelper.addToolMaterial("TIN", 2, 200, 4.5F, 3.0F, 16);
+		
 	}
 	
 	public static void addBlocks(ConfigurationHandler common) {
 		// @Add Blocks
+		OreAluminium = (new oreAluminium(common.oreAluminiumID));
 		OrePlatinum = (new orePlatinum(common.orePlatinumID));
 		BlockPlatinum = (new blockPlatinum(common.blockPlatinumID, Material.iron)); 
 		// @Register Blocks

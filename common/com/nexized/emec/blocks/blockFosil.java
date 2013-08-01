@@ -9,9 +9,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class blockSilver extends Block {
+public class blockFosil extends Block {
 
-	public blockSilver(int id, Material mat)
+	public blockFosil(int id, Material mat)
 	{
 		// @Block Constructor
 		super(id, mat);
@@ -20,12 +20,12 @@ public class blockSilver extends Block {
         // @StepSound
 		this.setStepSound(Block.soundStoneFootstep);
         // @BlockHardness
-		this.setHardness(30F);
+		this.setHardness(60F);
 	}
 	
 	public void registerIcons(IconRegister reg)
     {
-        this.blockIcon = reg.registerIcon(modInfo.MODID + ":blockSilver");
+        this.blockIcon = reg.registerIcon(modInfo.MODID + ":blockFosil");
     }
 	
 	public int idDropped(int pa1, Random rand, int par2)
@@ -39,4 +39,3 @@ public class blockSilver extends Block {
     }
 	
 }
-
