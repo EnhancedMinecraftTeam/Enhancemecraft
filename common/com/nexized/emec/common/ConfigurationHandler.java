@@ -14,6 +14,11 @@ public class ConfigurationHandler {
 	
 	// @ItemID
 	public int ingotPlatinumID = 3000;
+	public int axePlatinumID = 3001;
+	public int hoePlatinumID = 3002;
+	public int pickPlatinumID = 3003;
+	public int shovelPlatinumID = 3004;
+	public int swordPlatinumID = 3005;
 	
 	// @Constructor
 	public ConfigurationHandler(FMLPreInitializationEvent event) {
@@ -24,6 +29,12 @@ public class ConfigurationHandler {
 		// @getConfiguration
 		this.blockPlatinumID = commonConfiguration.getBlock("Platinum Block", blockPlatinumID).getInt();
 		this.orePlatinumID = commonConfiguration.getBlock("Platinum Ore", orePlatinumID).getInt();
+		this.ingotPlatinumID = commonConfiguration.getBlock("Platinum Ingot", ingotPlatinumID).getInt();
+		this.axePlatinumID = commonConfiguration.getBlock("Platinum Axe", axePlatinumID).getInt();
+		this.hoePlatinumID = commonConfiguration.getBlock("Platinum Hoe", hoePlatinumID).getInt();
+		this.pickPlatinumID = commonConfiguration.getBlock("Platinum Pick", pickPlatinumID).getInt();
+		this.shovelPlatinumID = commonConfiguration.getBlock("Platinum Shovel", shovelPlatinumID).getInt();
+		this.swordPlatinumID = commonConfiguration.getBlock("Platinum Sword", swordPlatinumID).getInt();
 		// @Save
 		commonConfiguration.save();
 	}

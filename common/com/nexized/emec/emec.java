@@ -29,6 +29,8 @@ public class emec {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
     {
+		System.out.println("[" + modInfo.MODID+ "]" + "- Version " + modInfo.MODVERSION);
+		System.out.println("[" + modInfo.MODID+ "]" + "- Loading commonConfiguration...");
 		// @ConfigurationHandler
 		commonConfiguration = new ConfigurationHandler(event);
     }
@@ -37,16 +39,25 @@ public class emec {
 	public void Init(FMLInitializationEvent event)
     {
 		// @CommonLoader init
+		System.out.println("[" + modInfo.MODID+ "]" + "- Initialisation...");
 		CommonLoader.init();
 		// @CommonLoader add
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding blocks...");
 		CommonLoader.addBlocks(commonConfiguration);
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding items...");
 		CommonLoader.addItems(commonConfiguration);
 		// @CommonLoader addNames
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding names...");
 		CommonLoader.addNames();
 		// @CommonLoader addRecipes
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding recipes...");
 		CommonLoader.addRecipes();
+		// @CommonLoader toolClasses
+		CommonLoader.toolClasses();
 		// CommonLoader postInit
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding worldgenerator...");
 		CommonLoader.postInit();
+		System.out.println("[" + modInfo.MODID+ "]" + "- Initialisation sucessfully...");
     }
 	
 	@EventHandler
