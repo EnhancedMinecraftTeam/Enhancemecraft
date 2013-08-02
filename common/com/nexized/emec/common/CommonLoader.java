@@ -9,9 +9,13 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.nexized.emec.blocks.*;
-import com.nexized.emec.items.*;
-import com.nexized.emec.items.tools.*;
-import com.nexized.emec.items.weapons.*;
+import com.nexized.emec.itemAxe.*;
+import com.nexized.emec.itemHoe.*;
+import com.nexized.emec.itemIngot.*;
+import com.nexized.emec.itemPick.*;
+import com.nexized.emec.itemShovel.*;
+import com.nexized.emec.itemSword.*;
+
 import com.nexized.emec.world.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
