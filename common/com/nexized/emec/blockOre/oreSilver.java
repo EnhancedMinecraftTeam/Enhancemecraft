@@ -1,4 +1,4 @@
-package com.nexized.emec.blocks;
+package com.nexized.emec.blockOre;
 
 import java.util.Random;
 
@@ -8,18 +8,18 @@ import net.minecraft.block.BlockOre;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class oreCopper extends BlockOre {
+public class oreSilver extends BlockOre {
 
-	public oreCopper(int id)
+	public oreSilver(int id)
     {
         super(id);
         this.setCreativeTab(CreativeTabs.tabBlock);
-        this.setHardness(25F);
+        this.setHardness(30F);
     }
 
     public void registerIcons(IconRegister reg)
     {
-        this.blockIcon = reg.registerIcon(modInfo.MODID + ":oreCopper");
+        this.blockIcon = reg.registerIcon(modInfo.MODID + ":oreSilver");
     }
 
     public int idDropped(int pa1, Random rand, int par2)

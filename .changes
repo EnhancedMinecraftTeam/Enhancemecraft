@@ -1,0 +1,26 @@
+Enhancemecraft - Changes
+
+Version 0.1.2.006
+	@General
+		* Items are now structurized in itemTool (for example itemAxe, itemSword).
+		  This makes it easier to maintain the code and is mutch more clear.
+	@RealisticBlocks
+		* Changed BlockHardness of Aluminium, Copper, Platinum, Silver, Steel and Tin
+		  This makes blocks & ores more realistic 
+		* Removed blocks without realistic texture
+		  The blocks with missing texture are now commented out in the source
+		* Nerfed material values to more realistic values
+		  Steel is not that overpowered any more
+		* Included oreSteel (^^)
+		  This was never included and will never be included 
+	@ Armor
+		* Attempting to include first types of armors
+	@ Assets 
+	
+	@ Biomes
+		* Removed empty biome classes
+
+	@RealisticBlocks
+		* Fosils are now exactly as hard as obsidian (50F)
+		* Aluminium is now 4x harder than grass (2F)
+		
