@@ -192,51 +192,202 @@ public class CommonLoader {
 		SwordSteel = (new swordSteel(common.swordSteelID, STEEL).setUnlocalizedName("Steel Sword"));
 		
 		// @Add Tools Tin
-		AxePlatinum = (new axePlatinum(common.axePlatinumID, PLATINUM).setUnlocalizedName("Platinum Axe"));
-		HoePlatinum = (new hoePlatinum(common.hoePlatinumID, PLATINUM).setUnlocalizedName("Platinum Hoe"));
-		PickPlatinum = (new pickPlatinum(common.pickPlatinumID, PLATINUM).setUnlocalizedName("Platinum Pickaxe"));
-		ShovelPlatinum = (new shovelPlatinum(common.shovelPlatinumID, PLATINUM).setUnlocalizedName("Platinum Shovel"));
-		SwordPlatinum = (new swordPlatinum(common.swordPlatinumID, PLATINUM).setUnlocalizedName("Platinum Sword"));
+		AxeTin = (new axeTin(common.axeTinID, TIN).setUnlocalizedName("Tin Axe"));
+		HoeTin = (new hoeTin(common.hoeTinID, TIN).setUnlocalizedName("Tin Hoe"));
+		PickTin = (new pickTin(common.pickTinID, TIN).setUnlocalizedName("Tin Pickaxe"));
+		ShovelTin = (new shovelTin(common.shovelTinID, TIN).setUnlocalizedName("Tin Shovel"));
+		SwordTin = (new swordTin(common.swordTinID, TIN).setUnlocalizedName("Tin Sword"));
 		
-		// @Register Items
+		// @Register Items Ingots
+		GameRegistry.registerItem(IngotAluminium, "Aluminium Ingot");
+		GameRegistry.registerItem(IngotCopper, "Copper Ingot");
 		GameRegistry.registerItem(IngotPlatinum, "Platinum Ingot");
+		GameRegistry.registerItem(IngotSilver, "Silver Ingot");
+		GameRegistry.registerItem(IngotSteel, "Steel Ingot");
+		GameRegistry.registerItem(IngotTin, "Tin Ingot");
+		
+		// @Register Tools
+		GameRegistry.registerItem(AxeAluminium, "Aluminium Axe");
+		GameRegistry.registerItem(AxeCopper, "Copper Axe");
 		GameRegistry.registerItem(AxePlatinum, "Platinum Axe");
+		GameRegistry.registerItem(AxeSilver, "Silver Axe");
+		GameRegistry.registerItem(AxeSteel, "Steel Axe");
+		GameRegistry.registerItem(AxeTin, "Tin Axe");
+		
+		GameRegistry.registerItem(HoeAluminium, "Aluminium Hoe");
+		GameRegistry.registerItem(HoeCopper, "Copper Hoe");
 		GameRegistry.registerItem(HoePlatinum, "Platinum Hoe");
+		GameRegistry.registerItem(HoeSilver, "Silver Hoe");
+		GameRegistry.registerItem(HoeSteel, "Steel Hoe");
+		GameRegistry.registerItem(HoeTin, "Tin Hoe");
+		
+		GameRegistry.registerItem(PickAluminium, "Aluminium Pick");
+		GameRegistry.registerItem(PickCopper, "Copper Pick");
 		GameRegistry.registerItem(PickPlatinum, "Platinum Pick");
+		GameRegistry.registerItem(PickSilver, "Silver Pick");
+		GameRegistry.registerItem(PickSteel, "Steel Pick");
+		GameRegistry.registerItem(PickTin, "Tin Pick");
+		
+		GameRegistry.registerItem(ShovelAluminium, "Aluminium Shovel");
+		GameRegistry.registerItem(ShovelCopper, "Copper Shovel");
 		GameRegistry.registerItem(ShovelPlatinum, "Platinum Shovel");
+		GameRegistry.registerItem(ShovelSilver, "Silver Shovel");
+		GameRegistry.registerItem(ShovelSteel, "Steel Shovel");
+		GameRegistry.registerItem(ShovelTin, "Tin Shovel");
+				
+		GameRegistry.registerItem(SwordAluminium, "Aluminium Sword");
+		GameRegistry.registerItem(SwordCopper, "Copper Sword");
 		GameRegistry.registerItem(SwordPlatinum, "Platinum Sword");
+		GameRegistry.registerItem(SwordSilver, "Silver Sword");
+		GameRegistry.registerItem(SwordSteel, "Steel Sword");
+		GameRegistry.registerItem(SwordTin, "Tin Sword");
 	}
 	
 	public static void addNames() {
-		// @Add Block Names
-		LanguageRegistry.addName(BlockPlatinum, "Block of Platinum");
+		// @Add Block Ores Names
+		LanguageRegistry.addName(OreAluminium, "Aluminium Ore");
+		LanguageRegistry.addName(OreCopper, "Copper Ore");
 		LanguageRegistry.addName(OrePlatinum, "Platinum Ore");
-		// @Add Item Names
+		LanguageRegistry.addName(OreSilver, "Silver Ore");
+		LanguageRegistry.addName(OreTin, "Tin Ore");
+		
+		// @Add Block Ingot Names
+		LanguageRegistry.addName(BlockAluminium, "Aluminium Block");
+		LanguageRegistry.addName(BlockCopper, "Copper Block");
+		LanguageRegistry.addName(BlockPlatinum, "Platinum Block");
+		LanguageRegistry.addName(BlockSilver, "Silver Block");
+		LanguageRegistry.addName(BlockSteel, "Steel Block");
+		LanguageRegistry.addName(BlockTin, "Tin Block");
+		
+		// @Add Additional Block Names
+		LanguageRegistry.addName(BlockFosil, "Fosil Block");
+		
+		// @Add Ingot Names
+		LanguageRegistry.addName(IngotAluminium, "Aluminium Ingot");
+		LanguageRegistry.addName(IngotCopper, "Copper Ingot");
 		LanguageRegistry.addName(IngotPlatinum, "Platinum Ingot");
+		LanguageRegistry.addName(IngotSilver, "Silver Ingot");
+		LanguageRegistry.addName(IngotSteel, "Steel Ingot");
+		LanguageRegistry.addName(IngotTin, "Tin Ingot");
+		
+		// @Add Tools Names
+		LanguageRegistry.addName(AxeAluminium, "Aluminium Axe");
+		LanguageRegistry.addName(AxeCopper, "Copper Axe");
 		LanguageRegistry.addName(AxePlatinum, "Platinum Axe");
+		LanguageRegistry.addName(AxeSilver, "Silver Axe");
+		LanguageRegistry.addName(AxeSteel, "Steel Axe");
+		LanguageRegistry.addName(AxeTin, "Tin Axe");
+		
+		LanguageRegistry.addName(HoeAluminium, "Aluminium Hoe");
+		LanguageRegistry.addName(HoeCopper, "Copper Hoe");
 		LanguageRegistry.addName(HoePlatinum, "Platinum Hoe");
+		LanguageRegistry.addName(HoeSilver, "Silver Hoe");
+		LanguageRegistry.addName(HoeSteel, "Steel Hoe");
+		LanguageRegistry.addName(HoeTin, "Tin Hoe");
+		
+		LanguageRegistry.addName(PickAluminium, "Aluminium Pickaxe");
+		LanguageRegistry.addName(PickCopper, "Copper Pickaxe");
 		LanguageRegistry.addName(PickPlatinum, "Platinum Pickaxe");
+		LanguageRegistry.addName(PickSilver, "Silver Pickaxe");
+		LanguageRegistry.addName(PickSteel, "Steel Pickaxe");
+		LanguageRegistry.addName(PickTin, "Tin Pickaxe");
+		
+		LanguageRegistry.addName(ShovelAluminium, "Aluminium Shovel");
+		LanguageRegistry.addName(ShovelCopper, "Copper Shovel");
 		LanguageRegistry.addName(ShovelPlatinum, "Platinum Shovel");
+		LanguageRegistry.addName(ShovelSilver, "Silver Shovel");
+		LanguageRegistry.addName(ShovelSteel, "Steel Shovel");
+		LanguageRegistry.addName(ShovelTin, "Tin Shovel");
+		
+		LanguageRegistry.addName(SwordAluminium, "Aluminium Sword");
+		LanguageRegistry.addName(SwordCopper, "Copper Sword");
 		LanguageRegistry.addName(SwordPlatinum, "Platinum Sword");
+		LanguageRegistry.addName(SwordSilver, "Silver Sword");
+		LanguageRegistry.addName(SwordSteel, "Steel Sword");
+		LanguageRegistry.addName(SwordTin, "Tin Sword");
 	}
 	
 	public static void addRecipes() {
-		// @Add Block Recipes
+		// @Add Ingot Smelting
+		GameRegistry.addSmelting(OreAluminium.blockID, new ItemStack(IngotAluminium), 10.0F);
+		GameRegistry.addSmelting(OreCopper.blockID, new ItemStack(IngotCopper), 10.0F);
 		GameRegistry.addSmelting(OrePlatinum.blockID, new ItemStack(IngotPlatinum), 10.0F);
+		GameRegistry.addSmelting(OreSilver.blockID, new ItemStack(IngotSilver), 10.0F);
+		GameRegistry.addSmelting(OreTin.blockID, new ItemStack(IngotTin), 10.0F);
+		
+		// @Add Block Ingot Crafting
+		GameRegistry.addRecipe(new ItemStack(BlockAluminium), new Object[] {"XXX", "XXX", "XXX", 'X', IngotAluminium});
+		GameRegistry.addRecipe(new ItemStack(BlockCopper), new Object[] {"XXX", "XXX", "XXX", 'X', IngotCopper});
 		GameRegistry.addRecipe(new ItemStack(BlockPlatinum), new Object[] {"XXX", "XXX", "XXX", 'X', IngotPlatinum});
-		// @Add Item Recipes
+		GameRegistry.addRecipe(new ItemStack(BlockSilver), new Object[] {"XXX", "XXX", "XXX", 'X', IngotSilver});
+		GameRegistry.addRecipe(new ItemStack(BlockSteel), new Object[] {"XXX", "XXX", "XXX", 'X', IngotSteel});
+		GameRegistry.addRecipe(new ItemStack(BlockTin), new Object[] {"XXX", "XXX", "XXX", 'X', IngotTin});
+		
+		// @Add Tool Crafting
+		GameRegistry.addRecipe(new ItemStack(AxeAluminium), new Object[] {" XX", " *X", " * ", 'X', IngotAluminium, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(AxeCopper), new Object[] {" XX", " *X", " * ", 'X', IngotCopper, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(AxePlatinum), new Object[] {" XX", " *X", " * ", 'X', IngotPlatinum, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(AxeSilver), new Object[] {" XX", " *X", " * ", 'X', IngotSilver, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(AxeSteel), new Object[] {" XX", " *X", " * ", 'X', IngotSteel, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(AxeTin), new Object[] {" XX", " *X", " * ", 'X', IngotTin, '*', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(HoeAluminium), new Object[] {" XX", " * ", " * ", 'X', IngotAluminium, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(HoeCopper), new Object[] {" XX", " * ", " * ", 'X', IngotCopper, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(HoePlatinum), new Object[] {" XX", " * ", " * ", 'X', IngotPlatinum, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(HoeSilver), new Object[] {" XX", " * ", " * ", 'X', IngotSilver, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(HoeSteel), new Object[] {" XX", " * ", " * ", 'X', IngotSteel, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(HoeTin), new Object[] {" XX", " * ", " * ", 'X', IngotTin, '*', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(PickAluminium), new Object[] {"XXX", " * ", " * ", 'X', IngotAluminium, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(PickCopper), new Object[] {"XXX", " * ", " * ", 'X', IngotCopper, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(PickPlatinum), new Object[] {"XXX", " * ", " * ", 'X', IngotPlatinum, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(PickSilver), new Object[] {"XXX", " * ", " * ", 'X', IngotSilver, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(PickSteel), new Object[] {"XXX", " * ", " * ", 'X', IngotSteel, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(PickTin), new Object[] {"XXX", " * ", " * ", 'X', IngotTin, '*', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(ShovelAluminium), new Object[] {" X ", " * ", " * ", 'X', IngotAluminium, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(ShovelCopper), new Object[] {" X ", " * ", " * ", 'X', IngotCopper, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(ShovelPlatinum), new Object[] {" X ", " * ", " * ", 'X', IngotPlatinum, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(ShovelSilver), new Object[] {" X ", " * ", " * ", 'X', IngotSilver, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(ShovelSteel), new Object[] {" X ", " * ", " * ", 'X', IngotSteel, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(ShovelTin), new Object[] {" X ", " * ", " * ", 'X', IngotTin, '*', Item.stick});
+				
+		GameRegistry.addRecipe(new ItemStack(SwordAluminium), new Object[] {" X ", " X ", " * ", 'X', IngotAluminium, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(SwordCopper), new Object[] {" X ", " X ", " * ", 'X', IngotCopper, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(SwordPlatinum), new Object[] {" X ", " X ", " * ", 'X', IngotPlatinum, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(SwordSilver), new Object[] {" X ", " X ", " * ", 'X', IngotSilver, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(SwordSteel), new Object[] {" X ", " X ", " * ", 'X', IngotSteel, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(SwordTin), new Object[] {" X ", " X ", " * ", 'X', IngotTin, '*', Item.stick});
 	}
 
 	public static void toolClasses() {
+		MinecraftForge.setToolClass(PickAluminium, "pickaxe", 2);
+		MinecraftForge.setToolClass(PickCopper, "pickaxe", 2);
 		MinecraftForge.setToolClass(PickPlatinum, "pickaxe", 2);
-        MinecraftForge.setToolClass(AxePlatinum, "axe", 2);
-        MinecraftForge.setToolClass(ShovelPlatinum, "shovel", 2);
-        MinecraftForge.setToolClass(HoePlatinum, "hoe", 2);
+		MinecraftForge.setToolClass(PickSilver, "pickaxe", 2);
+		MinecraftForge.setToolClass(PickSteel, "pickaxe", 2);
+		MinecraftForge.setToolClass(PickTin, "pickaxe", 2);
+		
+		MinecraftForge.setToolClass(AxeAluminium, "axe", 2);
+		MinecraftForge.setToolClass(AxeCopper, "axe", 2);
+		MinecraftForge.setToolClass(AxePlatinum, "axe", 2);
+		MinecraftForge.setToolClass(AxeSilver, "axe", 2);
+		MinecraftForge.setToolClass(AxeSteel, "axe", 2);
+		MinecraftForge.setToolClass(AxeTin, "axe", 2);
+        
+		MinecraftForge.setToolClass(ShovelAluminium, "shovel", 2);
+		MinecraftForge.setToolClass(ShovelCopper, "shovel", 2);
+		MinecraftForge.setToolClass(ShovelPlatinum, "shovel", 2);
+		MinecraftForge.setToolClass(ShovelSilver, "shovel", 2);
+		MinecraftForge.setToolClass(ShovelSteel, "shovel", 2);
+		MinecraftForge.setToolClass(ShovelTin, "shovel", 2);
+        
+		MinecraftForge.setToolClass(HoeAluminium, "hoe", 2);
+		MinecraftForge.setToolClass(HoeCopper, "hoe", 2);
+		MinecraftForge.setToolClass(HoePlatinum, "hoe", 2);
+		MinecraftForge.setToolClass(HoeSilver, "hoe", 2);
+		MinecraftForge.setToolClass(HoeSteel, "hoe", 2);
+		MinecraftForge.setToolClass(HoeTin, "hoe", 2);
 	}
 	
 	public static void postInit() {
