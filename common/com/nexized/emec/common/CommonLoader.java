@@ -8,14 +8,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.nexized.emec.blocks.*;
-import com.nexized.emec.itemAxe.*;
-import com.nexized.emec.itemHoe.*;
-import com.nexized.emec.itemIngot.*;
-import com.nexized.emec.itemPick.*;
-import com.nexized.emec.itemShovel.*;
-import com.nexized.emec.itemSword.*;
-
+import com.nexized.emec.block.blockIngot.*;
+import com.nexized.emec.block.blockOre.*;
+import com.nexized.emec.item.itemIngot.*;
+import com.nexized.emec.tool.toolAxe.*;
+import com.nexized.emec.tool.toolHoe.*;
+import com.nexized.emec.tool.toolPick.*;
+import com.nexized.emec.tool.toolShovel.*;
+import com.nexized.emec.tool.toolSword.*;
 import com.nexized.emec.world.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -91,12 +91,12 @@ public class CommonLoader {
 	
 	public static void materialInit() {
 		// @Add Materials
-		ALUMINIUM = EnumHelper.addToolMaterial("ALUMINIUM", 2, 150, 4.0F, 3.0F, 16);
-		COPPER = EnumHelper.addToolMaterial("COPPER", 2, 200, 4.5F, 3.0F, 16);
-		PLATINUM = EnumHelper.addToolMaterial("PLATINUM", 4, 300, 6.5F, 4.0F, 16);
-		SILVER = EnumHelper.addToolMaterial("SILVER", 3, 250, 5.0F, 3.0F, 16);
-		STEEL = EnumHelper.addToolMaterial("STEEL", 4, 400, 7.0F, 5.0F, 16);
-		TIN = EnumHelper.addToolMaterial("TIN", 2, 200, 4.5F, 3.0F, 16);
+		ALUMINIUM = EnumHelper.addToolMaterial("ALUMINIUM", 2, 200, 4.0F, 3.0F, 16);
+		COPPER = EnumHelper.addToolMaterial("COPPER", 2, 250, 5.0F, 4.0F, 16);
+		PLATINUM = EnumHelper.addToolMaterial("PLATINUM", 3, 300, 5.0F, 5.0F, 16);
+		SILVER = EnumHelper.addToolMaterial("SILVER", 3, 250, 5.0F, 4.0F, 16);
+		STEEL = EnumHelper.addToolMaterial("STEEL", 3, 400, 8.0F, 6.0F, 16);
+		TIN = EnumHelper.addToolMaterial("TIN", 2, 200, 4.0F, 4.0F, 16);
 	}
 	
 	public static void addBlocks(ConfigurationHandler common) {
