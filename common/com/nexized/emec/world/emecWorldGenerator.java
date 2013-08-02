@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.nexized.emec.common.CommonLoader;
+import com.nexized.emec.common.instance.loaderOre;
 
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -39,12 +39,12 @@ public class emecWorldGenerator implements IWorldGenerator {
 	
     private void generateSurface(World world, Random random, int x, int z)
     {
-    	this.addOreSpawn(CommonLoader.BlockFosil, world, random, x, z, 16, 16, 4 + random.nextInt(3), 2, 40, 60);
-    	this.addOreSpawn(CommonLoader.OreAluminium, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
-    	this.addOreSpawn(CommonLoader.OreCopper, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
-    	this.addOreSpawn(CommonLoader.OrePlatinum, world, random, x, z, 16, 16, 4 + random.nextInt(3), 4, 0, 40);
-    	this.addOreSpawn(CommonLoader.OreSilver, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
-    	this.addOreSpawn(CommonLoader.OreTin, world, random, x, z, 16, 16, 4 + random.nextInt(3), 7, 15, 60);
+    	this.addOreSpawn(loaderOre.BlockFosil, world, random, x, z, 16, 16, 4 + random.nextInt(3), 2, 40, 60);
+    	this.addOreSpawn(loaderOre.OreAluminium, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
+    	this.addOreSpawn(loaderOre.OreCopper, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
+    	this.addOreSpawn(loaderOre.OrePlatinum, world, random, x, z, 16, 16, 4 + random.nextInt(3), 4, 0, 40);
+    	this.addOreSpawn(loaderOre.OreSilver, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 60);
+    	this.addOreSpawn(loaderOre.OreTin, world, random, x, z, 16, 16, 4 + random.nextInt(3), 7, 15, 60);
     }
 
     private void generateNether(World world, Random random, int x, int z) {}

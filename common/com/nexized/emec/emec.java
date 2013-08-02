@@ -8,9 +8,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 import com.nexized.emec.lib.*;
+import com.nexized.emec.world.emecWorldGenerator;
 import com.nexized.emec.common.*;
+import com.nexized.emec.common.instance.loaderIngot;
+import com.nexized.emec.common.instance.loaderOre;
+import com.nexized.emec.common.instance.loaderTools;
 
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @Mod(modid = modInfo.MODID, name = modInfo.MODNAME, version = modInfo.MODVERSION)
@@ -24,7 +29,7 @@ public class emec {
     public emec instance;
 	
 	// @ConfgurationHandler
-	ConfigurationHandler commonConfiguration;
+	public ConfigurationHandler commonConfiguration;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -37,19 +42,28 @@ public class emec {
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
     {
-		// @CommonLoader init
-		CommonLoader.materialInit();
-		// @CommonLoader add
-		CommonLoader.addBlocks(commonConfiguration);
-		CommonLoader.addItems(commonConfiguration);
-		// @CommonLoader addNames
-		CommonLoader.addNames();
-		// @CommonLoader addRecipes
-		CommonLoader.addRecipes();
-		// @CommonLoader toolClasses
-		CommonLoader.toolClasses();
-		// CommonLoader postInit
-		CommonLoader.postInit();
+		/* 	Old method for MaterialInitialisation
+			CommonLoader.materialInit();
+			CommonLoader.addBlocks(commonConfiguration);
+			CommonLoader.addItems(commonConfiguration);
+			CommonLoader.addNames();
+			CommonLoader.addRecipes();
+			CommonLoader.toolClasses();
+			CommonLoader.postInit();
+    	*/
+		
+		// @New Initialization
+		loaderIngot.addBlocks(commonConfiguration); loaderIngot.addItems(commonConfiguration);
+		loaderIngot.addNames(); loaderIngot.addRecipes();
+		
+		loaderOre.addBlocks(commonConfiguration); 
+		loaderOre.addNames(); loaderOre.addRecipes();
+		
+		loaderTools.addItems(commonConfiguration);
+		loaderTools.addNames(); loaderTools.addRecipes();
+		
+		// @Add WorldGenerator
+		GameRegistry.registerWorldGenerator(new emecWorldGenerator());
     }
 	
 	@EventHandler
