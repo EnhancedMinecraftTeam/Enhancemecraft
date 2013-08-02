@@ -9,11 +9,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-import com.nexized.emec.lib.modInfo;
-import com.nexized.emec.common.CommonProxy;
-import com.nexized.emec.common.ConfigurationHandler;
-import com.nexized.emec.common.CommonLoader;
-
+import com.nexized.emec.lib.*;
+import com.nexized.emec.common.*;
 
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @Mod(modid = modInfo.MODID, name = modInfo.MODNAME, version = modInfo.MODVERSION)
@@ -33,6 +30,7 @@ public class emec {
 	public void preInit(FMLPreInitializationEvent event)
     {
 		System.out.println("[" + modInfo.MODID+ "]" + "- Version " + modInfo.MODVERSION);
+		System.out.println("[" + modInfo.MODID+ "]" + "- Loading commonConfiguration...");
 		// @ConfigurationHandler
 		commonConfiguration = new ConfigurationHandler(event);
     }
@@ -40,19 +38,26 @@ public class emec {
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
     {
-		// @CommonLoader materialInitialisation
+		// @CommonLoader init
+		System.out.println("[" + modInfo.MODID+ "]" + "- Initialisation...");
 		CommonLoader.materialInit();
-		// @CommonLoader addBlocks & addItems
+		// @CommonLoader add
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding blocks...");
 		CommonLoader.addBlocks(commonConfiguration);
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding items...");
 		CommonLoader.addItems(commonConfiguration);
 		// @CommonLoader addNames
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding names...");
 		CommonLoader.addNames();
 		// @CommonLoader addRecipes
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding recipes...");
 		CommonLoader.addRecipes();
 		// @CommonLoader toolClasses
 		CommonLoader.toolClasses();
 		// CommonLoader postInit
+		System.out.println("[" + modInfo.MODID+ "]" + "- Adding worldgenerator...");
 		CommonLoader.postInit();
+		System.out.println("[" + modInfo.MODID+ "]" + "- Initialisation sucessfully...");
     }
 	
 	@EventHandler

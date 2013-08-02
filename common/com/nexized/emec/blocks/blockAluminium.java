@@ -1,4 +1,4 @@
-package com.nexized.emec.block;
+package com.nexized.emec.blocks;
 
 import java.util.Random;
 
@@ -13,27 +13,28 @@ public class blockAluminium extends Block {
 
 	public blockAluminium(int id, Material mat)
 	{
-		super(id, mat); // @BlockConstructor
-		this.setCreativeTab(CreativeTabs.tabBlock); // @CreativeTab
-    	this.setStepSound(Block.soundStoneFootstep); // @StepSound
-    	this.setHardness(2F); // @BlockHardness
-    	this.setUnlocalizedName("Aluminium Block"); // @BlockName
+		// @Block Constructor
+		super(id, mat);
+		// @CreativeTab
+		this.setCreativeTab(CreativeTabs.tabBlock);
+        // @StepSound
+		this.setStepSound(Block.soundStoneFootstep);
+        // @BlockHardness
+		this.setHardness(25F);
 	}
 	
 	public void registerIcons(IconRegister reg)
     {
-        this.blockIcon = reg.registerIcon(modInfo.MODID + ":blockAluminium"); // @blockIcon
+        this.blockIcon = reg.registerIcon(modInfo.MODID + ":blockAluminium");
     }
 	
 	public int idDropped(int pa1, Random rand, int par2)
     {
-        // This block is dropping himself when it's mined
-		return this.blockID;
+        return this.blockID;
     }
 
     public int quantityDropped(Random rand)
     {
-    	// How many times the block drops an item when it's mined
         return 1;
     }
 	
