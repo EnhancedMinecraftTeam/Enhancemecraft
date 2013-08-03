@@ -1,6 +1,5 @@
 package com.nexized.emec.common.instance;
 
-import com.nexized.emec.common.ConfigurationHandler;
 import com.nexized.emec.tool.toolAxe.*;
 import com.nexized.emec.tool.toolHoe.*;
 import com.nexized.emec.tool.toolPick.*;
@@ -47,7 +46,7 @@ public class loaderTools extends loaderIngot {
 		public static Item SwordSteel;
 		public static Item SwordTin;
 		
-		public static void addItems(ConfigurationHandler common) {
+		public static void addItems(configurationHandler common) {
 			// @Add Tools Aluminum
 			AxeAluminium = (new axeAluminium(common.axeAluminiumID, ALUMINIUM).setUnlocalizedName("axeAluminium"));
 			HoeAluminium = (new hoeAluminium(common.hoeAluminiumID, ALUMINIUM).setUnlocalizedName("hoeAluminium"));

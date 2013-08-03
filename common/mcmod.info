@@ -1,0 +1,19 @@
+[
+{
+"modid": "EMEC",
+"name": "EnhanceMeCraft",
+"description": "Extending Minecraft with new Materials, Ores, Tools, Biomes, Mobs and more",
+"version": "",
+"credits": "Created by nexized",
+"logoFile": "/assets/emec/logo/logo.png",
+"mcversion": "",
+"url": "http://www.minecraftforum.net/",
+"updateUrl": "",
+"authors": [ "nexized", "EnhanceMeCraft Team" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+         "mod_MinecraftForge"
+]
+}
+]

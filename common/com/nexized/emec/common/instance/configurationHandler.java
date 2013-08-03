@@ -1,9 +1,9 @@
-package com.nexized.emec.common;
+package com.nexized.emec.common.instance;
 
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.Configuration;
 
-public class ConfigurationHandler {
+public class configurationHandler {
 
 	// @Configuration
 	Configuration commonConfiguration;
@@ -14,6 +14,7 @@ public class ConfigurationHandler {
 	public int orePlatinumID = 502;
 	public int oreSilverID = 503;
 	public int oreTinID = 504;
+	public int oreFossilID = 511;
 	
 	public int blockAluminiumID = 505;
 	public int blockCopperID = 506;
@@ -21,8 +22,6 @@ public class ConfigurationHandler {
 	public int blockSilverID = 508;
 	public int blockSteelID = 509;
 	public int blockTinID = 510;
-	
-	public int blockFosilID = 511;
 		
 	// @ItemID
 	public int ingotAluminiumID = 3000;
@@ -64,7 +63,7 @@ public class ConfigurationHandler {
 	public int swordTinID = 3035;
 	
 	// @Constructor
-	public ConfigurationHandler(FMLPreInitializationEvent event) {
+	public configurationHandler(FMLPreInitializationEvent event) {
 		// @Initialize
 		commonConfiguration = new Configuration(event.getSuggestedConfigurationFile());
 		// @Load
@@ -76,6 +75,7 @@ public class ConfigurationHandler {
 		this.orePlatinumID = commonConfiguration.getBlock("Platinum Ore", orePlatinumID).getInt();
 		this.oreSilverID = commonConfiguration.getBlock("Silver Ore", oreSilverID).getInt();
 		this.oreTinID = commonConfiguration.getBlock("Tin Ore", oreTinID).getInt();
+		this.oreFossilID = commonConfiguration.getBlock("Fosil Ore", oreFossilID).getInt();
 		
 		// @Ingot Block
 		this.blockAluminiumID = commonConfiguration.getBlock("Aluminium Block", blockAluminiumID).getInt();
@@ -84,10 +84,7 @@ public class ConfigurationHandler {
 		this.blockSilverID = commonConfiguration.getBlock("Silver Block", blockSilverID).getInt();
 		this.blockSteelID = commonConfiguration.getBlock("Steel Block", blockSteelID).getInt();
 		this.blockTinID = commonConfiguration.getBlock("Tin Block", blockTinID).getInt();
-		
-		// @Additional Block
-		this.blockFosilID = commonConfiguration.getBlock("Fosil Block", blockFosilID).getInt();
-		
+			
 		// @Ingot Item
 		this.ingotAluminiumID = commonConfiguration.getBlock("Aluminium Ingot", ingotAluminiumID).getInt();
 		this.ingotCopperID = commonConfiguration.getBlock("Copper Ingot", ingotCopperID).getInt();

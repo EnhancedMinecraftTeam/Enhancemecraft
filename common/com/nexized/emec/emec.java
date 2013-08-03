@@ -13,6 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import com.nexized.emec.lib.*;
 import com.nexized.emec.world.emecWorldGenerator;
 import com.nexized.emec.common.*;
+import com.nexized.emec.common.instance.configurationHandler;
 import com.nexized.emec.common.instance.loaderIngot;
 import com.nexized.emec.common.instance.loaderOre;
 import com.nexized.emec.common.instance.loaderTools;
@@ -29,14 +30,14 @@ public class emec {
     public emec instance;
 	
 	// @ConfgurationHandler
-	public ConfigurationHandler commonConfiguration;
+	public configurationHandler commonConfiguration;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
     {
 		System.out.println("[" + modInfo.MODID+ "]" + "- Version " + modInfo.MODVERSION);
 		// @ConfigurationHandler
-		commonConfiguration = new ConfigurationHandler(event);
+		commonConfiguration = new configurationHandler(event);
     }
 	
 	@EventHandler

@@ -1,17 +1,10 @@
 package com.nexized.emec.common.instance;
 
-import com.nexized.emec.block.blockIngot.blockFosil;
-import com.nexized.emec.block.blockOre.oreAluminium;
-import com.nexized.emec.block.blockOre.oreCopper;
-import com.nexized.emec.block.blockOre.orePlatinum;
-import com.nexized.emec.block.blockOre.oreSilver;
-import com.nexized.emec.block.blockOre.oreTin;
-import com.nexized.emec.common.ConfigurationHandler;
+import com.nexized.emec.block.blockOre.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -25,9 +18,9 @@ public class loaderOre extends loaderIngot {
 		public static Block OreTin;
 	
 		// @Additional Blocks
-		public static Block BlockFosil;
+		public static Block OreFossil;
 		
-	public static void addBlocks(ConfigurationHandler common) {
+	public static void addBlocks(configurationHandler common) {
 		
 				// @Add Block Ores
 				OreAluminium = (new oreAluminium(common.oreAluminiumID)).setUnlocalizedName("oreAluminium");
@@ -35,7 +28,7 @@ public class loaderOre extends loaderIngot {
 				OrePlatinum = (new orePlatinum(common.orePlatinumID)).setUnlocalizedName("orePlatinum");
 				OreSilver = (new oreSilver(common.oreSilverID)).setUnlocalizedName("oreSilver");
 				OreTin = (new oreTin(common.oreTinID)).setUnlocalizedName("oreTin");
-				BlockFosil = (new blockFosil(common.blockFosilID, Material.iron));
+				OreFossil = (new oreFossil(common.oreFossilID)).setUnlocalizedName("oreFossil");
 				
 				// @Register Ores
 				GameRegistry.registerBlock(OreAluminium, "oreAluminium");
@@ -43,6 +36,7 @@ public class loaderOre extends loaderIngot {
 				GameRegistry.registerBlock(OrePlatinum, "orePlatinum");
 				GameRegistry.registerBlock(OreSilver, "oreSilver");
 				GameRegistry.registerBlock(OreTin, "oreTin");
+				GameRegistry.registerBlock(OreFossil, "oreFossil");
 				
 				// @BlockHarvest
 				MinecraftForge.setBlockHarvestLevel(OreAluminium, "Pickaxe", 2);
@@ -50,7 +44,7 @@ public class loaderOre extends loaderIngot {
 				MinecraftForge.setBlockHarvestLevel(OrePlatinum, "Pickaxe", 2);
 				MinecraftForge.setBlockHarvestLevel(OreSilver, "Pickaxe", 2);
 				MinecraftForge.setBlockHarvestLevel(OreTin, "Pickaxe", 2);
-				MinecraftForge.setBlockHarvestLevel(BlockFosil, "Pickaxe", 3);
+				MinecraftForge.setBlockHarvestLevel(OreFossil, "Pickaxe", 3);
 	}
 	
 	public static void addNames() {
@@ -60,7 +54,7 @@ public class loaderOre extends loaderIngot {
 				LanguageRegistry.addName(OrePlatinum, "Platinum Ore");
 				LanguageRegistry.addName(OreSilver, "Silver Ore");
 				LanguageRegistry.addName(OreTin, "Tin Ore");
-				LanguageRegistry.addName(BlockFosil, "Fosil Block");
+				LanguageRegistry.addName(OreFossil, "Fossil Ore");
 	}
 	
 	public static void addRecipes() {

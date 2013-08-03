@@ -1,13 +1,7 @@
 package com.nexized.emec.common.instance;
 
 import com.nexized.emec.block.blockIngot.*;
-import com.nexized.emec.common.ConfigurationHandler;
-import com.nexized.emec.item.itemIngot.ingotAluminium;
-import com.nexized.emec.item.itemIngot.ingotCopper;
-import com.nexized.emec.item.itemIngot.ingotPlatinum;
-import com.nexized.emec.item.itemIngot.ingotSilver;
-import com.nexized.emec.item.itemIngot.ingotSteel;
-import com.nexized.emec.item.itemIngot.ingotTin;
+import com.nexized.emec.item.itemIngot.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -36,7 +30,7 @@ public class loaderIngot extends loaderMaterial {
 		public static Item IngotTin;
 		
 		
-		public static void addBlocks(ConfigurationHandler common) {
+		public static void addBlocks(configurationHandler common) {
 			// @ Add Blocks
 			// BlockAluminium = (new blockAluminium(common.blockAluminiumID, Material.iron));
 			// BlockCopper = (new blockCopper(common.blockCopperID, Material.iron));
@@ -63,7 +57,7 @@ public class loaderIngot extends loaderMaterial {
 			// MinecraftForge.setBlockHarvestLevel(BlockTin, "Pickaxe", 2);
 		}
 		
-		public static void addItems(ConfigurationHandler common) {
+		public static void addItems(configurationHandler common) {
 			// @Add Ingot Items
 			IngotAluminium = (new ingotAluminium(common.ingotAluminiumID).setUnlocalizedName("ingotAluminium"));
 			IngotCopper = (new ingotCopper(common.ingotCopperID).setUnlocalizedName("ingotIron"));
