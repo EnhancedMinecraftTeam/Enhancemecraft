@@ -53,7 +53,6 @@ public class loaderIngot extends loaderMaterial {
 			GameRegistry.registerBlock(BlockSilver, "SilverBlock");
 			// GameRegistry.registerBlock(BlockSteel, "SteelBlock");
 			// GameRegistry.registerBlock(BlockTin, "TinBlock");
-			// GameRegistry.registerBlock(BlockFosil, "Fosil Block");
 			
 			// @BlockHarvest Level
 			// MinecraftForge.setBlockHarvestLevel(BlockAluminium, "Pickaxe", 2);
@@ -66,20 +65,20 @@ public class loaderIngot extends loaderMaterial {
 		
 		public static void addItems(ConfigurationHandler common) {
 			// @Add Ingot Items
-			IngotAluminium = (new ingotAluminium(common.ingotAluminiumID).setUnlocalizedName("Aluminium Ingot"));
-			IngotCopper = (new ingotCopper(common.ingotCopperID).setUnlocalizedName("Copper Ingot"));
-			IngotPlatinum = (new ingotPlatinum(common.ingotPlatinumID).setUnlocalizedName("Platinum Ingot"));
-			IngotSilver = (new ingotSilver(common.ingotSilverID).setUnlocalizedName("Silver Ingot"));
-			IngotSteel = (new ingotSteel(common.ingotSteelID).setUnlocalizedName("Steel Ingot"));
-			IngotTin = (new ingotTin(common.ingotTinID).setUnlocalizedName("Tin Ingot"));
+			IngotAluminium = (new ingotAluminium(common.ingotAluminiumID).setUnlocalizedName("ingotAluminium"));
+			IngotCopper = (new ingotCopper(common.ingotCopperID).setUnlocalizedName("ingotIron"));
+			IngotPlatinum = (new ingotPlatinum(common.ingotPlatinumID).setUnlocalizedName("ingotPlatinum"));
+			IngotSilver = (new ingotSilver(common.ingotSilverID).setUnlocalizedName("ingotSilver"));
+			IngotSteel = (new ingotSteel(common.ingotSteelID).setUnlocalizedName("ingotSteel"));
+			IngotTin = (new ingotTin(common.ingotTinID).setUnlocalizedName("ingotTin"));
 			
 			// @Register Ingot Items
-			GameRegistry.registerItem(IngotAluminium, "Aluminium Ingot");
-			GameRegistry.registerItem(IngotCopper, "Copper Ingot");
-			GameRegistry.registerItem(IngotPlatinum, "Platinum Ingot");
-			GameRegistry.registerItem(IngotSilver, "Silver Ingot");
-			GameRegistry.registerItem(IngotSteel, "Steel Ingot");
-			GameRegistry.registerItem(IngotTin, "Tin Ingot");
+			GameRegistry.registerItem(IngotAluminium, "ingotAluminium");
+			GameRegistry.registerItem(IngotCopper, "ingotCopper");
+			GameRegistry.registerItem(IngotPlatinum, "ingotPlatinum");
+			GameRegistry.registerItem(IngotSilver, "ingotSilver");
+			GameRegistry.registerItem(IngotSteel, "ingotSteel");
+			GameRegistry.registerItem(IngotTin, "ingotTin");
 		}
 		
 		public static void addNames() {

@@ -30,19 +30,19 @@ public class loaderOre extends loaderIngot {
 	public static void addBlocks(ConfigurationHandler common) {
 		
 				// @Add Block Ores
-				OreAluminium = (new oreAluminium(common.oreAluminiumID));
-				OreCopper = (new oreCopper(common.oreCopperID));
-				OrePlatinum = (new orePlatinum(common.orePlatinumID));
-				OreSilver = (new oreSilver(common.oreSilverID));
-				OreTin = (new oreTin(common.oreTinID));
+				OreAluminium = (new oreAluminium(common.oreAluminiumID)).setUnlocalizedName("oreAluminium");
+				OreCopper = (new oreCopper(common.oreCopperID)).setUnlocalizedName("oreCopper");
+				OrePlatinum = (new orePlatinum(common.orePlatinumID)).setUnlocalizedName("orePlatinum");
+				OreSilver = (new oreSilver(common.oreSilverID)).setUnlocalizedName("oreSilver");
+				OreTin = (new oreTin(common.oreTinID)).setUnlocalizedName("oreTin");
 				BlockFosil = (new blockFosil(common.blockFosilID, Material.iron));
 				
 				// @Register Ores
-				GameRegistry.registerBlock(OreAluminium, "AluminiumOre");
-				GameRegistry.registerBlock(OreCopper, "CopperOre");
-				GameRegistry.registerBlock(OrePlatinum, "PlatinumOre");
-				GameRegistry.registerBlock(OreSilver, "SilverOre");
-				GameRegistry.registerBlock(OreTin, "TinOre");
+				GameRegistry.registerBlock(OreAluminium, "oreAluminium");
+				GameRegistry.registerBlock(OreCopper, "oreCopper");
+				GameRegistry.registerBlock(OrePlatinum, "orePlatinum");
+				GameRegistry.registerBlock(OreSilver, "oreSilver");
+				GameRegistry.registerBlock(OreTin, "oreTin");
 				
 				// @BlockHarvest
 				MinecraftForge.setBlockHarvestLevel(OreAluminium, "Pickaxe", 2);

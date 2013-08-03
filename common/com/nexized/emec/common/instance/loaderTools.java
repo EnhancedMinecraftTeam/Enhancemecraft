@@ -49,46 +49,46 @@ public class loaderTools extends loaderIngot {
 		
 		public static void addItems(ConfigurationHandler common) {
 			// @Add Tools Aluminum
-			AxeAluminium = (new axeAluminium(common.axeAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Axe"));
-			HoeAluminium = (new hoeAluminium(common.hoeAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Hoe"));
-			PickAluminium = (new pickAluminium(common.pickAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Pickaxe"));
-			ShovelAluminium = (new shovelAluminium(common.shovelAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Shovel"));
-			SwordAluminium = (new swordAluminium(common.swordAluminiumID, ALUMINIUM).setUnlocalizedName("Aluminium Sword"));
+			AxeAluminium = (new axeAluminium(common.axeAluminiumID, ALUMINIUM).setUnlocalizedName("axeAluminium"));
+			HoeAluminium = (new hoeAluminium(common.hoeAluminiumID, ALUMINIUM).setUnlocalizedName("hoeAluminium"));
+			PickAluminium = (new pickAluminium(common.pickAluminiumID, ALUMINIUM).setUnlocalizedName("pickAluminium"));
+			ShovelAluminium = (new shovelAluminium(common.shovelAluminiumID, ALUMINIUM).setUnlocalizedName("shovelAluminium"));
+			SwordAluminium = (new swordAluminium(common.swordAluminiumID, ALUMINIUM).setUnlocalizedName("swordAluminium"));
 			
 			// @Add Tools Copper
-			AxeCopper = (new axeCopper(common.axeCopperID, COPPER).setUnlocalizedName("Copper Axe"));
-			HoeCopper = (new hoeCopper(common.hoeCopperID, COPPER).setUnlocalizedName("Copper Hoe"));
-			PickCopper = (new pickCopper(common.pickCopperID, COPPER).setUnlocalizedName("Copper Pickaxe"));
-			ShovelCopper = (new shovelCopper(common.shovelCopperID, COPPER).setUnlocalizedName("Copper Shovel"));
-			SwordCopper = (new swordCopper(common.swordCopperID, COPPER).setUnlocalizedName("Copper Sword"));
+			AxeCopper = (new axeCopper(common.axeCopperID, COPPER).setUnlocalizedName("axeCopper"));
+			HoeCopper = (new hoeCopper(common.hoeCopperID, COPPER).setUnlocalizedName("hoeCopper"));
+			PickCopper = (new pickCopper(common.pickCopperID, COPPER).setUnlocalizedName("pickCopper"));
+			ShovelCopper = (new shovelCopper(common.shovelCopperID, COPPER).setUnlocalizedName("shovelCopper"));
+			SwordCopper = (new swordCopper(common.swordCopperID, COPPER).setUnlocalizedName("swordCopper"));
 			
 			// @Add Tools Platinum
-			AxePlatinum = (new axePlatinum(common.axePlatinumID, PLATINUM).setUnlocalizedName("Platinum Axe"));
-			HoePlatinum = (new hoePlatinum(common.hoePlatinumID, PLATINUM).setUnlocalizedName("Platinum Hoe"));
-			PickPlatinum = (new pickPlatinum(common.pickPlatinumID, PLATINUM).setUnlocalizedName("Platinum Pickaxe"));
-			ShovelPlatinum = (new shovelPlatinum(common.shovelPlatinumID, PLATINUM).setUnlocalizedName("Platinum Shovel"));
-			SwordPlatinum = (new swordPlatinum(common.swordPlatinumID, PLATINUM).setUnlocalizedName("Platinum Sword"));
+			AxePlatinum = (new axePlatinum(common.axePlatinumID, PLATINUM).setUnlocalizedName("axePlatinum"));
+			HoePlatinum = (new hoePlatinum(common.hoePlatinumID, PLATINUM).setUnlocalizedName("hoePlatinum"));
+			PickPlatinum = (new pickPlatinum(common.pickPlatinumID, PLATINUM).setUnlocalizedName("pickPlatinum"));
+			ShovelPlatinum = (new shovelPlatinum(common.shovelPlatinumID, PLATINUM).setUnlocalizedName("shovelPlatinum"));
+			SwordPlatinum = (new swordPlatinum(common.swordPlatinumID, PLATINUM).setUnlocalizedName("swordPlatinum"));
 			
 			// @Add Tools Silver
-			AxeSilver = (new axeSilver(common.axeSilverID, SILVER).setUnlocalizedName("Silver Axe"));
-			HoeSilver = (new hoeSilver(common.hoeSilverID, SILVER).setUnlocalizedName("Silver Hoe"));
-			PickSilver = (new pickSilver(common.pickSilverID, SILVER).setUnlocalizedName("Silver Pickaxe"));
-			ShovelSilver = (new shovelSilver(common.shovelSilverID, SILVER).setUnlocalizedName("Silver Shovel"));
-			SwordSilver = (new swordSilver(common.swordSilverID, SILVER).setUnlocalizedName("Silver Sword"));
+			AxeSilver = (new axeSilver(common.axeSilverID, SILVER).setUnlocalizedName("axeSilver"));
+			HoeSilver = (new hoeSilver(common.hoeSilverID, SILVER).setUnlocalizedName("hoeSilver"));
+			PickSilver = (new pickSilver(common.pickSilverID, SILVER).setUnlocalizedName("pickSilver"));
+			ShovelSilver = (new shovelSilver(common.shovelSilverID, SILVER).setUnlocalizedName("shovelSilver"));
+			SwordSilver = (new swordSilver(common.swordSilverID, SILVER).setUnlocalizedName("swordSilver"));
 			
 			// @Add Tools Steel
-			AxeSteel = (new axeSteel(common.axeSteelID, STEEL).setUnlocalizedName("Steel Axe"));
-			HoeSteel = (new hoeSteel(common.hoeSteelID, STEEL).setUnlocalizedName("Steel Hoe"));
-			PickSteel = (new pickSteel(common.pickSteelID, STEEL).setUnlocalizedName("Steel Pickaxe"));
-			ShovelSteel = (new shovelSteel(common.shovelSteelID, STEEL).setUnlocalizedName("Steel Shovel"));
-			SwordSteel = (new swordSteel(common.swordSteelID, STEEL).setUnlocalizedName("Steel Sword"));
+			AxeSteel = (new axeSteel(common.axeSteelID, STEEL).setUnlocalizedName("axeSteel"));
+			HoeSteel = (new hoeSteel(common.hoeSteelID, STEEL).setUnlocalizedName("hoeSteel"));
+			PickSteel = (new pickSteel(common.pickSteelID, STEEL).setUnlocalizedName("pickSteel"));
+			ShovelSteel = (new shovelSteel(common.shovelSteelID, STEEL).setUnlocalizedName("shovelSteel"));
+			SwordSteel = (new swordSteel(common.swordSteelID, STEEL).setUnlocalizedName("swordSteel"));
 			
 			// @Add Tools Tin
-			AxeTin = (new axeTin(common.axeTinID, TIN).setUnlocalizedName("Tin Axe"));
-			HoeTin = (new hoeTin(common.hoeTinID, TIN).setUnlocalizedName("Tin Hoe"));
-			PickTin = (new pickTin(common.pickTinID, TIN).setUnlocalizedName("Tin Pickaxe"));
-			ShovelTin = (new shovelTin(common.shovelTinID, TIN).setUnlocalizedName("Tin Shovel"));
-			SwordTin = (new swordTin(common.swordTinID, TIN).setUnlocalizedName("Tin Sword"));
+			AxeTin = (new axeTin(common.axeTinID, TIN).setUnlocalizedName("axeTin"));
+			HoeTin = (new hoeTin(common.hoeTinID, TIN).setUnlocalizedName("hoeTin"));
+			PickTin = (new pickTin(common.pickTinID, TIN).setUnlocalizedName("pickTin"));
+			ShovelTin = (new shovelTin(common.shovelTinID, TIN).setUnlocalizedName("shovelTin"));
+			SwordTin = (new swordTin(common.swordTinID, TIN).setUnlocalizedName("swordTin"));
 		}
 	
 		public static void addNames() {
