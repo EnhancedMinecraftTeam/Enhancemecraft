@@ -15,6 +15,7 @@ public class configurationHandler {
 	public int oreSilverID = 503;
 	public int oreTinID = 504;
 	public int oreFossilID = 511;
+	public int oreExpID = 512;
 	
 	public int blockAluminiumID = 505;
 	public int blockCopperID = 506;
@@ -84,6 +85,7 @@ public class configurationHandler {
 		this.oreSilverID = commonConfiguration.getBlock("Silver Ore", oreSilverID).getInt();
 		this.oreTinID = commonConfiguration.getBlock("Tin Ore", oreTinID).getInt();
 		this.oreFossilID = commonConfiguration.getBlock("Fosil Ore", oreFossilID).getInt();
+		this.oreExpID = commonConfiguration.getBlock("Experience Ore", oreExpID).getInt();
 		
 		// @Ingot Block
 		this.blockAluminiumID = commonConfiguration.getBlock("Aluminium Block", blockAluminiumID).getInt();
@@ -142,13 +144,17 @@ public class configurationHandler {
 		this.swordTinID = commonConfiguration.getBlock("Tin Sword", swordTinID).getInt();
 		
 		// @Armor Helmet
-		
+		this.helmetCopperID = commonConfiguration.getBlock("Copper Helmet", helmetCopperID).getInt();
+		this.helmetSteelID = commonConfiguration.getBlock("Steel Helmet", helmetSteelID).getInt();
 		// @Armor Chestplate
-		
+		this.chestplateCopperID = commonConfiguration.getBlock("Copper Chestplate", chestplateCopperID).getInt();
+		this.chestplateSteelID = commonConfiguration.getBlock("Steel Chestplate", chestplateSteelID).getInt();
 		// @Armor Leggins
-		
+		this.legginsCopperID = commonConfiguration.getBlock("Copper Leggings", legginsCopperID).getInt();
+		this.legginsSteelID = commonConfiguration.getBlock("Steel Leggings", legginsSteelID).getInt();
 		// @Armor Boots
-		
+		this.bootsCopperID = commonConfiguration.getBlock("Copper Boots", bootsCopperID).getInt();
+		this.bootsSteelID = commonConfiguration.getBlock("Steel Boots", bootsSteelID).getInt();
 		// @Save
 		commonConfiguration.save();
 	}

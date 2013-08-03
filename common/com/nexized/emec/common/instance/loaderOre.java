@@ -19,6 +19,7 @@ public class loaderOre extends loaderIngot {
 	
 		// @Additional Blocks
 		public static Block OreFossil;
+		public static Block OreExp;
 		
 	public static void addBlocks(configurationHandler common) {
 		
@@ -29,6 +30,7 @@ public class loaderOre extends loaderIngot {
 				OreSilver = (new oreSilver(common.oreSilverID)).setUnlocalizedName("oreSilver");
 				OreTin = (new oreTin(common.oreTinID)).setUnlocalizedName("oreTin");
 				OreFossil = (new oreFossil(common.oreFossilID)).setUnlocalizedName("oreFossil");
+				OreExp = (new oreExperience(common.oreExpID).setUnlocalizedName("oreExp"));
 				
 				// @Register Ores
 				GameRegistry.registerBlock(OreAluminium, "oreAluminium");
@@ -37,6 +39,7 @@ public class loaderOre extends loaderIngot {
 				GameRegistry.registerBlock(OreSilver, "oreSilver");
 				GameRegistry.registerBlock(OreTin, "oreTin");
 				GameRegistry.registerBlock(OreFossil, "oreFossil");
+				GameRegistry.registerBlock(OreExp, "oreFreeExp");
 				
 				// @BlockHarvest
 				MinecraftForge.setBlockHarvestLevel(OreAluminium, "Pickaxe", 2);
@@ -45,6 +48,7 @@ public class loaderOre extends loaderIngot {
 				MinecraftForge.setBlockHarvestLevel(OreSilver, "Pickaxe", 2);
 				MinecraftForge.setBlockHarvestLevel(OreTin, "Pickaxe", 2);
 				MinecraftForge.setBlockHarvestLevel(OreFossil, "Pickaxe", 3);
+				MinecraftForge.setBlockHarvestLevel(OreExp, "Pickaxe", 2);
 	}
 	
 	public static void addNames() {
@@ -55,6 +59,7 @@ public class loaderOre extends loaderIngot {
 				LanguageRegistry.addName(OreSilver, "Silver Ore");
 				LanguageRegistry.addName(OreTin, "Tin Ore");
 				LanguageRegistry.addName(OreFossil, "Fossil Ore");
+				LanguageRegistry.addName(OreExp, "Experience Ore");
 	}
 	
 	public static void addRecipes() {
@@ -64,7 +69,5 @@ public class loaderOre extends loaderIngot {
 		GameRegistry.addSmelting(OrePlatinum.blockID, new ItemStack(IngotPlatinum), 10.0F);
 		GameRegistry.addSmelting(OreSilver.blockID, new ItemStack(IngotSilver), 10.0F);
 		GameRegistry.addSmelting(OreTin.blockID, new ItemStack(IngotTin), 10.0F);
-		
 	}
-	
 }

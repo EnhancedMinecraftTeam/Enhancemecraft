@@ -6,7 +6,7 @@ public class modInfo {
 	// Predefined (@String) MODID
 	public static final String MODID = "EMEC";
 	// Predefined (@String) MODVERSION
-	public static final String MODVERSION = "0.1.3.008";
+	public static final String MODVERSION = "0.1.3.009";
 	
 	/*
 	 * Return (@String) MODNAME
