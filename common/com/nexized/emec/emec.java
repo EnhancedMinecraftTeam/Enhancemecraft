@@ -14,6 +14,7 @@ import com.nexized.emec.lib.*;
 import com.nexized.emec.world.emecWorldGenerator;
 import com.nexized.emec.common.*;
 import com.nexized.emec.common.instance.configurationHandler;
+import com.nexized.emec.common.instance.loaderArmor;
 import com.nexized.emec.common.instance.loaderIngot;
 import com.nexized.emec.common.instance.loaderOre;
 import com.nexized.emec.common.instance.loaderTools;
@@ -62,6 +63,9 @@ public class emec {
 		
 		loaderTools.addItems(commonConfiguration);
 		loaderTools.addNames(); loaderTools.addRecipes();
+		
+		loaderArmor.addArmor(commonConfiguration); loaderArmor.addNames();
+		loaderArmor.addRecipes();
 		
 		// @Add WorldGenerator
 		GameRegistry.registerWorldGenerator(new emecWorldGenerator());

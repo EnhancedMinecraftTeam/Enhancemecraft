@@ -97,9 +97,11 @@ public class loaderIngot extends loaderMaterial {
 			// GameRegistry.addRecipe(new ItemStack(BlockAluminium), new Object[] {"XXX", "XXX", "XXX", 'X', IngotAluminium});
 			// GameRegistry.addRecipe(new ItemStack(BlockCopper), new Object[] {"XXX", "XXX", "XXX", 'X', IngotCopper});
 			// GameRegistry.addRecipe(new ItemStack(BlockPlatinum), new Object[] {"XXX", "XXX", "XXX", 'X', IngotPlatinum});
-			GameRegistry.addRecipe(new ItemStack(BlockSilver), new Object[] {"XXX", "XXX", "XXX", 'X', IngotSilver});
+			GameRegistry.addRecipe(new ItemStack(BlockSilver, 1), new Object[] {"XXX", "XXX", "XXX", 'X', IngotSilver});
 			// GameRegistry.addRecipe(new ItemStack(BlockSteel), new Object[] {"XXX", "XXX", "XXX", 'X', IngotSteel});
 			// GameRegistry.addRecipe(new ItemStack(BlockTin), new Object[] {"XXX", "XXX", "XXX", 'X', IngotTin});
+			// @Add Reverse Recipes
+			GameRegistry.addRecipe(new ItemStack(IngotSilver, 9), new Object[] {"X", 'X', BlockSilver});
 		}
 	
 		

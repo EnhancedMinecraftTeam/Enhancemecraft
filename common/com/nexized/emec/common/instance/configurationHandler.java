@@ -61,6 +61,14 @@ public class configurationHandler {
 	public int swordSilverID = 3033;
 	public int swordSteelID = 3034;
 	public int swordTinID = 3035;
+	public int helmetCopperID = 3036;
+	public int helmetSteelID = 3040;
+	public int chestplateCopperID = 3037;
+	public int chestplateSteelID = 3041;
+	public int legginsCopperID = 3038;
+	public int legginsSteelID = 3042;
+	public int bootsCopperID = 3039;
+	public int bootsSteelID = 3043;
 	
 	// @Constructor
 	public configurationHandler(FMLPreInitializationEvent event) {
@@ -132,6 +140,14 @@ public class configurationHandler {
 		this.swordSilverID = commonConfiguration.getBlock("Silver Sword", swordSilverID).getInt();
 		this.swordSteelID = commonConfiguration.getBlock("Steel Sword", swordSteelID).getInt();
 		this.swordTinID = commonConfiguration.getBlock("Tin Sword", swordTinID).getInt();
+		
+		// @Armor Helmet
+		
+		// @Armor Chestplate
+		
+		// @Armor Leggins
+		
+		// @Armor Boots
 		
 		// @Save
 		commonConfiguration.save();
