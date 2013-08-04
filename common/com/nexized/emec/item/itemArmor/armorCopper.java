@@ -20,11 +20,12 @@ public class armorCopper extends ItemArmor {
 	
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 	{
-		if (itemID == loaderArmor.helmetCopper.itemID || itemID == loaderArmor.chestplateCopper.itemID) {
+		if (itemID == loaderArmor.helmetCopper.itemID || itemID == loaderArmor.chestplateCopper.itemID
+				|| itemID == loaderArmor.bootsCopper.itemID ) {
 			return modInfo.MODID + ":textures/armor/" + this.materialName + "_1.png";
 		}
 		
-		if (itemID == loaderArmor.legginsCopper.itemID || itemID == loaderArmor.bootsCopper.itemID) {
+		if (itemID == loaderArmor.legginsCopper.itemID ) {
 			return modInfo.MODID + ":textures/armor/" + this.materialName + "_2.png";
 		} 
 		

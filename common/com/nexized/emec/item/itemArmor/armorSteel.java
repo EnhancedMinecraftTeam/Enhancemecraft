@@ -20,11 +20,12 @@ public class armorSteel extends ItemArmor {
 	
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 	{
-		if (itemID == loaderArmor.helmetSteel.itemID || itemID == loaderArmor.chestplateSteel.itemID) {
+		if (itemID == loaderArmor.helmetSteel.itemID || itemID == loaderArmor.chestplateSteel.itemID
+				|| itemID == loaderArmor.bootsSteel.itemID) {
 			return modInfo.MODID + ":textures/armor/" + this.materialName + "_1.png";
 		}
 		
-		if (itemID == loaderArmor.legginsSteel.itemID || itemID == loaderArmor.bootsSteel.itemID) {
+		if (itemID == loaderArmor.legginsSteel.itemID) {
 			return modInfo.MODID + ":textures/armor/" + this.materialName + "_2.png";
 		} 
 		

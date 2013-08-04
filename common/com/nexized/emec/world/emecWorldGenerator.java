@@ -39,11 +39,11 @@ public class emecWorldGenerator implements IWorldGenerator {
 	
     private void generateSurface(World world, Random random, int x, int z)
     {
-    	this.addOreSpawn(loaderOre.OreFossil, world, random, x, z, 16, 16, 4 + random.nextInt(3), 2, 0, 30);
+    	this.addOreSpawn(loaderOre.OreFossil, world, random, x, z, 16, 16, 4 + random.nextInt(3), 3, 0, 30);
     	this.addOreSpawn(loaderOre.OreExp, world, random, x, z, 16, 16, 4 + random.nextInt(3), 10, 30, 60);
     	this.addOreSpawn(loaderOre.OreAluminium, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 0, 60);
     	this.addOreSpawn(loaderOre.OreCopper, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 0, 60);
-    	this.addOreSpawn(loaderOre.OrePlatinum, world, random, x, z, 16, 16, 4 + random.nextInt(3), 3, 0, 40);
+    	this.addOreSpawn(loaderOre.OrePlatinum, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 0, 40);
     	this.addOreSpawn(loaderOre.OreSilver, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 0, 60);
     	this.addOreSpawn(loaderOre.OreTin, world, random, x, z, 16, 16, 4 + random.nextInt(3), 8, 0, 60);
     }
