@@ -58,7 +58,7 @@ public class loaderOre extends loaderIngot {
 				LanguageRegistry.addName(OrePlatinum, "Platinum Ore");
 				LanguageRegistry.addName(OreSilver, "Silver Ore");
 				LanguageRegistry.addName(OreTin, "Tin Ore");
-				LanguageRegistry.addName(OreFossil, "Fossil Ore");
+				LanguageRegistry.addName(OreFossil, "Fossil Block");
 				LanguageRegistry.addName(OreExp, "Experience Ore");
 	}
 	

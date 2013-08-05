@@ -13,11 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import com.nexized.emec.lib.*;
 import com.nexized.emec.world.emecWorldGenerator;
 import com.nexized.emec.common.*;
-import com.nexized.emec.common.instance.configurationHandler;
-import com.nexized.emec.common.instance.loaderArmor;
-import com.nexized.emec.common.instance.loaderIngot;
-import com.nexized.emec.common.instance.loaderOre;
-import com.nexized.emec.common.instance.loaderTools;
+import com.nexized.emec.common.instance.*;
 
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @Mod(modid = modInfo.MODID, name = modInfo.MODNAME, version = modInfo.MODVERSION)
@@ -58,14 +54,20 @@ public class emec {
 		loaderIngot.addBlocks(commonConfiguration); loaderIngot.addItems(commonConfiguration);
 		loaderIngot.addNames(); loaderIngot.addRecipes();
 		
+		// @Add Blocks		
 		loaderOre.addBlocks(commonConfiguration); 
 		loaderOre.addNames(); loaderOre.addRecipes();
 		
+		// @Add Items
 		loaderTools.addItems(commonConfiguration);
 		loaderTools.addNames(); loaderTools.addRecipes();
 		
+		// @Add Armor		
 		loaderArmor.addArmor(commonConfiguration); loaderArmor.addNames();
 		loaderArmor.addRecipes();
+		
+		// @Add CreativeTab
+		loaderCreativeTab.addTab();
 		
 		// @Add WorldGenerator
 		GameRegistry.registerWorldGenerator(new emecWorldGenerator());
