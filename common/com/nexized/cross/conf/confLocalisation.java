@@ -88,6 +88,14 @@ public class confLocalisation {
 		public static String bootsSilverName;
 		public static String bootsSteelName;
 		public static String bootsTinName;
+		
+		// @itemIngot
+		public static String ingotAluminumName;
+		public static String ingotCopperName;
+		public static String ingotPlatinumName;
+		public static String ingotSilverName;
+		public static String ingotSteelName;
+		public static String ingotTinName;
 	
 		public static void runTask(FMLPreInitializationEvent event) {
 			
@@ -173,6 +181,15 @@ public class confLocalisation {
 			bootsSilverName = conf.get("itemName", "bootsSilver", "Silver Boots").getString();
 			bootsSteelName = conf.get("itemName", "bootsSteel", "Steel Boots").getString();
 			bootsTinName = conf.get("itemName", "bootsTin", "Tin Boots").getString();
+			
+			// @itemIngot
+			ingotAluminumName = conf.get("itemName", "ingotAluminum", "Aluminum Ingot").getString();
+			ingotCopperName = conf.get("itemName", "ingotCopper", "Copper Ingot").getString();
+			ingotPlatinumName = conf.get("itemName", "ingotPlatinum", "Platinum Ingot").getString();
+			ingotSilverName = conf.get("itemName", "ingotSilver", "Silver Ingot").getString();
+			ingotSteelName = conf.get("itemName", "ingotSteel", "Steel Ingot").getString();
+			ingotTinName = conf.get("itemName", "ingotTin", "Tin Ingot").getString();
+			
 			
 			// Save Configuration
 			conf.save();

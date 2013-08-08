@@ -89,6 +89,15 @@ public class confEntity {
 	public static int bootsSteelID = 3084;
 	public static int bootsTinID = 3085;
 
+	// @itemIngot
+	public static int ingotAluminumID = 3090;
+	public static int ingotCopperID = 3091;
+	public static int ingotPlatinumID = 3092;
+	public static int ingotSilverID = 3093;
+	public static int ingotSteelID = 3094;
+	public static int ingotTinID = 3095;
+	
+	
 	public static void runTask(FMLPreInitializationEvent event) {
 		
 		// @Configuration Initialization
@@ -179,6 +188,14 @@ public class confEntity {
 		bootsSilverID = conf.getItem("armorBoots", "Silver Boots", bootsSilverID).getInt();
 		bootsSteelID = conf.getItem("armorBoots", "Steel Boots", bootsSteelID).getInt();
 		bootsTinID = conf.getItem("armorBoots", "Tin Boots", bootsTinID).getInt();
+		
+		// @itemIngot
+		ingotAluminumID = conf.getItem("itemIngot", "Aluminum Ingot", ingotAluminumID).getInt();
+		ingotCopperID = conf.getItem("itemIngot", "Copper Ingot", ingotCopperID).getInt();
+		ingotPlatinumID = conf.getItem("itemIngot", "Platinum Ingot", ingotPlatinumID).getInt();
+		ingotSilverID = conf.getItem("itemIngot", "Silver Ingot", ingotSilverID).getInt();
+		ingotSteelID = conf.getItem("itemIngot", "Steel Ingot", ingotSteelID).getInt();
+		ingotTinID = conf.getItem("itemIngot", "Tin Ingot", ingotTinID).getInt();
 		
 		// Save Configuration
 		conf.save();
