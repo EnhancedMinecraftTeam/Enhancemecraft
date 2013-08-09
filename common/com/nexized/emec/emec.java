@@ -37,12 +37,16 @@ public class emec {
     public static int armorSteelRenderer;
     public static int armorTinRenderer;
 	
+    // @Language Configuration
+    confEntity idm;
+    confLocalisation local;
+    
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 		// @Configuration
-		confEntity.runTask(event);
+		idm.runTask(event);
 		// @Localisation
-		confLocalisation.runTask(event);		
+		local.runTask(event);		
 	}
 	
 	@EventHandler
@@ -50,13 +54,13 @@ public class emec {
 		// @Custom Tab
 		tabEnhanceMeCraft = new CreativeTabs("tabEnhanceMeCraft");
 		// @Add Blocks
-		blockInit.doWork();
+		blockInit.doWork(this.idm, this.local);
 		// @Add Items
-		itemInit.doWork();
+		itemInit.doWork(this.idm, this.local);
 		// @Add Tools
-		toolInit.doWork();
+		toolInit.doWork(this.idm, this.local);
 		// @Add Armor
-		armorInit.doWork();
+		armorInit.doWork(this.idm, this.local);
 		// @Add Recipes
 		recipesInit.addRecipes();
 		// @Add WorldGenerator

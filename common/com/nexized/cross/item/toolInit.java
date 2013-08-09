@@ -45,51 +45,51 @@ public class toolInit {
 	public static Item swordSteel;
 	public static Item swordTin;
 	
-	public static void doWork() {
+	public static void doWork(confEntity idm, confLocalisation local) {
 		// @Add Tools
-		addTools();
+		addTools(idm);
 		// @Add Names
-		addNames();
+		addNames(local);
 		// @SetHarvestLevel
 		setHarvestLevel();
 	}
 	
-	public static void addTools() {
+	public static void addTools(confEntity idm) {
 		// @Add toolAxe
-		axeAluminum = new toolAxe(confEntity.axeAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("axeAluminum");
-		axeCopper = new toolAxe(confEntity.axeCopperID, crossMaterials.materialCopper).setUnlocalizedName("axeCopper");
-		axePlatinum = new toolAxe(confEntity.axePlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("axePlatinum");
-		axeSilver = new toolAxe(confEntity.axeSilverID, crossMaterials.materialSilver).setUnlocalizedName("axeSilver");
-		axeSteel = new toolAxe(confEntity.axeSteelID, crossMaterials.materialSteel).setUnlocalizedName("axeSteel");
-		axeTin = new toolAxe(confEntity.axeTinID, crossMaterials.materialTin).setUnlocalizedName("axeTin");
+		axeAluminum = new toolAxe(idm.axeAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("axeAluminum");
+		axeCopper = new toolAxe(idm.axeCopperID, crossMaterials.materialCopper).setUnlocalizedName("axeCopper");
+		axePlatinum = new toolAxe(idm.axePlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("axePlatinum");
+		axeSilver = new toolAxe(idm.axeSilverID, crossMaterials.materialSilver).setUnlocalizedName("axeSilver");
+		axeSteel = new toolAxe(idm.axeSteelID, crossMaterials.materialSteel).setUnlocalizedName("axeSteel");
+		axeTin = new toolAxe(idm.axeTinID, crossMaterials.materialTin).setUnlocalizedName("axeTin");
 		// @Add toolHoe
-		hoeAluminum = new toolHoe(confEntity.hoeAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("hoeAluminum");
-		hoeCopper = new toolHoe(confEntity.hoeCopperID, crossMaterials.materialCopper).setUnlocalizedName("hoeCopper");
-		hoePlatinum = new toolHoe(confEntity.hoePlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("hoePlatinum");
-		hoeSilver = new toolHoe(confEntity.hoeSilverID, crossMaterials.materialSilver).setUnlocalizedName("hoeSilver");
-		hoeSteel = new toolHoe(confEntity.hoeSteelID, crossMaterials.materialSteel).setUnlocalizedName("hoeSteel");
-		hoeTin = new toolHoe(confEntity.hoeTinID, crossMaterials.materialTin).setUnlocalizedName("hoeTin");
+		hoeAluminum = new toolHoe(idm.hoeAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("hoeAluminum");
+		hoeCopper = new toolHoe(idm.hoeCopperID, crossMaterials.materialCopper).setUnlocalizedName("hoeCopper");
+		hoePlatinum = new toolHoe(idm.hoePlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("hoePlatinum");
+		hoeSilver = new toolHoe(idm.hoeSilverID, crossMaterials.materialSilver).setUnlocalizedName("hoeSilver");
+		hoeSteel = new toolHoe(idm.hoeSteelID, crossMaterials.materialSteel).setUnlocalizedName("hoeSteel");
+		hoeTin = new toolHoe(idm.hoeTinID, crossMaterials.materialTin).setUnlocalizedName("hoeTin");
 		// @Add toolPick
-		pickAluminum = new toolPick(confEntity.pickAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("pickAluminum");
-		pickCopper = new toolPick(confEntity.pickCopperID, crossMaterials.materialCopper).setUnlocalizedName("pickCopper");
-		pickPlatinum = new toolPick(confEntity.pickPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("pickPlatinum");
-		pickSilver = new toolPick(confEntity.pickSilverID, crossMaterials.materialSilver).setUnlocalizedName("pickSilver");
-		pickSteel = new toolPick(confEntity.pickSteelID, crossMaterials.materialSteel).setUnlocalizedName("pickSteel");
-		pickTin = new toolPick(confEntity.pickTinID, crossMaterials.materialTin).setUnlocalizedName("pickTin");
+		pickAluminum = new toolPick(idm.pickAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("pickAluminum");
+		pickCopper = new toolPick(idm.pickCopperID, crossMaterials.materialCopper).setUnlocalizedName("pickCopper");
+		pickPlatinum = new toolPick(idm.pickPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("pickPlatinum");
+		pickSilver = new toolPick(idm.pickSilverID, crossMaterials.materialSilver).setUnlocalizedName("pickSilver");
+		pickSteel = new toolPick(idm.pickSteelID, crossMaterials.materialSteel).setUnlocalizedName("pickSteel");
+		pickTin = new toolPick(idm.pickTinID, crossMaterials.materialTin).setUnlocalizedName("pickTin");
 		// @Add toolPick
-		shovelAluminum = new toolShovel(confEntity.shovelAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("shovelAluminum");
-		shovelCopper = new toolShovel(confEntity.shovelCopperID, crossMaterials.materialCopper).setUnlocalizedName("shovelCopper");
-		shovelPlatinum = new toolShovel(confEntity.shovelPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("shovelPlatinum");
-		shovelSilver = new toolShovel(confEntity.shovelSilverID, crossMaterials.materialSilver).setUnlocalizedName("shovelSilver");
-		shovelSteel = new toolShovel(confEntity.shovelSteelID, crossMaterials.materialSteel).setUnlocalizedName("shovelSteel");
-		shovelTin = new toolShovel(confEntity.shovelTinID, crossMaterials.materialTin).setUnlocalizedName("shovelTin");
+		shovelAluminum = new toolShovel(idm.shovelAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("shovelAluminum");
+		shovelCopper = new toolShovel(idm.shovelCopperID, crossMaterials.materialCopper).setUnlocalizedName("shovelCopper");
+		shovelPlatinum = new toolShovel(idm.shovelPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("shovelPlatinum");
+		shovelSilver = new toolShovel(idm.shovelSilverID, crossMaterials.materialSilver).setUnlocalizedName("shovelSilver");
+		shovelSteel = new toolShovel(idm.shovelSteelID, crossMaterials.materialSteel).setUnlocalizedName("shovelSteel");
+		shovelTin = new toolShovel(idm.shovelTinID, crossMaterials.materialTin).setUnlocalizedName("shovelTin");
 		// @Add toolPick
-		swordAluminum = new toolSword(confEntity.swordAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("swordAluminum");
-		swordCopper = new toolSword(confEntity.swordCopperID, crossMaterials.materialCopper).setUnlocalizedName("swordCopper");
-		swordPlatinum = new toolSword(confEntity.swordPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("swordPlatinum");
-		swordSilver = new toolSword(confEntity.swordSilverID, crossMaterials.materialSilver).setUnlocalizedName("swordSilver");
-		swordSteel = new toolSword(confEntity.swordSteelID, crossMaterials.materialSteel).setUnlocalizedName("swordSteel");
-		swordTin = new toolSword(confEntity.swordTinID, crossMaterials.materialTin).setUnlocalizedName("swordTin");
+		swordAluminum = new toolSword(idm.swordAluminumID, crossMaterials.materialAluminum).setUnlocalizedName("swordAluminum");
+		swordCopper = new toolSword(idm.swordCopperID, crossMaterials.materialCopper).setUnlocalizedName("swordCopper");
+		swordPlatinum = new toolSword(idm.swordPlatinumID, crossMaterials.materialPlatinum).setUnlocalizedName("swordPlatinum");
+		swordSilver = new toolSword(idm.swordSilverID, crossMaterials.materialSilver).setUnlocalizedName("swordSilver");
+		swordSteel = new toolSword(idm.swordSteelID, crossMaterials.materialSteel).setUnlocalizedName("swordSteel");
+		swordTin = new toolSword(idm.swordTinID, crossMaterials.materialTin).setUnlocalizedName("swordTin");
 	}
 	
 	public static void setHarvestLevel() {
@@ -122,41 +122,41 @@ public class toolInit {
 		MinecraftForge.setToolClass(hoeTin, "hoe", 2);
 	}
 	
-	public static void addNames() {
+	public static void addNames(confLocalisation local) {
 		// @Add Tool Names
-		LanguageRegistry.addName(axeAluminum, confLocalisation.axeAluminumName);
-		LanguageRegistry.addName(axeCopper, confLocalisation.axeCopperName);
-		LanguageRegistry.addName(axePlatinum, confLocalisation.axePlatinumName);
-		LanguageRegistry.addName(axeSilver, confLocalisation.axeSilverName);
-		LanguageRegistry.addName(axeSteel, confLocalisation.axeSteelName);
-		LanguageRegistry.addName(axeTin, confLocalisation.axeTinName);
+		LanguageRegistry.addName(axeAluminum, local.axeAluminumName);
+		LanguageRegistry.addName(axeCopper, local.axeCopperName);
+		LanguageRegistry.addName(axePlatinum, local.axePlatinumName);
+		LanguageRegistry.addName(axeSilver, local.axeSilverName);
+		LanguageRegistry.addName(axeSteel, local.axeSteelName);
+		LanguageRegistry.addName(axeTin, local.axeTinName);
 		
-		LanguageRegistry.addName(hoeAluminum, confLocalisation.hoeAluminumName);
-		LanguageRegistry.addName(hoeCopper, confLocalisation.hoeCopperName);
-		LanguageRegistry.addName(hoePlatinum, confLocalisation.hoePlatinumName);
-		LanguageRegistry.addName(hoeSilver, confLocalisation.hoeSilverName);
-		LanguageRegistry.addName(hoeSteel, confLocalisation.hoeSteelName);
-		LanguageRegistry.addName(hoeTin, confLocalisation.hoeTinName);
+		LanguageRegistry.addName(hoeAluminum, local.hoeAluminumName);
+		LanguageRegistry.addName(hoeCopper, local.hoeCopperName);
+		LanguageRegistry.addName(hoePlatinum, local.hoePlatinumName);
+		LanguageRegistry.addName(hoeSilver, local.hoeSilverName);
+		LanguageRegistry.addName(hoeSteel, local.hoeSteelName);
+		LanguageRegistry.addName(hoeTin, local.hoeTinName);
 		
-		LanguageRegistry.addName(shovelAluminum, confLocalisation.shovelAluminumName);
-		LanguageRegistry.addName(shovelCopper, confLocalisation.shovelCopperName);
-		LanguageRegistry.addName(shovelPlatinum, confLocalisation.shovelPlatinumName);
-		LanguageRegistry.addName(shovelSilver, confLocalisation.shovelSilverName);
-		LanguageRegistry.addName(shovelSteel, confLocalisation.shovelSteelName);
-		LanguageRegistry.addName(shovelTin, confLocalisation.shovelTinName);
+		LanguageRegistry.addName(shovelAluminum, local.shovelAluminumName);
+		LanguageRegistry.addName(shovelCopper, local.shovelCopperName);
+		LanguageRegistry.addName(shovelPlatinum, local.shovelPlatinumName);
+		LanguageRegistry.addName(shovelSilver, local.shovelSilverName);
+		LanguageRegistry.addName(shovelSteel, local.shovelSteelName);
+		LanguageRegistry.addName(shovelTin, local.shovelTinName);
 		
-		LanguageRegistry.addName(pickAluminum, confLocalisation.pickAluminumName);
-		LanguageRegistry.addName(pickCopper, confLocalisation.pickCopperName);
-		LanguageRegistry.addName(pickPlatinum, confLocalisation.pickPlatinumName);
-		LanguageRegistry.addName(pickSilver, confLocalisation.pickSilverName);
-		LanguageRegistry.addName(pickSteel, confLocalisation.pickSteelName);
-		LanguageRegistry.addName(pickTin, confLocalisation.pickTinName);
+		LanguageRegistry.addName(pickAluminum, local.pickAluminumName);
+		LanguageRegistry.addName(pickCopper, local.pickCopperName);
+		LanguageRegistry.addName(pickPlatinum, local.pickPlatinumName);
+		LanguageRegistry.addName(pickSilver, local.pickSilverName);
+		LanguageRegistry.addName(pickSteel, local.pickSteelName);
+		LanguageRegistry.addName(pickTin, local.pickTinName);
 		
-		LanguageRegistry.addName(swordAluminum, confLocalisation.swordAluminumName);
-		LanguageRegistry.addName(swordCopper, confLocalisation.swordCopperName);
-		LanguageRegistry.addName(swordPlatinum, confLocalisation.swordPlatinumName);
-		LanguageRegistry.addName(swordSilver, confLocalisation.swordSilverName);
-		LanguageRegistry.addName(swordSteel, confLocalisation.swordSteelName);
-		LanguageRegistry.addName(swordTin, confLocalisation.swordTinName);
+		LanguageRegistry.addName(swordAluminum, local.swordAluminumName);
+		LanguageRegistry.addName(swordCopper, local.swordCopperName);
+		LanguageRegistry.addName(swordPlatinum, local.swordPlatinumName);
+		LanguageRegistry.addName(swordSilver, local.swordSilverName);
+		LanguageRegistry.addName(swordSteel, local.swordSteelName);
+		LanguageRegistry.addName(swordTin, local.swordTinName);
 	}
 }

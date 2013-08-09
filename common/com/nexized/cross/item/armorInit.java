@@ -39,74 +39,74 @@ public class armorInit {
 	public static Item legsTin;
 	public static Item bootsTin;
 	
-	public static void doWork() {
+	public static void doWork(confEntity idm, confLocalisation local) {
 		// @Add Armors
-		addArmor();
+		addArmor(idm);
 		// @Add Names
-		addNames();
+		addNames(local);
 	}
 	
-	public static void addArmor() {
-		helmAluminum = new crossArmor(confEntity.helmAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 0, "aluminum").setUnlocalizedName("helmAluminum");
-		chestAluminum = new crossArmor(confEntity.chestAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 1, "aluminum").setUnlocalizedName("chestAluminum");
-		legsAluminum = new crossArmor(confEntity.legsAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 2, "aluminum").setUnlocalizedName("legsAluminum");
-		bootsAluminum = new crossArmor(confEntity.bootsAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 3, "aluminum").setUnlocalizedName("bootsAluminum");
+	public static void addArmor(confEntity idm) {
+		helmAluminum = new crossArmor(idm.helmAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 0, "aluminum").setUnlocalizedName("helmAluminum");
+		chestAluminum = new crossArmor(idm.chestAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 1, "aluminum").setUnlocalizedName("chestAluminum");
+		legsAluminum = new crossArmor(idm.legsAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 2, "aluminum").setUnlocalizedName("legsAluminum");
+		bootsAluminum = new crossArmor(idm.bootsAluminumID, crossMaterials.armorAluminum, emec.armorAluminumRenderer, 3, "aluminum").setUnlocalizedName("bootsAluminum");
 		
-		helmCopper = new crossArmor(confEntity.helmCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 0, "copper").setUnlocalizedName("helmCopper");
-		chestCopper = new crossArmor(confEntity.chestCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 1, "copper").setUnlocalizedName("chestCopper");
-		legsCopper = new crossArmor(confEntity.legsCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 2, "copper").setUnlocalizedName("legsCopper");
-		bootsCopper = new crossArmor(confEntity.bootsCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 3, "copper").setUnlocalizedName("bootsCopper");
+		helmCopper = new crossArmor(idm.helmCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 0, "copper").setUnlocalizedName("helmCopper");
+		chestCopper = new crossArmor(idm.chestCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 1, "copper").setUnlocalizedName("chestCopper");
+		legsCopper = new crossArmor(idm.legsCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 2, "copper").setUnlocalizedName("legsCopper");
+		bootsCopper = new crossArmor(idm.bootsCopperID, crossMaterials.armorCopper, emec.armorCopperRenderer, 3, "copper").setUnlocalizedName("bootsCopper");
 		
-		helmPlatinum = new crossArmor(confEntity.helmPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 0, "platinum").setUnlocalizedName("helmPlatinum");
-		chestPlatinum = new crossArmor(confEntity.chestPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 1, "platinum").setUnlocalizedName("chestPlatinum");
-		legsPlatinum = new crossArmor(confEntity.legsPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 2, "platinum").setUnlocalizedName("legsPlatinum");
-		bootsPlatinum = new crossArmor(confEntity.bootsPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 3, "platinum").setUnlocalizedName("bootsPlatinum");
+		helmPlatinum = new crossArmor(idm.helmPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 0, "platinum").setUnlocalizedName("helmPlatinum");
+		chestPlatinum = new crossArmor(idm.chestPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 1, "platinum").setUnlocalizedName("chestPlatinum");
+		legsPlatinum = new crossArmor(idm.legsPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 2, "platinum").setUnlocalizedName("legsPlatinum");
+		bootsPlatinum = new crossArmor(idm.bootsPlatinumID, crossMaterials.armorPlatinum, emec.armorPlatinumRenderer, 3, "platinum").setUnlocalizedName("bootsPlatinum");
 		
-		helmSilver = new crossArmor(confEntity.helmSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 0, "silver").setUnlocalizedName("helmSilver");
-		chestSilver = new crossArmor(confEntity.chestSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 1, "silver").setUnlocalizedName("chestSilver");
-		legsSilver = new crossArmor(confEntity.legsSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 2, "silver").setUnlocalizedName("legsSilver");
-		bootsSilver = new crossArmor(confEntity.bootsSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 3, "silver").setUnlocalizedName("bootsSilver");
+		helmSilver = new crossArmor(idm.helmSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 0, "silver").setUnlocalizedName("helmSilver");
+		chestSilver = new crossArmor(idm.chestSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 1, "silver").setUnlocalizedName("chestSilver");
+		legsSilver = new crossArmor(idm.legsSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 2, "silver").setUnlocalizedName("legsSilver");
+		bootsSilver = new crossArmor(idm.bootsSilverID, crossMaterials.armorSilver, emec.armorSilverRenderer, 3, "silver").setUnlocalizedName("bootsSilver");
 		
-		helmSteel = new crossArmor(confEntity.helmSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 0, "steel").setUnlocalizedName("helmSteel");
-		chestSteel = new crossArmor(confEntity.chestSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 1, "steel").setUnlocalizedName("chestSteel");
-		legsSteel = new crossArmor(confEntity.legsSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 2, "steel").setUnlocalizedName("legsSteel");
-		bootsSteel = new crossArmor(confEntity.bootsSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 3, "steel").setUnlocalizedName("bootsSteel");
+		helmSteel = new crossArmor(idm.helmSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 0, "steel").setUnlocalizedName("helmSteel");
+		chestSteel = new crossArmor(idm.chestSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 1, "steel").setUnlocalizedName("chestSteel");
+		legsSteel = new crossArmor(idm.legsSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 2, "steel").setUnlocalizedName("legsSteel");
+		bootsSteel = new crossArmor(idm.bootsSteelID, crossMaterials.armorSteel, emec.armorSteelRenderer, 3, "steel").setUnlocalizedName("bootsSteel");
 		
-		helmTin = new crossArmor(confEntity.helmTinID, crossMaterials.armorTin, emec.armorTinRenderer, 0, "tin").setUnlocalizedName("helmTin");
-		chestTin = new crossArmor(confEntity.chestTinID, crossMaterials.armorTin, emec.armorTinRenderer, 1, "tin").setUnlocalizedName("chestTin");
-		legsTin = new crossArmor(confEntity.legsTinID, crossMaterials.armorTin, emec.armorTinRenderer, 2, "tin").setUnlocalizedName("legsTin");
-		bootsTin = new crossArmor(confEntity.bootsTinID, crossMaterials.armorTin, emec.armorTinRenderer, 3, "tin").setUnlocalizedName("bootsTin");
+		helmTin = new crossArmor(idm.helmTinID, crossMaterials.armorTin, emec.armorTinRenderer, 0, "tin").setUnlocalizedName("helmTin");
+		chestTin = new crossArmor(idm.chestTinID, crossMaterials.armorTin, emec.armorTinRenderer, 1, "tin").setUnlocalizedName("chestTin");
+		legsTin = new crossArmor(idm.legsTinID, crossMaterials.armorTin, emec.armorTinRenderer, 2, "tin").setUnlocalizedName("legsTin");
+		bootsTin = new crossArmor(idm.bootsTinID, crossMaterials.armorTin, emec.armorTinRenderer, 3, "tin").setUnlocalizedName("bootsTin");
 	}
 	
-	public static void addNames() {
-		LanguageRegistry.addName(helmAluminum, confLocalisation.helmAluminumName);
-		LanguageRegistry.addName(chestAluminum, confLocalisation.chestAluminumName);
-		LanguageRegistry.addName(legsAluminum, confLocalisation.legsAluminumName);
-		LanguageRegistry.addName(bootsAluminum, confLocalisation.bootsAluminumName);
+	public static void addNames(confLocalisation local) {
+		LanguageRegistry.addName(helmAluminum, local.helmAluminumName);
+		LanguageRegistry.addName(chestAluminum, local.chestAluminumName);
+		LanguageRegistry.addName(legsAluminum, local.legsAluminumName);
+		LanguageRegistry.addName(bootsAluminum, local.bootsAluminumName);
 		
-		LanguageRegistry.addName(helmCopper, confLocalisation.helmCopperName);
-		LanguageRegistry.addName(chestCopper, confLocalisation.chestCopperName);
-		LanguageRegistry.addName(legsCopper, confLocalisation.legsCopperName);
-		LanguageRegistry.addName(bootsCopper, confLocalisation.bootsCopperName);
+		LanguageRegistry.addName(helmCopper, local.helmCopperName);
+		LanguageRegistry.addName(chestCopper, local.chestCopperName);
+		LanguageRegistry.addName(legsCopper, local.legsCopperName);
+		LanguageRegistry.addName(bootsCopper, local.bootsCopperName);
 		
-		LanguageRegistry.addName(helmPlatinum, confLocalisation.helmPlatinumName);
-		LanguageRegistry.addName(chestPlatinum, confLocalisation.chestPlatinumName);
-		LanguageRegistry.addName(legsPlatinum, confLocalisation.legsPlatinumName);
-		LanguageRegistry.addName(bootsPlatinum, confLocalisation.bootsPlatinumName);
+		LanguageRegistry.addName(helmPlatinum, local.helmPlatinumName);
+		LanguageRegistry.addName(chestPlatinum, local.chestPlatinumName);
+		LanguageRegistry.addName(legsPlatinum, local.legsPlatinumName);
+		LanguageRegistry.addName(bootsPlatinum, local.bootsPlatinumName);
 		
-		LanguageRegistry.addName(helmSilver, confLocalisation.helmSilverName);
-		LanguageRegistry.addName(chestSilver, confLocalisation.chestSilverName);
-		LanguageRegistry.addName(legsSilver, confLocalisation.legsSilverName);
-		LanguageRegistry.addName(bootsSilver, confLocalisation.bootsSilverName);
+		LanguageRegistry.addName(helmSilver, local.helmSilverName);
+		LanguageRegistry.addName(chestSilver, local.chestSilverName);
+		LanguageRegistry.addName(legsSilver, local.legsSilverName);
+		LanguageRegistry.addName(bootsSilver, local.bootsSilverName);
 		
-		LanguageRegistry.addName(helmSteel, confLocalisation.helmSteelName);
-		LanguageRegistry.addName(chestSteel, confLocalisation.chestSteelName);
-		LanguageRegistry.addName(legsSteel, confLocalisation.legsSteelName);
-		LanguageRegistry.addName(bootsSteel, confLocalisation.bootsSteelName);
+		LanguageRegistry.addName(helmSteel, local.helmSteelName);
+		LanguageRegistry.addName(chestSteel, local.chestSteelName);
+		LanguageRegistry.addName(legsSteel, local.legsSteelName);
+		LanguageRegistry.addName(bootsSteel, local.bootsSteelName);
 		
-		LanguageRegistry.addName(helmTin, confLocalisation.helmTinName);
-		LanguageRegistry.addName(chestTin, confLocalisation.chestTinName);
-		LanguageRegistry.addName(legsTin, confLocalisation.legsTinName);
-		LanguageRegistry.addName(bootsTin, confLocalisation.bootsTinName);
+		LanguageRegistry.addName(helmTin, local.helmTinName);
+		LanguageRegistry.addName(chestTin, local.chestTinName);
+		LanguageRegistry.addName(legsTin, local.legsTinName);
+		LanguageRegistry.addName(bootsTin, local.bootsTinName);
 	}
 }

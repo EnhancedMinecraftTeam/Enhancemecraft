@@ -16,29 +16,29 @@ public class itemInit {
 	public static Item ingotSteel;
 	public static Item ingotTin;
 	
-	public static void doWork() {
+	public static void doWork(confEntity idm, confLocalisation local) {
 		// @add Items
-		addItems();
+		addItems(idm);
 		// @add Names
-		addNames();
+		addNames(local);
 	}
 	
-	public static void addItems() {
-		ingotAluminum = new crossItem(confEntity.ingotAluminumID).setUnlocalizedName("ingotAluminum");
-		ingotCopper = new crossItem(confEntity.ingotCopperID).setUnlocalizedName("ingotCopper");
-		ingotPlatinum = new crossItem(confEntity.ingotPlatinumID).setUnlocalizedName("ingotPlatinum");
-		ingotSilver = new crossItem(confEntity.ingotSilverID).setUnlocalizedName("ingotSilver");
-		ingotSteel = new crossItem(confEntity.ingotSteelID).setUnlocalizedName("ingotSteel");
-		ingotTin = new crossItem(confEntity.ingotTinID).setUnlocalizedName("ingotTin");
+	public static void addItems(confEntity idm) {
+		ingotAluminum = new crossItem(idm.ingotAluminumID).setUnlocalizedName("ingotAluminum");
+		ingotCopper = new crossItem(idm.ingotCopperID).setUnlocalizedName("ingotCopper");
+		ingotPlatinum = new crossItem(idm.ingotPlatinumID).setUnlocalizedName("ingotPlatinum");
+		ingotSilver = new crossItem(idm.ingotSilverID).setUnlocalizedName("ingotSilver");
+		ingotSteel = new crossItem(idm.ingotSteelID).setUnlocalizedName("ingotSteel");
+		ingotTin = new crossItem(idm.ingotTinID).setUnlocalizedName("ingotTin");
 	}
 	
-	public static void addNames() {
-		LanguageRegistry.addName(ingotAluminum, confLocalisation.ingotAluminumName);
-		LanguageRegistry.addName(ingotCopper, confLocalisation.ingotCopperName);
-		LanguageRegistry.addName(ingotPlatinum, confLocalisation.ingotPlatinumName);
-		LanguageRegistry.addName(ingotSilver, confLocalisation.ingotSilverName);
-		LanguageRegistry.addName(ingotSteel, confLocalisation.ingotSteelName);
-		LanguageRegistry.addName(ingotTin, confLocalisation.ingotTinName);
+	public static void addNames(confLocalisation local) {
+		LanguageRegistry.addName(ingotAluminum, local.ingotAluminumName);
+		LanguageRegistry.addName(ingotCopper, local.ingotCopperName);
+		LanguageRegistry.addName(ingotPlatinum, local.ingotPlatinumName);
+		LanguageRegistry.addName(ingotSilver, local.ingotSilverName);
+		LanguageRegistry.addName(ingotSteel, local.ingotSteelName);
+		LanguageRegistry.addName(ingotTin, local.ingotTinName);
 	}
 	
 }

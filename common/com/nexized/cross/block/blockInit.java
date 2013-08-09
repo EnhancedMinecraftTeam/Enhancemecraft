@@ -10,7 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 
 public class blockInit {
-
+	
 			// @oreBlocks
 			public static Block oreAluminum;
 			public static Block oreCopper;
@@ -30,61 +30,61 @@ public class blockInit {
 			// @addBlocks
 			public static Block blockFosil;
 	
-			public static void doWork() {
+			public static void doWork(confEntity idm, confLocalisation local) {
 				// @Add Blocks to Registry
-				addBlocks();
+				addBlocks(idm);
 				// @Add Names to Registry
-				addNames();
+				addNames(local);
 				// @Add Blocks to Registry
 				registerBlocks();
 			}
 			
-			public static void addBlocks()
+			public static void addBlocks(confEntity idm)
 			{
 				// @Defaults 
 				float oreResistance = 5.0F; 
 				float blockResistance = 12.0F;
 				
 				// @oreBlocks
-				oreAluminum = new crossBlock(confEntity.oreAluminumID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
-				oreCopper = new crossBlock(confEntity.oreCopperID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
-				orePlatinum = new crossBlock(confEntity.orePlatinumID, Material.rock).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
-				oreSilver = new crossBlock(confEntity.oreSilverID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
-				oreTin = new crossBlock(confEntity.oreTinID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
-				oreExperience = new crossBlock(confEntity.oreExperienceID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
+				oreAluminum = new crossBlock(idm.oreAluminumID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
+				oreCopper = new crossBlock(idm.oreCopperID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
+				orePlatinum = new crossBlock(idm.orePlatinumID, Material.rock).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
+				oreSilver = new crossBlock(idm.oreSilverID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
+				oreTin = new crossBlock(idm.oreTinID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
+				oreExperience = new crossBlock(idm.oreExperienceID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
 			
 				// @ingotBlocks
-				blockAluminum = new crossBlock(confEntity.blockAluminumID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockAluminum");
-				blockCopper = new crossBlock(confEntity.blockCopperID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockCopper");
-				blockPlatinum = new crossBlock(confEntity.blockPlatinumID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockPlatinum");
-				blockSilver = new crossBlock(confEntity.blockSilverID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
-				blockSteel = new crossBlock(confEntity.blockSteelID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
-				blockTin = new crossBlock(confEntity.blockTinID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
+				blockAluminum = new crossBlock(idm.blockAluminumID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockAluminum");
+				blockCopper = new crossBlock(idm.blockCopperID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockCopper");
+				blockPlatinum = new crossBlock(idm.blockPlatinumID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockPlatinum");
+				blockSilver = new crossBlock(idm.blockSilverID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
+				blockSteel = new crossBlock(idm.blockSteelID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
+				blockTin = new crossBlock(idm.blockTinID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
 			
 				// @addBlocks
-				blockFosil = new crossBlock(confEntity.blockFosilID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
+				blockFosil = new crossBlock(idm.blockFosilID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
 			}
 			
-			public static void addNames() {
+			public static void addNames(confLocalisation local) {
 				
 				// @oreBlocks
-				LanguageRegistry.addName(oreAluminum, confLocalisation.oreAluminumName);
-				LanguageRegistry.addName(oreCopper, confLocalisation.oreCopperName);
-				LanguageRegistry.addName(orePlatinum, confLocalisation.orePlatinumName);
-				LanguageRegistry.addName(oreSilver, confLocalisation.oreSilverName);
-				LanguageRegistry.addName(oreTin, confLocalisation.oreTinName);
-				LanguageRegistry.addName(oreExperience, confLocalisation.oreExperienceName);
+				LanguageRegistry.addName(oreAluminum, local.oreAluminumName);
+				LanguageRegistry.addName(oreCopper, local.oreCopperName);
+				LanguageRegistry.addName(orePlatinum, local.orePlatinumName);
+				LanguageRegistry.addName(oreSilver, local.oreSilverName);
+				LanguageRegistry.addName(oreTin, local.oreTinName);
+				LanguageRegistry.addName(oreExperience, local.oreExperienceName);
 				
 				// @ingotBlocks
-				LanguageRegistry.addName(blockAluminum, confLocalisation.blockAluminumName);
-				LanguageRegistry.addName(blockCopper, confLocalisation.blockCopperName);
-				LanguageRegistry.addName(blockPlatinum, confLocalisation.blockPlatinumName);
-				LanguageRegistry.addName(blockSilver, confLocalisation.blockSilverName);
-				LanguageRegistry.addName(blockSteel, confLocalisation.blockSteelName);
-				LanguageRegistry.addName(blockTin, confLocalisation.blockTinName);
+				LanguageRegistry.addName(blockAluminum, local.blockAluminumName);
+				LanguageRegistry.addName(blockCopper, local.blockCopperName);
+				LanguageRegistry.addName(blockPlatinum, local.blockPlatinumName);
+				LanguageRegistry.addName(blockSilver, local.blockSilverName);
+				LanguageRegistry.addName(blockSteel, local.blockSteelName);
+				LanguageRegistry.addName(blockTin, local.blockTinName);
 				
 				// @addBlocks
-				LanguageRegistry.addName(blockFosil, confLocalisation.blockFosilName);
+				LanguageRegistry.addName(blockFosil, local.blockFosilName);
 			}
 			
 			public static void registerBlocks() {
