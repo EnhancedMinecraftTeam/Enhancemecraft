@@ -6,96 +6,96 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class confLocalisation {
 
 		// @oreBlocks
-		public String oreAluminumName;
-		public String oreCopperName;
-		public String orePlatinumName;
-		public String oreSilverName;
-		public String oreTinName;
-		public String oreExperienceName;
+		public String oreAluminumName = "";
+		public String oreCopperName= "";
+		public String orePlatinumName= "";
+		public String oreSilverName= "";
+		public String oreTinName= "";
+		public String oreExperienceName= "";
 		
 		// @ingotBlocks
-		public String blockAluminumName;
-		public String blockCopperName;
-		public String blockPlatinumName;
-		public String blockSilverName;
-		public String blockSteelName;
-		public String blockTinName;
+		public String blockAluminumName= "";
+		public String blockCopperName= "";
+		public String blockPlatinumName= "";
+		public String blockSilverName= "";
+		public String blockSteelName= "";
+		public String blockTinName= "";
 		
 		// @addBlocks
-		public String blockFosilName;
+		public String blockFosilName= "";
 		
 		//@itemTools
-		public String axeAluminumName;
-		public String axeCopperName;
-		public String axePlatinumName;
-		public String axeSilverName;
-		public String axeSteelName;
-		public String axeTinName;
+		public String axeAluminumName= "";
+		public String axeCopperName= "";
+		public String axePlatinumName= "";
+		public String axeSilverName= "";
+		public String axeSteelName= "";
+		public String axeTinName= "";
 		
-		public String hoeAluminumName;
-		public String hoeCopperName;
-		public String hoePlatinumName;
-		public String hoeSilverName;
-		public String hoeSteelName;
-		public String hoeTinName;
+		public String hoeAluminumName= "";
+		public String hoeCopperName= "";
+		public String hoePlatinumName= "";
+		public String hoeSilverName= "";
+		public String hoeSteelName= "";
+		public String hoeTinName= "";
 		
-		public String shovelAluminumName;
-		public String shovelCopperName;
-		public String shovelPlatinumName;
-		public String shovelSilverName;
-		public String shovelSteelName;
-		public String shovelTinName;
+		public String shovelAluminumName= "";
+		public String shovelCopperName= "";
+		public String shovelPlatinumName= "";
+		public String shovelSilverName= "";
+		public String shovelSteelName= "";
+		public String shovelTinName= "";
 		
-		public String pickAluminumName;
-		public String pickCopperName;
-		public String pickPlatinumName;
-		public String pickSilverName;
-		public String pickSteelName;
-		public String pickTinName;
+		public String pickAluminumName= "";
+		public String pickCopperName= "";
+		public String pickPlatinumName= "";
+		public String pickSilverName= "";
+		public String pickSteelName= "";
+		public String pickTinName= "";
 		
-		public String swordAluminumName;
-		public String swordCopperName;
-		public String swordPlatinumName;
-		public String swordSilverName;
-		public String swordSteelName;
-		public String swordTinName;
+		public String swordAluminumName= "";
+		public String swordCopperName= "";
+		public String swordPlatinumName= "";
+		public String swordSilverName= "";
+		public String swordSteelName= "";
+		public String swordTinName= "";
 		
 		//@item Armors
-		public String helmAluminumName;
-		public String helmCopperName;
-		public String helmPlatinumName;
-		public String helmSilverName;
-		public String helmSteelName;
-		public String helmTinName;
+		public String helmAluminumName= "";
+		public String helmCopperName= "";
+		public String helmPlatinumName= "";
+		public String helmSilverName= "";
+		public String helmSteelName= "";
+		public String helmTinName= "";
 		
-		public String chestAluminumName;
-		public String chestCopperName;
-		public String chestPlatinumName;
-		public String chestSilverName;
-		public String chestSteelName;
-		public String chestTinName;
+		public String chestAluminumName= "";
+		public String chestCopperName= "";
+		public String chestPlatinumName= "";
+		public String chestSilverName= "";
+		public String chestSteelName= "";
+		public String chestTinName= "";
 		
-		public String legsAluminumName;
-		public String legsCopperName;
-		public String legsPlatinumName;
-		public String legsSilverName;
-		public String legsSteelName;
-		public String legsTinName;
+		public String legsAluminumName= "";
+		public String legsCopperName= "";
+		public String legsPlatinumName= "";
+		public String legsSilverName= "";
+		public String legsSteelName= "";
+		public String legsTinName= "";
 		
-		public String bootsAluminumName;
-		public String bootsCopperName;
-		public String bootsPlatinumName;
-		public String bootsSilverName;
-		public String bootsSteelName;
-		public String bootsTinName;
+		public String bootsAluminumName= "";
+		public String bootsCopperName= "";
+		public String bootsPlatinumName= "";
+		public String bootsSilverName= "";
+		public String bootsSteelName= "";
+		public String bootsTinName= "";
 		
 		// @itemIngot
-		public String ingotAluminumName;
-		public String ingotCopperName;
-		public String ingotPlatinumName;
-		public String ingotSilverName;
-		public String ingotSteelName;
-		public String ingotTinName;
+		public String ingotAluminumName= "";
+		public String ingotCopperName= "";
+		public String ingotPlatinumName= "";
+		public String ingotSilverName= "";
+		public String ingotSteelName= "";
+		public String ingotTinName= "";
 	
 		public void runTask(FMLPreInitializationEvent event) {
 			

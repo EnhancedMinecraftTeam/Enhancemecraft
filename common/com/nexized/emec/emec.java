@@ -38,8 +38,8 @@ public class emec {
     public static int armorTinRenderer;
 	
     // @Language Configuration
-    confEntity idm;
-    confLocalisation local;
+    confEntity idm = new confEntity();
+    confLocalisation local = new confLocalisation();
     
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event) {
