@@ -1,10 +1,11 @@
 package com.nexized.emec;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 
-import com.nexized.cross.block.blockInit;
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
+import com.nexized.cross.manager.*;
 import com.nexized.cross.world.crossWorldGenerator;
 import com.nexized.emec.lib.modInfo;
 import com.nexized.emec.proxy.proxyCommon;
@@ -28,6 +29,7 @@ public class emec {
 	
 	// @Creative Tab
 	public static CreativeTabs tabEnhanceMeCraft;
+	public static CreativeTabs tabEnhanceMeCraftFood;
 	
 	// @Armor Renders
 	public static int armorAluminumRenderer;
@@ -42,7 +44,7 @@ public class emec {
     confLocalisation local = new confLocalisation();
     
 	@EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preManager(FMLPreInitializationEvent event) {
 		// @Configuration
 		idm.runTask(event);
 		// @Localisation
@@ -50,19 +52,30 @@ public class emec {
 	}
 	
 	@EventHandler
-	public void Init(FMLInitializationEvent event) {
+	public void Manager(FMLInitializationEvent event) {
 		// @Custom Tab
-		tabEnhanceMeCraft = new CreativeTabs("tabEnhanceMeCraft");
+		tabEnhanceMeCraft = new CreativeTabs("tabEnhanceMeCraft") {
+			public ItemStack getIconItemStack() {
+                return new ItemStack(blockManager.orePlatinum, 1, 0);
+			}
+		};
+		tabEnhanceMeCraftFood = new CreativeTabs("tabEnhanceMeCraftFood"){
+			public ItemStack getIconItemStack() {
+                return new ItemStack(foodManager.foodBacon, 1, 0);
+			}
+		};
 		// @Add Blocks
-		blockInit.doWork(this.idm, this.local);
+		blockManager.doWork(this.idm, this.local);
 		// @Add Items
-		itemInit.doWork(this.idm, this.local);
+		itemManager.doWork(this.idm, this.local);
 		// @Add Tools
-		toolInit.doWork(this.idm, this.local);
+		toolManager.doWork(this.idm, this.local);
 		// @Add Armor
-		armorInit.doWork(this.idm, this.local);
+		armorManager.doWork(this.idm, this.local);
+		// @Add Food
+		foodManager.doWork(this.idm, this.local);
 		// @Add Recipes
-		recipesInit.addRecipes();
+		recipesManager.addRecipes();
 		// @Add WorldGenerator
 		GameRegistry.registerWorldGenerator(new crossWorldGenerator());
 		// @Add armorRenders
@@ -73,21 +86,22 @@ public class emec {
 		armorSteelRenderer = proxy.addArmor("steel");
 		armorTinRenderer = proxy.addArmor("tin");
 		// @Repair Materials
-		crossMaterials.materialAluminum.customCraftingMaterial = itemInit.ingotAluminum;
-		crossMaterials.materialCopper.customCraftingMaterial = itemInit.ingotCopper;
-		crossMaterials.materialPlatinum.customCraftingMaterial = itemInit.ingotPlatinum;
-		crossMaterials.materialSilver.customCraftingMaterial = itemInit.ingotSilver;
-		crossMaterials.materialSteel.customCraftingMaterial = itemInit.ingotSteel;
-		crossMaterials.materialTin.customCraftingMaterial = itemInit.ingotTin;
+		crossMaterials.materialAluminum.customCraftingMaterial = itemManager.ingotAluminum;
+		crossMaterials.materialCopper.customCraftingMaterial = itemManager.ingotCopper;
+		crossMaterials.materialPlatinum.customCraftingMaterial = itemManager.ingotPlatinum;
+		crossMaterials.materialSilver.customCraftingMaterial = itemManager.ingotSilver;
+		crossMaterials.materialSteel.customCraftingMaterial = itemManager.ingotSteel;
+		crossMaterials.materialTin.customCraftingMaterial = itemManager.ingotTin;
 		// @Repair Armors
-		crossMaterials.armorAluminum.customCraftingMaterial = itemInit.ingotAluminum;
-		crossMaterials.armorCopper.customCraftingMaterial = itemInit.ingotCopper;
-		crossMaterials.armorPlatinum.customCraftingMaterial = itemInit.ingotPlatinum;
-		crossMaterials.armorSilver.customCraftingMaterial = itemInit.ingotSilver;
-		crossMaterials.armorSteel.customCraftingMaterial = itemInit.ingotSteel;
-		crossMaterials.armorTin.customCraftingMaterial = itemInit.ingotTin;
+		crossMaterials.armorAluminum.customCraftingMaterial = itemManager.ingotAluminum;
+		crossMaterials.armorCopper.customCraftingMaterial = itemManager.ingotCopper;
+		crossMaterials.armorPlatinum.customCraftingMaterial = itemManager.ingotPlatinum;
+		crossMaterials.armorSilver.customCraftingMaterial = itemManager.ingotSilver;
+		crossMaterials.armorSteel.customCraftingMaterial = itemManager.ingotSteel;
+		crossMaterials.armorTin.customCraftingMaterial = itemManager.ingotTin;
 		// @Add Tab Names
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraft", "en_US", "EnhanceMeCraft");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraftFood", "en_US", "EnhanceMeCraftFood");
 	}
 	
 }

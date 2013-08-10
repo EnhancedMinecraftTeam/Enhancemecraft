@@ -96,6 +96,10 @@ public class confLocalisation {
 		public String ingotSilverName= "";
 		public String ingotSteelName= "";
 		public String ingotTinName= "";
+		
+		// @itemFood
+		public String foodRawbaconName = "";
+		public String foodBaconName = "";
 	
 		public void runTask(FMLPreInitializationEvent event) {
 			
@@ -110,6 +114,7 @@ public class confLocalisation {
 			orePlatinumName = conf.get("blockName", "orePlatinum", "Platinum Ore").getString();
 			oreSilverName = conf.get("blockName", "oreSilver", "Silver Ore").getString();
 			oreTinName = conf.get("blockName", "oreTin", "Tin Ore").getString();
+			oreExperienceName = conf.get("blockName", "oreExperience", "Experience Ore").getString();
 			
 			blockAluminumName = conf.get("blockName", "blockAluminum", "Aluminum Block").getString();
 			blockCopperName = conf.get("blockName", "blockCopper", "Copper Block").getString();
@@ -190,6 +195,9 @@ public class confLocalisation {
 			ingotSteelName = conf.get("itemName", "ingotSteel", "Steel Ingot").getString();
 			ingotTinName = conf.get("itemName", "ingotTin", "Tin Ingot").getString();
 			
+			// @itemFood
+			foodRawbaconName = conf.get("foodName", "foodRawbacon", "Raw Bacon").getString();
+			foodBaconName = conf.get("foodName", "foodBacon", "Bacon").getString();
 			
 			// Save Configuration
 			conf.save();

@@ -25,78 +25,81 @@ public class confEntity {
 	public int blockFosilID = 520;
 	
 	//@itemTools
-	public int axeAluminumID = 3000;
-	public int axeCopperID = 3001;
-	public int axePlatinumID = 3002;
-	public int axeSilverID = 3003;
-	public int axeSteelID = 3004;
-	public int axeTinID = 3005;
+	public int axeAluminumID = 4000;
+	public int axeCopperID = 4001;
+	public int axePlatinumID = 4002;
+	public int axeSilverID = 4003;
+	public int axeSteelID = 4004;
+	public int axeTinID = 4005;
 	
-	public int hoeAluminumID = 3010;
-	public int hoeCopperID = 3011;
-	public int hoePlatinumID = 3012;
-	public int hoeSilverID = 3013;
-	public int hoeSteelID = 3014;
-	public int hoeTinID = 3015;
+	public int hoeAluminumID = 4010;
+	public int hoeCopperID = 4011;
+	public int hoePlatinumID = 4012;
+	public int hoeSilverID = 4013;
+	public int hoeSteelID = 4014;
+	public int hoeTinID = 4015;
 	
-	public int shovelAluminumID = 3020;
-	public int shovelCopperID = 3021;
-	public int shovelPlatinumID = 3022;
-	public int shovelSilverID = 3023;
-	public int shovelSteelID = 3024;
-	public int shovelTinID = 3025;
+	public int shovelAluminumID = 4020;
+	public int shovelCopperID = 4021;
+	public int shovelPlatinumID = 4022;
+	public int shovelSilverID = 4023;
+	public int shovelSteelID = 4024;
+	public int shovelTinID = 4025;
 	
-	public int pickAluminumID = 3030;
-	public int pickCopperID = 3031;
-	public int pickPlatinumID = 3032;
-	public int pickSilverID = 3033;
-	public int pickSteelID = 3034;
-	public int pickTinID = 3035;
+	public int pickAluminumID = 4030;
+	public int pickCopperID = 4031;
+	public int pickPlatinumID = 4032;
+	public int pickSilverID = 4033;
+	public int pickSteelID = 4034;
+	public int pickTinID = 4035;
 	
-	public int swordAluminumID = 3040;
-	public int swordCopperID = 3041;
-	public int swordPlatinumID = 3042;
-	public int swordSilverID = 3043;
-	public int swordSteelID = 3044;
-	public int swordTinID = 3045;
+	public int swordAluminumID = 4040;
+	public int swordCopperID = 4041;
+	public int swordPlatinumID = 4042;
+	public int swordSilverID = 4043;
+	public int swordSteelID = 4044;
+	public int swordTinID = 4045;
 	
 	//@item Armors
-	public int helmAluminumID = 3050;
-	public int helmCopperID = 3051;
-	public int helmPlatinumID = 3052;
-	public int helmSilverID = 3053;
-	public int helmSteelID = 3054;
-	public int helmTinID = 3055;
+	public int helmAluminumID = 4050;
+	public int helmCopperID = 4051;
+	public int helmPlatinumID = 4052;
+	public int helmSilverID = 4053;
+	public int helmSteelID = 4054;
+	public int helmTinID = 4055;
 	
-	public int chestAluminumID = 3060;
-	public int chestCopperID = 3061;
-	public int chestPlatinumID = 3062;
-	public int chestSilverID = 3063;
-	public int chestSteelID = 3064;
-	public int chestTinID = 3065;
+	public int chestAluminumID = 4060;
+	public int chestCopperID = 4061;
+	public int chestPlatinumID = 4062;
+	public int chestSilverID = 4063;
+	public int chestSteelID = 4064;
+	public int chestTinID = 4065;
 	
-	public int legsAluminumID = 3070;
-	public int legsCopperID = 3071;
-	public int legsPlatinumID = 3072;
-	public int legsSilverID = 3073;
-	public int legsSteelID = 3074;
-	public int legsTinID = 3075;
+	public int legsAluminumID = 4070;
+	public int legsCopperID = 4071;
+	public int legsPlatinumID = 4072;
+	public int legsSilverID = 4073;
+	public int legsSteelID = 4074;
+	public int legsTinID = 4075;
 	
-	public int bootsAluminumID = 3080;
-	public int bootsCopperID = 3081;
-	public int bootsPlatinumID = 3082;
-	public int bootsSilverID = 3083;
-	public int bootsSteelID = 3084;
-	public int bootsTinID = 3085;
+	public int bootsAluminumID = 4080;
+	public int bootsCopperID = 4081;
+	public int bootsPlatinumID = 4082;
+	public int bootsSilverID = 4083;
+	public int bootsSteelID = 4084;
+	public int bootsTinID = 4085;
 
 	// @itemIngot
-	public int ingotAluminumID = 3090;
-	public int ingotCopperID = 3091;
-	public int ingotPlatinumID = 3092;
-	public int ingotSilverID = 3093;
-	public int ingotSteelID = 3094;
-	public int ingotTinID = 3095;
+	public int ingotAluminumID = 4090;
+	public int ingotCopperID = 4091;
+	public int ingotPlatinumID = 4092;
+	public int ingotSilverID = 4093;
+	public int ingotSteelID = 4094;
+	public int ingotTinID = 4095;
 	
+	// @itemFood
+	public int foodRawbaconID = 4100;
+	public int foodBaconID = 4101;
 	
 	public void runTask(FMLPreInitializationEvent event) {
 		
@@ -196,6 +199,10 @@ public class confEntity {
 		ingotSilverID = conf.getItem("itemIngot", "Silver Ingot", ingotSilverID).getInt();
 		ingotSteelID = conf.getItem("itemIngot", "Steel Ingot", ingotSteelID).getInt();
 		ingotTinID = conf.getItem("itemIngot", "Tin Ingot", ingotTinID).getInt();
+		
+		// @itemFood
+		foodRawbaconID = conf.getItem("itemFood", "Raw Bacon", foodRawbaconID).getInt();
+		foodBaconID = conf.getItem("itemFood", "Bacon", foodBaconID).getInt();
 		
 		// Save Configuration
 		conf.save();

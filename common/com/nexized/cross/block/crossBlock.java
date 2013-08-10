@@ -3,6 +3,7 @@ package com.nexized.cross.block;
 import java.util.Random;
 
 import com.nexized.cross.lib.libInfo;
+import com.nexized.cross.manager.blockManager;
 import com.nexized.emec.emec;
 
 import cpw.mods.fml.relauncher.Side;
@@ -30,7 +31,7 @@ public class crossBlock extends Block {
 
 	 public int idDropped(int i, Random random, int j)
 	 {
-		 if (this.blockID != blockInit.oreExperience.blockID) {
+		 if (this.blockID != blockManager.oreExperience.blockID) {
 			 return this.blockID;
 		 } else {
 			 return 0;
@@ -44,7 +45,7 @@ public class crossBlock extends Block {
 		 	 if (this.idDropped(par5, par1World.rand, par7) != this.blockID) {
 		 		 // @ Value for amount of dropped Experience
 		 		 int now = 0;
-			 	if (this.blockID == blockInit.oreExperience.blockID) {
+			 	if (this.blockID == blockManager.oreExperience.blockID) {
 			 		// @ Value for maximal Experience
 			 		int max= 32;
 			 		// @ Value for minimal Experience

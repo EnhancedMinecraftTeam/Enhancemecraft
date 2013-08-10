@@ -7,6 +7,6 @@ public class modInfo {
 	// @MODID
 	public final static String ID = "emec";
 	// @VERSION
-	public final static String VERSION = "0.2.0";
+	public final static String VERSION = "0.2.1";
 	
 }

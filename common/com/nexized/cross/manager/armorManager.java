@@ -1,13 +1,13 @@
-package com.nexized.cross.item;
+package com.nexized.cross.manager;
 
-import com.nexized.cross.conf.confEntity;
-import com.nexized.cross.conf.confLocalisation;
+import com.nexized.cross.conf.*;
+import com.nexized.cross.item.*;
 import com.nexized.emec.emec;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 
-public class armorInit {
+public class armorManager {
 
 	public static Item helmAluminum;
 	public static Item chestAluminum;

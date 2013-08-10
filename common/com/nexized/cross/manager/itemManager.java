@@ -1,12 +1,12 @@
-package com.nexized.cross.item;
+package com.nexized.cross.manager;
 
-import com.nexized.cross.conf.confEntity;
-import com.nexized.cross.conf.confLocalisation;
+import com.nexized.cross.conf.*;
+import com.nexized.cross.item.*;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 
-public class itemInit {
+public class itemManager {
 
 	// @itemIngot
 	public static Item ingotAluminum;

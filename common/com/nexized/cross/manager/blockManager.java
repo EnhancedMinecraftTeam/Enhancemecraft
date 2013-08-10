@@ -1,7 +1,7 @@
-package com.nexized.cross.block;
+package com.nexized.cross.manager;
 
-import com.nexized.cross.conf.confEntity;
-import com.nexized.cross.conf.confLocalisation;
+import com.nexized.cross.block.*;
+import com.nexized.cross.conf.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -9,7 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 
-public class blockInit {
+public class blockManager {
 	
 			// @oreBlocks
 			public static Block oreAluminum;

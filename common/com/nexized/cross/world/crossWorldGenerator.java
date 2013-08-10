@@ -2,7 +2,7 @@ package com.nexized.cross.world;
 
 import java.util.Random;
 
-import com.nexized.cross.block.blockInit;
+import com.nexized.cross.manager.blockManager;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -38,13 +38,13 @@ public class crossWorldGenerator implements IWorldGenerator {
 	
     private void generateSurface(World world, Random random, int x, int z)
     {
-    	this.addOreSpawn(blockInit.blockFosil, world, random, x, z, 16, 16, 3, 8, 0, 45);
-    	this.addOreSpawn(blockInit.oreExperience, world, random, x, z, 16, 16, 5, 45, 0, 90);
-    	this.addOreSpawn(blockInit.oreAluminum, world, random, x, z, 16, 16, 16, 30, 30, 60);
-    	this.addOreSpawn(blockInit.oreCopper, world, random, x, z, 16, 16, 4, 20, 0, 60);
-    	this.addOreSpawn(blockInit.orePlatinum, world, random, x, z, 16, 16, 3, 8, 0, 45);
-    	this.addOreSpawn(blockInit.oreSilver, world, random, x, z, 16, 16, 4, 20, 0, 60);
-    	this.addOreSpawn(blockInit.oreTin, world, random, x, z, 16, 16, 8, 30, 0, 60);
+    	this.addOreSpawn(blockManager.blockFosil, world, random, x, z, 16, 16, 1, 8, 0, 45);
+    	this.addOreSpawn(blockManager.oreExperience, world, random, x, z, 16, 16, 4, 24, 0, 90);
+    	this.addOreSpawn(blockManager.oreAluminum, world, random, x, z, 16, 16, 4, 16, 30, 60);
+    	this.addOreSpawn(blockManager.oreCopper, world, random, x, z, 16, 16, 4, 16, 0, 60);
+    	this.addOreSpawn(blockManager.orePlatinum, world, random, x, z, 16, 16, 4, 12, 0, 60);
+    	this.addOreSpawn(blockManager.oreSilver, world, random, x, z, 16, 16, 4, 16, 0, 60);
+    	this.addOreSpawn(blockManager.oreTin, world, random, x, z, 16, 16, 4, 24, 0, 60);
     }
 
     private void generateNether(World world, Random random, int x, int z) {}

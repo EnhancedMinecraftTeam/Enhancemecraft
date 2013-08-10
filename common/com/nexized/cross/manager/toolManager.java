@@ -1,14 +1,14 @@
-package com.nexized.cross.item;
+package com.nexized.cross.manager;
 
-import com.nexized.cross.conf.confEntity;
-import com.nexized.cross.conf.confLocalisation;
+import com.nexized.cross.conf.*;
+import com.nexized.cross.item.*;
 import com.nexized.cross.item.tools.*;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 
-public class toolInit {
+public class toolManager {
 
 	public static Item axeAluminum;
 	public static Item axeCopper;
