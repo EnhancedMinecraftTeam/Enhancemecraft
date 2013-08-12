@@ -23,6 +23,11 @@ public class confLocalisation {
 		
 		// @addBlocks
 		public String blockFosilName= "";
+		public String blockFreezerName= "";
+		public String blockCloudName= "";
+		
+		// @furnances
+		public String furnanceFusionName = "";
 		
 		//@itemTools
 		public String axeAluminumName= "";
@@ -97,6 +102,22 @@ public class confLocalisation {
 		public String ingotSteelName= "";
 		public String ingotTinName= "";
 		
+		// @itemShard
+		public String shardAluminumName= "";
+		public String shardCopperName= "";
+		public String shardPlatinumName= "";
+		public String shardSilverName= "";
+		public String shardSteelName= "";
+		public String shardTinName= "";
+		
+		// @itemShard
+		public String dustAluminumName= "";
+		public String dustCopperName= "";
+		public String dustPlatinumName= "";
+		public String dustSilverName= "";
+		public String dustSteelName= "";
+		public String dustTinName= "";
+		
 		// @itemFood
 		public String foodRawbaconName = "";
 		public String foodBaconName = "";
@@ -122,7 +143,12 @@ public class confLocalisation {
 			blockSilverName = conf.get("blockName", "blockSilver", "Silver Block").getString();
 			blockSteelName = conf.get("blockName", "blockSteel", "Steel Block").getString();
 			blockTinName = conf.get("blockName", "blockTin", "Tin Block").getString();
+			
 			blockFosilName = conf.get("blockName", "blockFosil", "Fosil Block").getString();
+			blockFreezerName = conf.get("blockName", "blockFreezer", "Freezer Block").getString();
+			blockCloudName = conf.get("blockName", "blockCloud", "Cloud Block").getString();
+			
+			furnanceFusionName = conf.get("blockName", "furnanceFusion", "Fusion Furnance").getString();
 			
 			axeAluminumName = conf.get("itemName", "axeAluminum", "Aluminum Axe").getString();
 			axeCopperName = conf.get("itemName", "axeCopper", "Copper Axe").getString();
@@ -198,6 +224,22 @@ public class confLocalisation {
 			// @itemFood
 			foodRawbaconName = conf.get("foodName", "foodRawbacon", "Raw Bacon").getString();
 			foodBaconName = conf.get("foodName", "foodBacon", "Bacon").getString();
+			
+			// @itemShard
+			shardAluminumName = conf.get("itemName", "shardAluminum", "Aluminum Shard").getString();
+			shardCopperName = conf.get("itemName", "shardCopper", "Copper Shard").getString();
+			shardPlatinumName = conf.get("itemName", "shardPlatinum", "Platinum Shard").getString();
+			shardSilverName = conf.get("itemName", "shardSilver", "Silver Shard").getString();
+			shardSteelName = conf.get("itemName", "shardSteel", "Steel Shard").getString();
+			shardTinName = conf.get("itemName", "shardTin", "Tin Shard").getString();
+			
+			// @itemShard
+			dustAluminumName = conf.get("itemName", "dustAluminum", "Aluminum Dust").getString();
+			dustCopperName = conf.get("itemName", "dustCopper", "Copper Dust").getString();
+			dustPlatinumName = conf.get("itemName", "dustPlatinum", "Platinum Dust").getString();
+			dustSilverName = conf.get("itemName", "dustSilver", "Silver Dust").getString();
+			dustSteelName = conf.get("itemName", "dustSteel", "Steel Dust").getString();
+			dustTinName = conf.get("itemName", "dustTin", "Tin Dust").getString();
 			
 			// Save Configuration
 			conf.save();

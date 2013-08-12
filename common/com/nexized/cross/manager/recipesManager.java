@@ -22,12 +22,14 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(blockManager.blockSilver, 1), new Object[] {"XXX", "XXX", "XXX", 'X', itemManager.ingotSilver});
 		GameRegistry.addRecipe(new ItemStack(blockManager.blockSteel), new Object[] {"XXX", "XXX", "XXX", 'X', itemManager.ingotSteel});
 		GameRegistry.addRecipe(new ItemStack(blockManager.blockTin), new Object[] {"XXX", "XXX", "XXX", 'X', itemManager.ingotTin});
+		GameRegistry.addRecipe(new ItemStack(blockManager.blockBronze), new Object[] {"XXX", "XXX", "XXX", 'X', itemManager.ingotBronze});
 		// @Add Reverse Recipes
 		GameRegistry.addRecipe(new ItemStack(itemManager.ingotCopper, 9), new Object[] {"X", 'X', blockManager.blockCopper});
 		GameRegistry.addRecipe(new ItemStack(itemManager.ingotPlatinum, 9), new Object[] {"X", 'X', blockManager.blockPlatinum});
 		GameRegistry.addRecipe(new ItemStack(itemManager.ingotSilver, 9), new Object[] {"X", 'X', blockManager.blockSilver});
 		GameRegistry.addRecipe(new ItemStack(itemManager.ingotSteel, 9), new Object[] {"X", 'X', blockManager.blockSteel});
 		GameRegistry.addRecipe(new ItemStack(itemManager.ingotTin, 9), new Object[] {"X", 'X', blockManager.blockTin});
+		GameRegistry.addRecipe(new ItemStack(itemManager.ingotBronze, 9), new Object[] {"X", 'X', blockManager.blockBronze});
 		
 		GameRegistry.addRecipe(new ItemStack(toolManager.axeAluminum), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotAluminum, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.axeCopper), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotCopper, '*', Item.stick});
@@ -35,6 +37,7 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.axeSilver), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotSilver, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.axeSteel), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotSteel, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.axeTin), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(toolManager.axeBronze), new Object[] {" XX", " *X", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 		
 		GameRegistry.addRecipe(new ItemStack(toolManager.hoeAluminum), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotAluminum, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.hoeCopper), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotCopper, '*', Item.stick});
@@ -42,6 +45,7 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.hoeSilver), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotSilver, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.hoeSteel), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotSteel, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.hoeTin), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(toolManager.hoeBronze), new Object[] {" XX", " * ", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 		
 		GameRegistry.addRecipe(new ItemStack(toolManager.pickAluminum), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotAluminum, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.pickCopper), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotCopper, '*', Item.stick});
@@ -49,6 +53,7 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.pickSilver), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotSilver, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.pickSteel), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotSteel, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.pickTin), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(toolManager.pickBronze), new Object[] {"XXX", " * ", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 		
 		GameRegistry.addRecipe(new ItemStack(toolManager.shovelAluminum), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotAluminum, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.shovelCopper), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotCopper, '*', Item.stick});
@@ -56,6 +61,7 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.shovelSilver), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotSilver, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.shovelSteel), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotSteel, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.shovelTin), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(toolManager.shovelBronze), new Object[] {" X ", " * ", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 				
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordAluminum), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotAluminum, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordCopper), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotCopper, '*', Item.stick});
@@ -63,6 +69,7 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordSilver), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotSilver, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordSteel), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotSteel, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordTin), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(toolManager.swordBronze), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 		
 		// @Add Food Recipes
 		GameRegistry.addRecipe(new ItemStack(foodManager.foodRawbacon, 3), new Object[] {"X", 'X', Item.porkRaw});
@@ -76,6 +83,18 @@ public class recipesManager {
 	
 		// @Add Smelting (foodItems)
 		GameRegistry.addSmelting(foodManager.foodRawbacon.itemID, new ItemStack (foodManager.foodBacon), 0.1F);
+	}
+	
+	public static void addFusionRecipes() {
+		// @Dust recipes
+		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustCopper.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
+		
+		// @Ingot recipes
+		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotCopper.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
 	}
 	
 }

@@ -20,7 +20,7 @@ public class crossItem extends Item {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) 
 	{
-		 this.itemIcon = iconRegister.registerIcon(libInfo.ID + ":" + (this.getUnlocalizedName()));
+		 this.itemIcon = iconRegister.registerIcon(libInfo.ID + ":" + (this.getUnlocalizedName().substring(5)));
 	}
 
 }

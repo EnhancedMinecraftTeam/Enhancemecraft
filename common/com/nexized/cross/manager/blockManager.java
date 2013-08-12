@@ -26,9 +26,17 @@ public class blockManager {
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
+			public static Block blockBronze;
 			
 			// @addBlocks
 			public static Block blockFosil;
+			public static Block blockFreezer;
+			public static Block blockCloud;
+			
+			// @fusionFurnance
+			public static Block furnanceFusion;
+			public static Block furnanceFusionOn;
+			
 	
 			public static void doWork(confEntity idm, confLocalisation local) {
 				// @Add Blocks to Registry
@@ -46,12 +54,12 @@ public class blockManager {
 				float blockResistance = 12.0F;
 				
 				// @oreBlocks
-				oreAluminum = new crossBlock(idm.oreAluminumID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
-				oreCopper = new crossBlock(idm.oreCopperID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
-				orePlatinum = new crossBlock(idm.orePlatinumID, Material.rock).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
-				oreSilver = new crossBlock(idm.oreSilverID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
-				oreTin = new crossBlock(idm.oreTinID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
-				oreExperience = new crossBlock(idm.oreExperienceID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
+				oreAluminum = new crossOre(idm.oreAluminumID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
+				oreCopper = new crossOre(idm.oreCopperID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
+				orePlatinum = new crossOre(idm.orePlatinumID, Material.rock).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
+				oreSilver = new crossOre(idm.oreSilverID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
+				oreTin = new crossOre(idm.oreTinID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
+				oreExperience = new crossOre(idm.oreExperienceID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
 			
 				// @ingotBlocks
 				blockAluminum = new crossBlock(idm.blockAluminumID, Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockAluminum");
@@ -63,6 +71,12 @@ public class blockManager {
 			
 				// @addBlocks
 				blockFosil = new crossBlock(idm.blockFosilID, Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
+				blockFreezer = new crossBlock(idm.blockFreezerID, Material.rock).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockFreezer");
+				blockCloud = new crossBlock(idm.blockCloudID, Material.rock).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockCloud");
+			
+				// @FusionFurnance
+				furnanceFusion = new crossFusionFurnance(idm.furnanceFusionID, false).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
+				furnanceFusionOn = new crossFusionFurnance(idm.furnanceFusionOnID, true).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
 			}
 			
 			public static void addNames(confLocalisation local) {
@@ -85,6 +99,11 @@ public class blockManager {
 				
 				// @addBlocks
 				LanguageRegistry.addName(blockFosil, local.blockFosilName);
+				LanguageRegistry.addName(blockFreezer, local.blockFreezerName);
+				LanguageRegistry.addName(blockCloud, local.blockCloudName);
+				
+				LanguageRegistry.addName(furnanceFusion, local.furnanceFusionName);
+				LanguageRegistry.addName(furnanceFusionOn, local.furnanceFusionName);
 			}
 			
 			public static void registerBlocks() {
@@ -112,6 +131,11 @@ public class blockManager {
 				GameRegistry.registerBlock(blockTin, blockTin.getUnlocalizedName());
 				
 				GameRegistry.registerBlock(blockFosil, blockFosil.getUnlocalizedName());
+				GameRegistry.registerBlock(blockFreezer, blockFreezer.getUnlocalizedName());
+				GameRegistry.registerBlock(blockCloud, blockCloud.getUnlocalizedName());
+				
+				GameRegistry.registerBlock(furnanceFusion, furnanceFusion.getUnlocalizedName());
+				// GameRegistry.registerBlock(furnanceFusionOn, furnanceFusionOn.getUnlocalizedName());
 			}
 			
 }

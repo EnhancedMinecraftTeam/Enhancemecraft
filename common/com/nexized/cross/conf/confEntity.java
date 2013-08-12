@@ -20,9 +20,17 @@ public class confEntity {
 	public int blockSilverID = 513;
 	public int blockSteelID = 514;
 	public int blockTinID = 515;
+	public int blockBronzeID = 515;
 	
 	// @addBlocks
 	public int blockFosilID = 520;
+	public int blockFreezerID = 521;
+	public int blockCloudID = 522;
+	public int blockBucketID = 523;
+
+	// @fusionFurnance
+	public int furnanceFusionID = 530;
+	public int furnanceFusionOnID = 531;
 	
 	//@itemTools
 	public int axeAluminumID = 4000;
@@ -31,6 +39,7 @@ public class confEntity {
 	public int axeSilverID = 4003;
 	public int axeSteelID = 4004;
 	public int axeTinID = 4005;
+	public int axeBronzeID = 4006;
 	
 	public int hoeAluminumID = 4010;
 	public int hoeCopperID = 4011;
@@ -38,6 +47,7 @@ public class confEntity {
 	public int hoeSilverID = 4013;
 	public int hoeSteelID = 4014;
 	public int hoeTinID = 4015;
+	public int hoeBronzeID = 4016;
 	
 	public int shovelAluminumID = 4020;
 	public int shovelCopperID = 4021;
@@ -45,6 +55,7 @@ public class confEntity {
 	public int shovelSilverID = 4023;
 	public int shovelSteelID = 4024;
 	public int shovelTinID = 4025;
+	public int shovelBronzeID = 4026;
 	
 	public int pickAluminumID = 4030;
 	public int pickCopperID = 4031;
@@ -52,6 +63,7 @@ public class confEntity {
 	public int pickSilverID = 4033;
 	public int pickSteelID = 4034;
 	public int pickTinID = 4035;
+	public int pickBronzeID = 4036;
 	
 	public int swordAluminumID = 4040;
 	public int swordCopperID = 4041;
@@ -59,6 +71,7 @@ public class confEntity {
 	public int swordSilverID = 4043;
 	public int swordSteelID = 4044;
 	public int swordTinID = 4045;
+	public int swordBronzeID = 4046;
 	
 	//@item Armors
 	public int helmAluminumID = 4050;
@@ -67,6 +80,7 @@ public class confEntity {
 	public int helmSilverID = 4053;
 	public int helmSteelID = 4054;
 	public int helmTinID = 4055;
+	public int helmBronzeID = 4056;
 	
 	public int chestAluminumID = 4060;
 	public int chestCopperID = 4061;
@@ -74,6 +88,7 @@ public class confEntity {
 	public int chestSilverID = 4063;
 	public int chestSteelID = 4064;
 	public int chestTinID = 4065;
+	public int chestBronzeID = 4066;
 	
 	public int legsAluminumID = 4070;
 	public int legsCopperID = 4071;
@@ -81,6 +96,7 @@ public class confEntity {
 	public int legsSilverID = 4073;
 	public int legsSteelID = 4074;
 	public int legsTinID = 4075;
+	public int legsBronzeID = 4076;
 	
 	public int bootsAluminumID = 4080;
 	public int bootsCopperID = 4081;
@@ -88,6 +104,7 @@ public class confEntity {
 	public int bootsSilverID = 4083;
 	public int bootsSteelID = 4084;
 	public int bootsTinID = 4085;
+	public int bootsBronzeID = 4086;
 
 	// @itemIngot
 	public int ingotAluminumID = 4090;
@@ -96,10 +113,30 @@ public class confEntity {
 	public int ingotSilverID = 4093;
 	public int ingotSteelID = 4094;
 	public int ingotTinID = 4095;
+	public int ingotBronzeID = 4096;
 	
 	// @itemFood
 	public int foodRawbaconID = 4100;
 	public int foodBaconID = 4101;
+	
+	// @itemShard
+	public int shardAluminumID = 4200;
+	public int shardCopperID = 4201;
+	public int shardPlatinumID = 4203;
+	public int shardSilverID = 4204;
+	public int shardSteelID = 4205;
+	public int shardTinID = 4206;
+	public int shardBronzeID = 4207;
+	
+	// @itemDust
+	public int dustAluminumID = 4210;
+	public int dustCopperID = 4211;
+	public int dustPlatinumID = 4213;
+	public int dustSilverID = 4214;
+	public int dustSteelID = 4215;
+	public int dustTinID = 4216;
+	public int dustBronzeID = 4217;
+	public int dustIronID = 4218;
 	
 	public void runTask(FMLPreInitializationEvent event) {
 		
@@ -127,6 +164,12 @@ public class confEntity {
 		
 		// @addBlocks
 		blockFosilID = conf.getBlock("oreBlock", "Fosil Block", blockFosilID).getInt();
+		blockFreezerID = conf.getBlock("biomeBlock", "Freezer Block", blockFreezerID).getInt();
+		blockCloudID = conf.getBlock("biomeBlock", "Cloud Block", blockCloudID).getInt();
+		
+		// @Furnances
+		furnanceFusionID = conf.getBlock("furnances", "Fusion Furnance", furnanceFusionID ).getInt();
+		furnanceFusionOnID = conf.getBlock("furnances", "Fusion Furnance onState", furnanceFusionOnID ).getInt();
 		
 		// @itemTools
 		axeAluminumID = conf.getItem("toolAxe", "Aluminum Axe", axeAluminumID).getInt();
@@ -203,6 +246,22 @@ public class confEntity {
 		// @itemFood
 		foodRawbaconID = conf.getItem("itemFood", "Raw Bacon", foodRawbaconID).getInt();
 		foodBaconID = conf.getItem("itemFood", "Bacon", foodBaconID).getInt();
+		
+		// @itemShard
+		shardAluminumID = conf.getItem("itemShard", "Aluminum Shard", shardAluminumID).getInt();
+		shardCopperID = conf.getItem("itemShard", "Copper Shard", shardCopperID).getInt();
+		shardPlatinumID = conf.getItem("itemShard", "Platinum Shard", shardPlatinumID).getInt();
+		shardSilverID = conf.getItem("itemShard", "Silver Shard", shardSilverID).getInt();
+		shardSteelID = conf.getItem("itemShard", "Steel Shard", shardSteelID).getInt();
+		shardTinID = conf.getItem("itemShard", "Tin Shard", shardTinID).getInt();
+		
+		// @itemDust
+		dustAluminumID = conf.getItem("itemDust", "Aluminum Dust", dustAluminumID).getInt();
+		dustCopperID = conf.getItem("itemDust", "Copper Dust", dustCopperID).getInt();
+		dustPlatinumID = conf.getItem("itemDust", "Platinum Dust", dustPlatinumID).getInt();
+		dustSilverID = conf.getItem("itemDust", "Silver Dust", dustSilverID).getInt();
+		dustSteelID = conf.getItem("itemDust", "Steel Dust", dustSteelID).getInt();
+		dustTinID = conf.getItem("itemDust", "Tin Dust", dustTinID).getInt();
 		
 		// Save Configuration
 		conf.save();

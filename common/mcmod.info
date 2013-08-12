@@ -2,10 +2,9 @@
 {
 "modid": "emec",
 "name": "EnhanceMeCraft",
-"description": "Extending Minecraft with new Materials, Ores, Tools, Biomes, Mobs and more",
+"description": "Extending Minecraft with new Materials, Food, Biomes, Mobs and more",
 "version": "",
-"credits": "Created by nexized & modattackz - based on nexized crossAPI",
-"logoFile": "/logo.png",
+"credits": "Created by nexized & modattackz",
 "mcversion": "",
 "url": "http://www.minecraftforum.net/",
 "updateUrl": "",

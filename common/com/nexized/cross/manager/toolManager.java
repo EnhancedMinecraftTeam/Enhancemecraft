@@ -16,6 +16,7 @@ public class toolManager {
 	public static Item axeSilver;
 	public static Item axeSteel;
 	public static Item axeTin;
+	public static Item axeBronze;
 	
 	public static Item hoeAluminum;
 	public static Item hoeCopper;
@@ -23,6 +24,7 @@ public class toolManager {
 	public static Item hoeSilver;
 	public static Item hoeSteel;
 	public static Item hoeTin;
+	public static Item hoeBronze;
 	
 	public static Item shovelAluminum;
 	public static Item shovelCopper;
@@ -30,6 +32,7 @@ public class toolManager {
 	public static Item shovelSilver;
 	public static Item shovelSteel;
 	public static Item shovelTin;
+	public static Item shovelBronze;
 	
 	public static Item pickAluminum;
 	public static Item pickCopper;
@@ -37,6 +40,7 @@ public class toolManager {
 	public static Item pickSilver;
 	public static Item pickSteel;
 	public static Item pickTin;
+	public static Item pickBronze;
 	
 	public static Item swordAluminum;
 	public static Item swordCopper;
@@ -44,6 +48,7 @@ public class toolManager {
 	public static Item swordSilver;
 	public static Item swordSteel;
 	public static Item swordTin;
+	public static Item swordBronze;
 	
 	public static void doWork(confEntity idm, confLocalisation local) {
 		// @Add Tools

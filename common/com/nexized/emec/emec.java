@@ -6,16 +6,19 @@ import net.minecraft.item.ItemStack;
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 import com.nexized.cross.manager.*;
+import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.world.crossWorldGenerator;
 import com.nexized.emec.lib.modInfo;
 import com.nexized.emec.proxy.proxyCommon;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -26,6 +29,9 @@ public class emec {
 	
 	@SidedProxy(clientSide = "com.nexized.emec.proxy.proxyClient", serverSide = "com.nexized.emec.proxy.proxyCommon")
 	public static proxyCommon proxy;
+	
+	@Instance("emec")
+    public static emec instance;
 	
 	// @Creative Tab
 	public static CreativeTabs tabEnhanceMeCraft;
@@ -38,7 +44,7 @@ public class emec {
     public static int armorSilverRenderer;
     public static int armorSteelRenderer;
     public static int armorTinRenderer;
-	
+	    
     // @Language Configuration
     confEntity idm = new confEntity();
     confLocalisation local = new confLocalisation();
@@ -75,8 +81,11 @@ public class emec {
 		// @Add Food
 		foodManager.doWork(this.idm, this.local);
 		// @Add Recipes
-		recipesManager.addRecipes();
+		recipesManager.addRecipes(); recipesManager.addFusionRecipes();
 		// @Add WorldGenerator
+		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
+		// @Add TileEntity
+		GameRegistry.registerTileEntity(tileFusionFurnace.class, "fusionFurnace");
 		GameRegistry.registerWorldGenerator(new crossWorldGenerator());
 		// @Add armorRenders
 		armorAluminumRenderer = proxy.addArmor("aluminum");

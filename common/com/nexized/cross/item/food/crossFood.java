@@ -18,7 +18,7 @@ public class crossFood extends ItemFood{
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) 
 	{
-		 this.itemIcon = iconRegister.registerIcon(libInfo.ID + ":" + (this.getUnlocalizedName()));
+		 this.itemIcon = iconRegister.registerIcon(libInfo.ID + ":" + (this.getUnlocalizedName().substring(5)));
 	}
 	
 }
