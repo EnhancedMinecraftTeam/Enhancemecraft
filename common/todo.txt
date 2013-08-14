@@ -19,10 +19,10 @@ work
 
 @ Remove unused imports (@nexized) | w
 # Implement new method for configuration (per instance) (@nexized) | f
-@ Finish implementation of LocalisationManager (@nexized) | w
+# Finish implementation of LocalisationManager (@nexized) | f
 @ Finish implementation of new material bronze (@nexized) | w
-@ Finish mod license (@nexized) | b
-@ Implement more food (@mod_attackz) | b
+# Finish mod license (@nexized) | f
+@ Implement more food (@mod_attackz) | w
 @ Implement new ores (@nexized) | p
 @ Implement more recipes for the fusion furnace (@nexized) | p
 @ Remove references from crossLib to EMEC (Later use of crossLib for other modifications (+ simple updates) (@nexized) | b

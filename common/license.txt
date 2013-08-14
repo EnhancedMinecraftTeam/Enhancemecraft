@@ -50,3 +50,22 @@ for personal usage.
 5. Deviration rights
 --------------------
 
+The user has the rights to derive code from this mod, that is to say to write code that extends or 
+instanciate the mod classes or interfaces, refer to its objects, or calls its functions. This code 
+is known as "derived" code, and must be licensed under the same license as this mod.
+
+6. Distribution of original or modified copy rights
+---------------------------------------------------
+
+Is subject to distribution rights this entire modification in its various forms. This includes:
+   - original binary or source forms of this mod files
+   - modified versions of these binaries or source files, as well as binaries resulting from 
+   	 source modifications
+   - patch to its source or binary files
+   - any copy of a portion of its binary source files
+   
+The user is not allowed to redistribute this modification partially, in totality, or included 
+in a distribution without the permission of the modification owner (or modification-teamleader).
+
+The user is also not allowed to redistribute modificated sources, binary or patches without
+the permission of the modification owner (or modification-teamleader).
