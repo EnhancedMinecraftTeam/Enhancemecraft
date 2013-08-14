@@ -1,5 +1,11 @@
 package com.nexized.cross.world;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-13 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import java.util.Random;
 
 import com.nexized.cross.manager.blockManager;

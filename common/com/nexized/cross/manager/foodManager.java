@@ -1,5 +1,11 @@
 package com.nexized.cross.manager;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-13 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import com.nexized.cross.conf.confEntity;
 import com.nexized.cross.conf.confLocalisation;
 import com.nexized.cross.item.food.crossFood;
@@ -9,8 +15,20 @@ import net.minecraft.item.Item;
 
 public class foodManager {
 
+	// @Defined Items (@nexized)
 	public static Item foodRawbacon;
     public static Item foodBacon;
+    
+    // @Defined Items (@mod_attackz)  
+	public static Item foodCorn;
+	public static Item foodTomato;
+	public static Item foodStrawberry;
+	public static Item foodBlueberry;
+	public static Item foodGreenTomato;
+	public static Item foodOrange;
+	public static Item foodLettuce;
+	public static Item foodEggplant;
+	public static Item foodEggScramled;
 	
     public static void doWork(confEntity idm, confLocalisation local) {
     	// @Add Food Items

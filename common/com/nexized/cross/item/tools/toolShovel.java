@@ -25,7 +25,7 @@ public class toolShovel extends ItemAxe {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) 
 	{
-		 this.itemIcon = iconRegister.registerIcon(libInfo.ID + ":" + (this.getUnlocalizedName().substring(5)));
+		 this.itemIcon = iconRegister.registerIcon(libInfo.getResourcePath(this.getUnlocalizedName()));
 	}
 	
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
