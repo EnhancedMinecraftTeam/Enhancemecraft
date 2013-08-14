@@ -33,6 +33,13 @@ public class proxyCommon implements IGuiHandler {
     }
 	
 	/*
+	 * Localization (new method to load it in the commonProxy instance)
+	 */
+	public void addStringLocalization(String key, String lang, String value) {
+        LanguageRegistry.instance().addStringLocalization(key, lang, value);
+    }
+	
+	/*
 	 * Armor Renderer (disabled on the server)
 	 */
 	public int addArmor(String armor) 

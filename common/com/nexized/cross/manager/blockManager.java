@@ -4,7 +4,6 @@ import com.nexized.cross.block.*;
 import com.nexized.cross.conf.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,16 +36,6 @@ public class blockManager {
 			public static Block furnanceFusion;
 			public static Block furnanceFusionOn;
 			
-	
-			public static void doWork(idManager idm, confLocalisation local) {
-				// @Add Blocks to Registry
-				addBlocks(idm);
-				// @Add Names to Registry
-				addNames(local);
-				// @Add Blocks to Registry
-				registerBlocks();
-			}
-			
 			public static void addBlocks(idManager idm)
 			{
 				// @Defaults 
@@ -77,33 +66,6 @@ public class blockManager {
 				// @FusionFurnance
 				furnanceFusion = new crossFusionFurnance(idm.getBlockID("furnanceFusion"), false).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
 				furnanceFusionOn = new crossFusionFurnance(idm.getBlockID("furnanceFusionOn"), true).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
-			}
-			
-			public static void addNames(confLocalisation local) {
-				
-				// @oreBlocks
-				LanguageRegistry.addName(oreAluminum, local.oreAluminumName);
-				LanguageRegistry.addName(oreCopper, local.oreCopperName);
-				LanguageRegistry.addName(orePlatinum, local.orePlatinumName);
-				LanguageRegistry.addName(oreSilver, local.oreSilverName);
-				LanguageRegistry.addName(oreTin, local.oreTinName);
-				LanguageRegistry.addName(oreExperience, local.oreExperienceName);
-				
-				// @ingotBlocks
-				LanguageRegistry.addName(blockAluminum, local.blockAluminumName);
-				LanguageRegistry.addName(blockCopper, local.blockCopperName);
-				LanguageRegistry.addName(blockPlatinum, local.blockPlatinumName);
-				LanguageRegistry.addName(blockSilver, local.blockSilverName);
-				LanguageRegistry.addName(blockSteel, local.blockSteelName);
-				LanguageRegistry.addName(blockTin, local.blockTinName);
-				
-				// @addBlocks
-				LanguageRegistry.addName(blockFosil, local.blockFosilName);
-				LanguageRegistry.addName(blockFreezer, local.blockFreezerName);
-				LanguageRegistry.addName(blockCloud, local.blockCloudName);
-				
-				LanguageRegistry.addName(furnanceFusion, local.furnanceFusionName);
-				LanguageRegistry.addName(furnanceFusionOn, local.furnanceFusionName);
 			}
 			
 			public static void registerBlocks() {

@@ -4,7 +4,6 @@ import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 import com.nexized.emec.emec;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 
 public class armorManager {
@@ -38,14 +37,7 @@ public class armorManager {
 	public static Item chestTin;
 	public static Item legsTin;
 	public static Item bootsTin;
-	
-	public static void doWork(idManager idm, confLocalisation local) {
-		// @Add Armors
-		addArmor(idm);
-		// @Add Names
-		addNames(local);
-	}
-	
+		
 	public static void addArmor(idManager idm) {
 		helmAluminum = new crossArmor(idm.getItemID("helmAluminum"), crossMaterials.armorAluminum, emec.armorAluminumRenderer, 0, "aluminum").setUnlocalizedName("helmAluminum");
 		chestAluminum = new crossArmor(idm.getItemID("chestAluminum"), crossMaterials.armorAluminum, emec.armorAluminumRenderer, 1, "aluminum").setUnlocalizedName("chestAluminum");
@@ -76,37 +68,5 @@ public class armorManager {
 		chestTin = new crossArmor(idm.getItemID("chestTin"), crossMaterials.armorTin, emec.armorTinRenderer, 1, "tin").setUnlocalizedName("chestTin");
 		legsTin = new crossArmor(idm.getItemID("legsTin"), crossMaterials.armorTin, emec.armorTinRenderer, 2, "tin").setUnlocalizedName("legsTin");
 		bootsTin = new crossArmor(idm.getItemID("bootsTin"), crossMaterials.armorTin, emec.armorTinRenderer, 3, "tin").setUnlocalizedName("bootsTin");
-	}
-	
-	public static void addNames(confLocalisation local) {
-		LanguageRegistry.addName(helmAluminum, local.helmAluminumName);
-		LanguageRegistry.addName(chestAluminum, local.chestAluminumName);
-		LanguageRegistry.addName(legsAluminum, local.legsAluminumName);
-		LanguageRegistry.addName(bootsAluminum, local.bootsAluminumName);
-		
-		LanguageRegistry.addName(helmCopper, local.helmCopperName);
-		LanguageRegistry.addName(chestCopper, local.chestCopperName);
-		LanguageRegistry.addName(legsCopper, local.legsCopperName);
-		LanguageRegistry.addName(bootsCopper, local.bootsCopperName);
-		
-		LanguageRegistry.addName(helmPlatinum, local.helmPlatinumName);
-		LanguageRegistry.addName(chestPlatinum, local.chestPlatinumName);
-		LanguageRegistry.addName(legsPlatinum, local.legsPlatinumName);
-		LanguageRegistry.addName(bootsPlatinum, local.bootsPlatinumName);
-		
-		LanguageRegistry.addName(helmSilver, local.helmSilverName);
-		LanguageRegistry.addName(chestSilver, local.chestSilverName);
-		LanguageRegistry.addName(legsSilver, local.legsSilverName);
-		LanguageRegistry.addName(bootsSilver, local.bootsSilverName);
-		
-		LanguageRegistry.addName(helmSteel, local.helmSteelName);
-		LanguageRegistry.addName(chestSteel, local.chestSteelName);
-		LanguageRegistry.addName(legsSteel, local.legsSteelName);
-		LanguageRegistry.addName(bootsSteel, local.bootsSteelName);
-		
-		LanguageRegistry.addName(helmTin, local.helmTinName);
-		LanguageRegistry.addName(chestTin, local.chestTinName);
-		LanguageRegistry.addName(legsTin, local.legsTinName);
-		LanguageRegistry.addName(bootsTin, local.bootsTinName);
 	}
 }

@@ -3,7 +3,6 @@ package com.nexized.cross.manager;
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 
 public class itemManager {
@@ -25,14 +24,7 @@ public class itemManager {
 	public static Item dustSilver;
 	public static Item dustSteel;
 	public static Item dustTin;
-	
-	public static void doWork(idManager idm, confLocalisation local) {
-		// @add Items
-		addItems(idm);
-		// @add Names
-		addNames(local);
-	}
-	
+		
 	public static void addItems(idManager idm) {
 		ingotAluminum = new crossItem(idm.getItemID("ingotAluminum")).setUnlocalizedName("ingotAluminum");
 		ingotCopper = new crossItem(idm.getItemID("ingotCopper")).setUnlocalizedName("ingotCopper");
@@ -47,22 +39,5 @@ public class itemManager {
 		dustSilver = new crossItem(idm.getItemID("dustSilver")).setUnlocalizedName("dustSilver");
 		dustSteel = new crossItem(idm.getItemID("dustSteel")).setUnlocalizedName("dustSteel");
 		dustTin = new crossItem(idm.getItemID("dustTin")).setUnlocalizedName("dustTin");
-	}
-	
-	public static void addNames(confLocalisation local) {
-		LanguageRegistry.addName(ingotAluminum, local.ingotAluminumName);
-		LanguageRegistry.addName(ingotCopper, local.ingotCopperName);
-		LanguageRegistry.addName(ingotPlatinum, local.ingotPlatinumName);
-		LanguageRegistry.addName(ingotSilver, local.ingotSilverName);
-		LanguageRegistry.addName(ingotSteel, local.ingotSteelName);
-		LanguageRegistry.addName(ingotTin, local.ingotTinName);
-		
-		LanguageRegistry.addName(dustAluminum, local.dustAluminumName);
-		LanguageRegistry.addName(dustCopper, local.dustCopperName);
-		LanguageRegistry.addName(dustPlatinum, local.dustPlatinumName);
-		LanguageRegistry.addName(dustSilver, local.dustSilverName);
-		LanguageRegistry.addName(dustSteel, local.dustSteelName);
-		LanguageRegistry.addName(dustTin, local.dustTinName);
-	}
-	
+	}	
 }

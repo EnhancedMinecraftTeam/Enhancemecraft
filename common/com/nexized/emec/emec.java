@@ -5,6 +5,8 @@ import net.minecraft.item.ItemStack;
 
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
+import com.nexized.cross.lib.libInfo;
+import com.nexized.cross.localisation.localizationHandler;
 import com.nexized.cross.manager.*;
 import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.world.crossWorldGenerator;
@@ -45,16 +47,17 @@ public class emec {
     public static int armorSteelRenderer;
     public static int armorTinRenderer;
 	    
-    // @Language Configuration
+    // @ID Manager
     idManager idm;
-    confLocalisation local = new confLocalisation();
     
 	@EventHandler
     public void preManager(FMLPreInitializationEvent event) {
-		// @IDManager
+		// @ID Manager
 		idm = new idManager(event);
 		// @Localisation
-		local.runTask(event);		
+		localizationHandler.loadLanguages();
+		proxy.addStringLocalization("itemGroup.tabEnhanceMeCraft", "en_US", libInfo.ID);
+		proxy.addStringLocalization("itemGroup.tabEnhanceMeCraftFood", "en_US", libInfo.ID);
 	}
 	
 	@EventHandler
@@ -71,15 +74,15 @@ public class emec {
 			}
 		};
 		// @Add Blocks
-		blockManager.doWork(this.idm, this.local);
+		blockManager.addBlocks(this.idm); blockManager.registerBlocks();
 		// @Add Items
-		itemManager.doWork(this.idm, this.local);
+		itemManager.addItems(this.idm);
 		// @Add Tools
-		toolManager.doWork(this.idm, this.local);
+		toolManager.addTools(this.idm); toolManager.setHarvestLevel();
 		// @Add Armor
-		armorManager.doWork(this.idm, this.local);
+		armorManager.addArmor(this.idm);
 		// @Add Food
-		foodManager.doWork(this.idm, this.local);
+		foodManager.addFood(this.idm);
 		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes

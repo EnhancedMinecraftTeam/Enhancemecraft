@@ -4,7 +4,6 @@ import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 import com.nexized.cross.item.tools.*;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -49,16 +48,7 @@ public class toolManager {
 	public static Item swordSteel;
 	public static Item swordTin;
 	public static Item swordBronze;
-	
-	public static void doWork(idManager idm, confLocalisation local) {
-		// @Add Tools
-		addTools(idm);
-		// @Add Names
-		addNames(local);
-		// @SetHarvestLevel
-		setHarvestLevel();
-	}
-	
+		
 	public static void addTools(idManager idm) {
 		// @Add toolAxe
 		axeAluminum = new toolAxe(idm.getItemID("axeAluminum"), crossMaterials.materialAluminum).setUnlocalizedName("axeAluminum");
@@ -125,43 +115,5 @@ public class toolManager {
 		MinecraftForge.setToolClass(hoeSilver, "hoe", 2);
 		MinecraftForge.setToolClass(hoeSteel, "hoe", 4);
 		MinecraftForge.setToolClass(hoeTin, "hoe", 2);
-	}
-	
-	public static void addNames(confLocalisation local) {
-		// @Add Tool Names
-		LanguageRegistry.addName(axeAluminum, local.axeAluminumName);
-		LanguageRegistry.addName(axeCopper, local.axeCopperName);
-		LanguageRegistry.addName(axePlatinum, local.axePlatinumName);
-		LanguageRegistry.addName(axeSilver, local.axeSilverName);
-		LanguageRegistry.addName(axeSteel, local.axeSteelName);
-		LanguageRegistry.addName(axeTin, local.axeTinName);
-		
-		LanguageRegistry.addName(hoeAluminum, local.hoeAluminumName);
-		LanguageRegistry.addName(hoeCopper, local.hoeCopperName);
-		LanguageRegistry.addName(hoePlatinum, local.hoePlatinumName);
-		LanguageRegistry.addName(hoeSilver, local.hoeSilverName);
-		LanguageRegistry.addName(hoeSteel, local.hoeSteelName);
-		LanguageRegistry.addName(hoeTin, local.hoeTinName);
-		
-		LanguageRegistry.addName(shovelAluminum, local.shovelAluminumName);
-		LanguageRegistry.addName(shovelCopper, local.shovelCopperName);
-		LanguageRegistry.addName(shovelPlatinum, local.shovelPlatinumName);
-		LanguageRegistry.addName(shovelSilver, local.shovelSilverName);
-		LanguageRegistry.addName(shovelSteel, local.shovelSteelName);
-		LanguageRegistry.addName(shovelTin, local.shovelTinName);
-		
-		LanguageRegistry.addName(pickAluminum, local.pickAluminumName);
-		LanguageRegistry.addName(pickCopper, local.pickCopperName);
-		LanguageRegistry.addName(pickPlatinum, local.pickPlatinumName);
-		LanguageRegistry.addName(pickSilver, local.pickSilverName);
-		LanguageRegistry.addName(pickSteel, local.pickSteelName);
-		LanguageRegistry.addName(pickTin, local.pickTinName);
-		
-		LanguageRegistry.addName(swordAluminum, local.swordAluminumName);
-		LanguageRegistry.addName(swordCopper, local.swordCopperName);
-		LanguageRegistry.addName(swordPlatinum, local.swordPlatinumName);
-		LanguageRegistry.addName(swordSilver, local.swordSilverName);
-		LanguageRegistry.addName(swordSteel, local.swordSteelName);
-		LanguageRegistry.addName(swordTin, local.swordTinName);
 	}
 }
