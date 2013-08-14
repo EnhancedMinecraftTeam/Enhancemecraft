@@ -46,13 +46,13 @@ public class emec {
     public static int armorTinRenderer;
 	    
     // @Language Configuration
-    confEntity idm = new confEntity();
+    idManager idm;
     confLocalisation local = new confLocalisation();
     
 	@EventHandler
     public void preManager(FMLPreInitializationEvent event) {
-		// @Configuration
-		idm.runTask(event);
+		// @IDManager
+		idm = new idManager(event);
 		// @Localisation
 		local.runTask(event);		
 	}
@@ -80,8 +80,10 @@ public class emec {
 		armorManager.doWork(this.idm, this.local);
 		// @Add Food
 		foodManager.doWork(this.idm, this.local);
+		// @Save Configuration
+		idm.saveConf();
 		// @Add Recipes
-		recipesManager.addRecipes(); recipesManager.addFusionRecipes();
+		recipesManager.addRecipes(); // recipesManager.addFusionRecipes();
 		// @Add WorldGenerator
 		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
 		// @Add TileEntity

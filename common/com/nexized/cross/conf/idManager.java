@@ -53,5 +53,9 @@ public class idManager {
 	public int getItemID(String itemID) {
 		return idmConfiguration.getItem("crossItem", itemID, getNextItemID()).getInt();
 	}
-		
+
+	public void saveConf() {
+		this.idmConfiguration.save();
+	}
+	
 }

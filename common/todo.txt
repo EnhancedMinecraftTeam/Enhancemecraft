@@ -18,7 +18,7 @@ work
 ----
 
 @ Remove unused imports (@nexized) | w
-@ Implement new method for configuration (per instance) (@nexized) | w
+# Implement new method for configuration (per instance) (@nexized) | f
 @ Finish implementation of LocalisationManager (@nexized) | w
 @ Finish implementation of new material bronze (@nexized) | w
 @ Finish mod license (@nexized) | b

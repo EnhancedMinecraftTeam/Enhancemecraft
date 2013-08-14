@@ -26,27 +26,27 @@ public class itemManager {
 	public static Item dustSteel;
 	public static Item dustTin;
 	
-	public static void doWork(confEntity idm, confLocalisation local) {
+	public static void doWork(idManager idm, confLocalisation local) {
 		// @add Items
 		addItems(idm);
 		// @add Names
 		addNames(local);
 	}
 	
-	public static void addItems(confEntity idm) {
-		ingotAluminum = new crossItem(idm.ingotAluminumID).setUnlocalizedName("ingotAluminum");
-		ingotCopper = new crossItem(idm.ingotCopperID).setUnlocalizedName("ingotCopper");
-		ingotPlatinum = new crossItem(idm.ingotPlatinumID).setUnlocalizedName("ingotPlatinum");
-		ingotSilver = new crossItem(idm.ingotSilverID).setUnlocalizedName("ingotSilver");
-		ingotSteel = new crossItem(idm.ingotSteelID).setUnlocalizedName("ingotSteel");
-		ingotTin = new crossItem(idm.ingotTinID).setUnlocalizedName("ingotTin");
+	public static void addItems(idManager idm) {
+		ingotAluminum = new crossItem(idm.getItemID("ingotAluminum")).setUnlocalizedName("ingotAluminum");
+		ingotCopper = new crossItem(idm.getItemID("ingotCopper")).setUnlocalizedName("ingotCopper");
+		ingotPlatinum = new crossItem(idm.getItemID("ingotPlatinum")).setUnlocalizedName("ingotPlatinum");
+		ingotSilver = new crossItem(idm.getItemID("ingotSilver")).setUnlocalizedName("ingotSilver");
+		ingotSteel = new crossItem(idm.getItemID("ingotSteel")).setUnlocalizedName("ingotSteel");
+		ingotTin = new crossItem(idm.getItemID("ingotTin")).setUnlocalizedName("ingotTin");
 		
-		dustAluminum = new crossItem(idm.dustAluminumID).setUnlocalizedName("dustAluminum");
-		dustCopper = new crossItem(idm.dustCopperID).setUnlocalizedName("dustCopper");
-		dustPlatinum = new crossItem(idm.dustPlatinumID).setUnlocalizedName("dustPlatinum");
-		dustSilver = new crossItem(idm.dustSilverID).setUnlocalizedName("dustSilver");
-		dustSteel = new crossItem(idm.dustSteelID).setUnlocalizedName("dustSteel");
-		dustTin = new crossItem(idm.dustTinID).setUnlocalizedName("dustTin");
+		dustAluminum = new crossItem(idm.getItemID("dustAluminum")).setUnlocalizedName("dustAluminum");
+		dustCopper = new crossItem(idm.getItemID("dustCopper")).setUnlocalizedName("dustCopper");
+		dustPlatinum = new crossItem(idm.getItemID("dustPlatinum")).setUnlocalizedName("dustPlatinum");
+		dustSilver = new crossItem(idm.getItemID("dustSilver")).setUnlocalizedName("dustSilver");
+		dustSteel = new crossItem(idm.getItemID("dustSteel")).setUnlocalizedName("dustSteel");
+		dustTin = new crossItem(idm.getItemID("dustTin")).setUnlocalizedName("dustTin");
 	}
 	
 	public static void addNames(confLocalisation local) {
