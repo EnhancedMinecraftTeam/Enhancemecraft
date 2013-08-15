@@ -1,8 +1,14 @@
 package com.nexized.cross.manager;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-15 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+
+import net.minecraft.item.*;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class recipesManager {
@@ -90,12 +96,12 @@ public class recipesManager {
 		// @Dust recipes
 		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
 		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
-		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustCopper.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
+		fusionRecipes.smelting().addSmelting(itemManager.dustCopper.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
 		
 		// @Ingot recipes
 		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
 		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
-		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotCopper.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
+		fusionRecipes.smelting().addSmelting(itemManager.ingotCopper.itemID, itemManager.ingotTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
 	}
 	
 }
