@@ -1,11 +1,18 @@
 package com.nexized.cross.manager;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-13 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import com.nexized.cross.block.*;
 import com.nexized.cross.conf.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
 public class blockManager {
@@ -20,12 +27,12 @@ public class blockManager {
 			
 			// @ingotBlocks
 			public static Block blockAluminum;
+			public static Block blockBronze;
 			public static Block blockCopper;
 			public static Block blockPlatinum;
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
-			public static Block blockBronze;
 			
 			// @addBlocks
 			public static Block blockFosil;
@@ -36,36 +43,37 @@ public class blockManager {
 			public static Block furnanceFusion;
 			public static Block furnanceFusionOn;
 			
-			public static void addBlocks(idManager idm)
+			public static void addBlocks(idManager idm, CreativeTabs tab)
 			{
 				// @Defaults 
 				float oreResistance = 5.0F; 
 				float blockResistance = 12.0F;
 				
 				// @oreBlocks
-				oreAluminum = new crossOre(idm.getBlockID("oreAluminum"), Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
-				oreCopper = new crossOre(idm.getBlockID("oreCopper"), Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
-				orePlatinum = new crossOre(idm.getBlockID("orePlatinum"), Material.rock).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
-				oreSilver = new crossOre(idm.getBlockID("oreSilver"), Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
-				oreTin = new crossOre(idm.getBlockID("oreTin"), Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
-				oreExperience = new crossOre(idm.getBlockID("oreExperience"), Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
+				oreAluminum = new crossOre(idm.getBlockID("oreAluminum"), Material.rock, tab).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum");
+				oreCopper = new crossOre(idm.getBlockID("oreCopper"), Material.rock, tab).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
+				orePlatinum = new crossOre(idm.getBlockID("orePlatinum"), Material.rock, tab).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
+				oreSilver = new crossOre(idm.getBlockID("oreSilver"), Material.rock, tab).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
+				oreTin = new crossOre(idm.getBlockID("oreTin"), Material.rock, tab).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreTin");
+				oreExperience = new crossOre(idm.getBlockID("oreExperience"), Material.rock, tab).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreExperience");
 			
 				// @ingotBlocks
-				blockAluminum = new crossBlock(idm.getBlockID("blockAluminum"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockAluminum");
-				blockCopper = new crossBlock(idm.getBlockID("blockCopper"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockCopper");
-				blockPlatinum = new crossBlock(idm.getBlockID("blockPlatinum"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockPlatinum");
-				blockSilver = new crossBlock(idm.getBlockID("blockSilver"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
-				blockSteel = new crossBlock(idm.getBlockID("blockSteel"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
-				blockTin = new crossBlock(idm.getBlockID("blockTin"), Material.iron).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
+				blockAluminum = new crossBlock(idm.getBlockID("blockAluminum"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockAluminum");
+				blockBronze = new crossBlock(idm.getBlockID("blockBronze"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockBronze");
+				blockCopper = new crossBlock(idm.getBlockID("blockCopper"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockCopper");
+				blockPlatinum = new crossBlock(idm.getBlockID("blockPlatinum"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockPlatinum");
+				blockSilver = new crossBlock(idm.getBlockID("blockSilver"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
+				blockSteel = new crossBlock(idm.getBlockID("blockSteel"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
+				blockTin = new crossBlock(idm.getBlockID("blockTin"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
 			
 				// @addBlocks
-				blockFosil = new crossBlock(idm.getBlockID("blockFosil"), Material.rock).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
-				blockFreezer = new crossBlock(idm.getBlockID("blockFreezer"), Material.rock).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockFreezer");
-				blockCloud = new crossBlock(idm.getBlockID("blockCloud"), Material.rock).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockCloud");
+				blockFosil = new crossBlock(idm.getBlockID("blockFosil"), Material.rock, tab).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
+				blockFreezer = new crossBlock(idm.getBlockID("blockFreezer"), Material.rock, tab).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockFreezer");
+				blockCloud = new crossBlock(idm.getBlockID("blockCloud"), Material.rock, tab).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockCloud");
 			
 				// @FusionFurnance
-				furnanceFusion = new crossFusionFurnance(idm.getBlockID("furnanceFusion"), false).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
-				furnanceFusionOn = new crossFusionFurnance(idm.getBlockID("furnanceFusionOn"), true).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
+				furnanceFusion = new crossFusionFurnance(idm.getBlockID("furnanceFusion"), false, tab).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
+				furnanceFusionOn = new crossFusionFurnance(idm.getBlockID("furnanceFusionOn"), true, tab).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
 			}
 			
 			public static void registerBlocks() {

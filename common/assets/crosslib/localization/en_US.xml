@@ -24,6 +24,10 @@
 	<entry key="item.com.nexized.cross.manager.armorManager.chestAluminum.name">Aluminum Chest</entry> 
 	<entry key="item.com.nexized.cross.manager.armorManager.legsAluminum.name">Aluminum Legs</entry> 
 	<entry key="item.com.nexized.cross.manager.armorManager.bootsAluminum.name">Aluminum Boots</entry>
+	<entry key="item.com.nexized.cross.manager.armorManager.helmBronze.name">Bronze Helm</entry>
+	<entry key="item.com.nexized.cross.manager.armorManager.chestBronze.name">Bronze Chest</entry> 
+	<entry key="item.com.nexized.cross.manager.armorManager.legsBronze.name">Bronze Legs</entry> 
+	<entry key="item.com.nexized.cross.manager.armorManager.bootsBronze.name">Bronze Boots</entry>
 	<entry key="item.com.nexized.cross.manager.armorManager.helmCopper.name">Copper Helm</entry>
 	<entry key="item.com.nexized.cross.manager.armorManager.chestCopper.name">Copper Chest</entry> 
 	<entry key="item.com.nexized.cross.manager.armorManager.legsCopper.name">Copper Legs</entry> 

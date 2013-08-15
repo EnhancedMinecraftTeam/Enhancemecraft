@@ -11,6 +11,7 @@ import java.util.Random;
 import com.nexized.cross.manager.blockManager;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -22,6 +23,9 @@ public class crossOre extends crossBlock {
 	public crossOre(int id, Material mat) 
 	{ super(id, mat); }
 
+	public crossOre(int id, Material mat, CreativeTabs tab) 
+	{ super(id, mat, tab); }
+	
 	public int idDropped(int i, Random random, int j)
 	 {
 		 if (this.blockID != blockManager.oreExperience.blockID) 

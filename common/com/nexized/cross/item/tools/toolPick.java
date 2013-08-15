@@ -1,15 +1,17 @@
 package com.nexized.cross.item.tools;
 
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumToolMaterial;
-import net.minecraft.item.ItemAxe;
-import net.minecraft.item.ItemStack;
+/*
+ * Author: nexized
+ * Last changed: 2013-08-15 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
 
 import com.nexized.cross.lib.libInfo;
-import com.nexized.emec.emec;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.*;
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.*;
 
 public class toolPick extends ItemAxe {
 
@@ -19,7 +21,12 @@ public class toolPick extends ItemAxe {
 	{
 		super(id, mat);
 		this.material = mat;
-		this.setCreativeTab(emec.tabEnhanceMeCraft);
+	}
+	
+	public toolPick(int id, EnumToolMaterial mat, CreativeTabs tab) {
+		super(id, mat);
+		this.material = mat;
+		this.setCreativeTab(tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

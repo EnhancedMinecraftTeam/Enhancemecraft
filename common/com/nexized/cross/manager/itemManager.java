@@ -1,8 +1,15 @@
 package com.nexized.cross.manager;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-15 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class itemManager {
@@ -25,19 +32,21 @@ public class itemManager {
 	public static Item dustSteel;
 	public static Item dustTin;
 		
-	public static void addItems(idManager idm) {
-		ingotAluminum = new crossItem(idm.getItemID("ingotAluminum")).setUnlocalizedName("ingotAluminum");
-		ingotCopper = new crossItem(idm.getItemID("ingotCopper")).setUnlocalizedName("ingotCopper");
-		ingotPlatinum = new crossItem(idm.getItemID("ingotPlatinum")).setUnlocalizedName("ingotPlatinum");
-		ingotSilver = new crossItem(idm.getItemID("ingotSilver")).setUnlocalizedName("ingotSilver");
-		ingotSteel = new crossItem(idm.getItemID("ingotSteel")).setUnlocalizedName("ingotSteel");
-		ingotTin = new crossItem(idm.getItemID("ingotTin")).setUnlocalizedName("ingotTin");
+	public static void addItems(idManager idm, CreativeTabs tab) {
+		ingotAluminum = new crossItem(idm.getItemID("ingotAluminum"), tab).setUnlocalizedName("ingotAluminum");
+		ingotBronze = new crossItem(idm.getItemID("ingotBronze"), tab).setUnlocalizedName("ingotBronze");
+		ingotCopper = new crossItem(idm.getItemID("ingotCopper"), tab).setUnlocalizedName("ingotCopper");
+		ingotPlatinum = new crossItem(idm.getItemID("ingotPlatinum"), tab).setUnlocalizedName("ingotPlatinum");
+		ingotSilver = new crossItem(idm.getItemID("ingotSilver"), tab).setUnlocalizedName("ingotSilver");
+		ingotSteel = new crossItem(idm.getItemID("ingotSteel"), tab).setUnlocalizedName("ingotSteel");
+		ingotTin = new crossItem(idm.getItemID("ingotTin"), tab).setUnlocalizedName("ingotTin");
 		
-		dustAluminum = new crossItem(idm.getItemID("dustAluminum")).setUnlocalizedName("dustAluminum");
-		dustCopper = new crossItem(idm.getItemID("dustCopper")).setUnlocalizedName("dustCopper");
-		dustPlatinum = new crossItem(idm.getItemID("dustPlatinum")).setUnlocalizedName("dustPlatinum");
-		dustSilver = new crossItem(idm.getItemID("dustSilver")).setUnlocalizedName("dustSilver");
-		dustSteel = new crossItem(idm.getItemID("dustSteel")).setUnlocalizedName("dustSteel");
-		dustTin = new crossItem(idm.getItemID("dustTin")).setUnlocalizedName("dustTin");
-	}	
+		dustIron = new crossItem(idm.getItemID("dustIron"), tab).setUnlocalizedName("dustIron");
+		dustAluminum = new crossItem(idm.getItemID("dustAluminum"), tab).setUnlocalizedName("dustAluminum");
+		dustBronze = new crossItem(idm.getItemID("dustBronze"), tab).setUnlocalizedName("dustBronze");
+		dustCopper = new crossItem(idm.getItemID("dustCopper"), tab).setUnlocalizedName("dustCopper");
+		dustPlatinum = new crossItem(idm.getItemID("dustPlatinum"), tab).setUnlocalizedName("dustPlatinum");
+		dustSilver = new crossItem(idm.getItemID("dustSilver"), tab).setUnlocalizedName("dustSilver");
+		dustSteel = new crossItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
+	}
 }

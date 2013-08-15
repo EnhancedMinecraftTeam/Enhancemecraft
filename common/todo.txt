@@ -17,10 +17,10 @@ roles
 work
 ----
 
-@ Remove unused imports (@nexized) | w
+# Remove unused imports (@nexized) | f
 # Implement new method for configuration (per instance) (@nexized) | f
 # Finish implementation of LocalisationManager (@nexized) | f
-@ Finish implementation of new material bronze (@nexized) | w
+# Finish implementation of new material bronze (@nexized) | f
 # Finish mod license (@nexized) | f
 @ Implement more food (@mod_attackz) | w
 @ Implement new ores (@nexized) | p

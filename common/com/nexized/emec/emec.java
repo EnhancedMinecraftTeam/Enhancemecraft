@@ -1,5 +1,11 @@
 package com.nexized.emec;
 
+/*
+ * Author: nexized
+ * Last changed: 2013-08-13 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
+ */
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -41,6 +47,7 @@ public class emec {
 	
 	// @Armor Renders
 	public static int armorAluminumRenderer;
+	public static int armorBronzeRenderer;
     public static int armorCopperRenderer;
     public static int armorPlatinumRenderer;
     public static int armorSilverRenderer;
@@ -74,15 +81,17 @@ public class emec {
 			}
 		};
 		// @Add Blocks
-		blockManager.addBlocks(this.idm); blockManager.registerBlocks();
+		blockManager.addBlocks(this.idm, tabEnhanceMeCraft); 
+		blockManager.registerBlocks();
 		// @Add Items
-		itemManager.addItems(this.idm);
+		itemManager.addItems(this.idm, tabEnhanceMeCraft);
 		// @Add Tools
-		toolManager.addTools(this.idm); toolManager.setHarvestLevel();
+		toolManager.addTools(this.idm, tabEnhanceMeCraft); 
+		toolManager.setHarvestLevel();
 		// @Add Armor
-		armorManager.addArmor(this.idm);
+		armorManager.addArmor(this.idm, tabEnhanceMeCraft);
 		// @Add Food
-		foodManager.addFood(this.idm);
+		foodManager.addFood(this.idm, tabEnhanceMeCraftFood);
 		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes
@@ -94,6 +103,7 @@ public class emec {
 		GameRegistry.registerWorldGenerator(new crossWorldGenerator());
 		// @Add armorRenders
 		armorAluminumRenderer = proxy.addArmor("aluminum");
+		armorBronzeRenderer = proxy.addArmor("bronze");
 		armorCopperRenderer = proxy.addArmor("copper");
 		armorPlatinumRenderer = proxy.addArmor("platinum");
 		armorSilverRenderer = proxy.addArmor("silver");
