@@ -78,9 +78,6 @@ public class recipesManager {
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordTin), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotTin, '*', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(toolManager.swordBronze), new Object[] {" X ", " X ", " * ", 'X', itemManager.ingotBronze, '*', Item.stick});
 		
-		// @Add Food Recipes
-		GameRegistry.addRecipe(new ItemStack(foodManager.foodRawbacon, 3), new Object[] {"X", 'X', Item.porkRaw});
-				
 		// @Add Smelting (oreBlocks)
 		GameRegistry.addSmelting(blockManager.oreAluminum.blockID, new ItemStack(itemManager.ingotAluminum), 1.0F);
 		GameRegistry.addSmelting(blockManager.oreCopper.blockID, new ItemStack(itemManager.ingotCopper), 1.0F);
@@ -89,7 +86,7 @@ public class recipesManager {
 		GameRegistry.addSmelting(blockManager.oreTin.blockID, new ItemStack(itemManager.ingotTin), 1.0F);
 	
 		// @Add Smelting (foodItems)
-		GameRegistry.addSmelting(foodManager.foodRawbacon.itemID, new ItemStack (foodManager.foodBacon), 0.1F);
+		GameRegistry.addSmelting(foodManager.foodRawBacon.itemID, new ItemStack (foodManager.foodBacon), 0.1F);
 	}
 	
 	public static void addFusionRecipes() {

@@ -8,9 +8,11 @@ package com.nexized.emec;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
+import com.nexized.cross.item.food.foodDropEvent;
 import com.nexized.cross.lib.libInfo;
 import com.nexized.cross.localisation.localizationHandler;
 import com.nexized.cross.manager.*;
@@ -101,6 +103,8 @@ public class emec {
 		// @Add TileEntity
 		GameRegistry.registerTileEntity(tileFusionFurnace.class, "fusionFurnace");
 		GameRegistry.registerWorldGenerator(new crossWorldGenerator());
+		// @Add Events
+		MinecraftForge.EVENT_BUS.register(new foodDropEvent());
 		// @Add armorRenders
 		armorAluminumRenderer = proxy.addArmor("aluminum");
 		armorBronzeRenderer = proxy.addArmor("bronze");

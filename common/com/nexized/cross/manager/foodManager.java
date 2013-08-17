@@ -15,8 +15,17 @@ import net.minecraft.item.Item;
 public class foodManager {
 
 	// @Defined Items (@nexized)
-	public static Item foodRawbacon;
+	public static Item foodRawBacon;
     public static Item foodBacon;
+    public static Item foodRawMoutton;
+    public static Item foodMoutton;
+    public static Item foodCucumber;
+    public static Item foodBanana;
+    public static Item foodTunaSalad;
+    public static Item foodSardine;
+    public static Item foodChese;
+    public static Item foodRye;
+    public static Item foodBarley;
     
     // @Defined Items (@mod_attackz)  
 	public static Item foodCorn;
@@ -30,8 +39,10 @@ public class foodManager {
 	public static Item foodEggScramled;
 	    
     public static void addFood(idManager idm, CreativeTabs tab) {
-    	foodRawbacon = (new crossFood(idm.getItemID("foodRawbacon"), 1, 0.1F, true, tab).setUnlocalizedName("foodRawbacon"));
+    	foodRawBacon = (new crossFood(idm.getItemID("foodRawBacon"), 1, 0.1F, true, tab).setUnlocalizedName("foodRawBacon"));
+    	foodRawMoutton = (new crossFood(idm.getItemID("foodRawMoutton"), 1, 0.1F, true, tab).setUnlocalizedName("foodRawMoutton"));
     	foodBacon = (new crossFood(idm.getItemID("foodBacon"), 3, 0.3F, true, tab).setUnlocalizedName("foodBacon"));
+    	foodMoutton = (new crossFood(idm.getItemID("foodMoutton"), 4, 0.4F, true, tab).setUnlocalizedName("foodMoutton"));
     	foodCorn = (new crossFood(idm.getItemID("foodCorn"), 1, 0.1F, true, tab).setUnlocalizedName("foodCorn"));
     	foodTomato = (new crossFood(idm.getItemID("foodTomato"), 3, 0.3F, true, tab).setUnlocalizedName("foodTomato"));
     	foodStrawberry = (new crossFood(idm.getItemID("foodStrawberry"), 1, 0.1F, true, tab).setUnlocalizedName("foodStrawberry"));
