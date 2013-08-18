@@ -22,10 +22,11 @@ work
 # Finish implementation of LocalisationManager (@nexized) | f
 # Finish implementation of new material bronze (@nexized) | f
 # Finish mod license (@nexized) | f
-@ Implement more food (@mod_attackz) | w
+# Implement more food (@mod_attackz) | f
 @ Implement new ores (@nexized) | p
+@ Fix fusion furnance (@nexized) | p
 @ Implement more recipes for the fusion furnace (@nexized) | p
-@ Remove references from crossLib to EMEC (Later use of crossLib for other modifications (+ simple updates) (@nexized) | b
+@ Remove references from crossLib to EMEC (Later use of crossLib for other modifications (+ simple updates) (@nexized) | w
 @ Implement biomes (@) | p
 @ Implement additional blocks for new biomes (@) | b
 @ Implement new kind of tools (@) | p

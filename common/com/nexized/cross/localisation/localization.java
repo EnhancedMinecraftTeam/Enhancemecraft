@@ -7,7 +7,7 @@ package com.nexized.cross.localisation;
  */
 
 public enum localization {
-	US("en_US"); // , GERMAN("de_DE"), FRENCH("fr_FR");
+	US("en_US") , GERMAN("de_DE"); //, FRENCH("fr_FR");
 
 	private final String locale;
 	

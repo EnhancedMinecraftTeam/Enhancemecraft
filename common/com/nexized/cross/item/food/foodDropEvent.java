@@ -8,7 +8,7 @@ import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-17 by nexized
+ * Last changed: 2013-08-18 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -26,7 +26,7 @@ public class foodDropEvent {
 		// Add @Drop on @EntityPig with chance of 25%
 		if (event.entityLiving instanceof EntityPig) {
 			double rand = Math.random();
-			if (rand < 0.25d) {
+			if (rand < 0.5d) {
 				event.entityLiving.dropItem(foodManager.foodRawBacon.itemID, 2);
 			}
 		}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
-	<comment>English Translation</comment>
+	<comment>English Translation Version 1.1</comment>
 	<entry key="tile.oreAluminum.name">Aluminum Ore</entry>
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
 	<entry key="tile.orePlatinum.name">Platinum Ore</entry>
@@ -48,8 +48,18 @@
 	<entry key="item.chestTin.name">Tin Chest</entry> 
 	<entry key="item.legsTin.name">Tin Legs</entry> 
 	<entry key="item.bootsTin.name">Tin Boots</entry> 
-	<entry key="item.foodRawbacon.name">Raw Bacon</entry>
+	<entry key="item.foodRawBacon.name">Raw Bacon</entry>
 	<entry key="item.foodBacon.name">Bacon</entry>
+	<entry key="item.foodRawMoutton.name">Raw Moutton</entry>
+	<entry key="item.foodMoutton.name">Moutton</entry>
+	<entry key="item.foodCucumber.name">Cucumber</entry>
+	<entry key="item.foodBanana.name">Banana</entry>
+	<entry key="item.foodTunaSalad.name">Tuna Salad</entry>
+	<entry key="item.foodRawSardine.name">Raw Sardine</entry>
+	<entry key="item.foodSardine.name">Sardine</entry>
+	<entry key="item.foodCheese.name">Cheese</entry>
+	<entry key="item.foodRye.name">Rye</entry>
+	<entry key="item.foodBarley.name">Barley</entry>
 	<entry key="item.foodCorn.name">Corn</entry>
 	<entry key="item.foodTomato.name">Tomato</entry>
 	<entry key="item.foodStrawberry.name">Strawberry</entry>

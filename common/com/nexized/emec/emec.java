@@ -2,7 +2,7 @@ package com.nexized.emec;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-13 by nexized
+ * Last changed: 2013-08-18 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -74,7 +74,7 @@ public class emec {
 		// @Custom Tab
 		tabEnhanceMeCraft = new CreativeTabs("tabEnhanceMeCraft") {
 			public ItemStack getIconItemStack() {
-                return new ItemStack(blockManager.orePlatinum, 1, 0);
+                return new ItemStack(blockManager.blockFosil, 1, 0);
 			}
 		};
 		tabEnhanceMeCraftFood = new CreativeTabs("tabEnhanceMeCraftFood"){
