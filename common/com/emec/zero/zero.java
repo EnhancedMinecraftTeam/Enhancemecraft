@@ -8,6 +8,7 @@ package com.emec.zero;
 
 import net.minecraft.creativetab.CreativeTabs;
 
+import com.emec.zero.conf.idManager;
 import com.emec.zero.conf.localizationHandler;
 import com.emec.zero.proxy.commonProxy;
 
@@ -24,6 +25,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 
 public class zero {
 
+	public idManager idm;
+	
 	@SidedProxy(clientSide = "com.emec.zero.proxy.clientProxy", 
 			serverSide = "com.emec.zero.proxy.commonProxy")
 	public static commonProxy proxy;
