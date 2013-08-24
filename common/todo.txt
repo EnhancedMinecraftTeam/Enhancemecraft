@@ -1,4 +1,4 @@
-TODO: EnhanceMeCraft (+crossLib)
+TODO: EnhanceMeCraft (+emecZero)
 
 status
 ------
@@ -17,20 +17,3 @@ roles
 work
 ----
 
-# Remove unused imports (@nexized) | f
-# Implement new method for configuration (per instance) (@nexized) | f
-# Finish implementation of LocalisationManager (@nexized) | f
-# Finish implementation of new material bronze (@nexized) | f
-# Finish mod license (@nexized) | f
-# Implement more food (@mod_attackz) | f
-@ Implement new ores (@nexized) | p
-@ Fix fusion furnance (@nexized) | p
-@ Implement more recipes for the fusion furnace (@nexized) | p
-@ Remove references from crossLib to EMEC (Later use of crossLib for other modifications (+ simple updates) (@nexized) | w
-@ Implement biomes (@) | p
-@ Implement additional blocks for new biomes (@) | b
-@ Implement new kind of tools (@) | p
-@ Implement new achievements (@) | p
-@ Implement AI for new mobs (@) | p
-@ Implement new mobs (@) | p
-@ Implement new dimensions (@) | p

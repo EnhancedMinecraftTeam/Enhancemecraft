@@ -2,7 +2,7 @@ package com.emec.zero;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-22 by nexized
+ * Last changed: 2013-08-24 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -19,9 +19,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @Mod(modid = lib.ID, name = lib.NAME, version = lib.VERSION)
+
 public class zero {
 
 	@SidedProxy(clientSide = "com.emec.zero.proxy.clientProxy", 

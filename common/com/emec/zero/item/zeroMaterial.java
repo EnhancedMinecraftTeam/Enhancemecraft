@@ -1,8 +1,8 @@
-package com.emec.material.item;
+package com.emec.zero.item;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-22 by nexized
+ * Last changed: 2013-08-24 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -10,7 +10,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
 
-public class emecMaterial {
+public class zeroMaterial {
 
 	public static EnumToolMaterial materialAluminum = EnumHelper.addToolMaterial("ALUMINUM", 2, 200, 5.0F, 2, 14);
 	public static EnumToolMaterial materialBronze = EnumHelper.addToolMaterial("BRONZE", 3, 300, 6.0F, 3, 14);

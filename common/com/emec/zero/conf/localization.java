@@ -2,7 +2,7 @@ package com.emec.zero.conf;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-22 by nexized
+ * Last changed: 2013-08-24 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -16,7 +16,7 @@ public enum localization {
 	    }
 	 
 	 public String filename() {
-	        return String.format("/assets/emec/localization/%s.xml", locale);
+	        return String.format("/assets/emecZero/localization/%s.xml", locale);
 	    }
 
 	    public String locale() {

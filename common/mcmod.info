@@ -1,18 +1,18 @@
 [
 {
-"modid": "emec",
+"modid": "emecZero",
 "name": "EnhanceMeCraft",
-"description": "Extending Minecraft with new Materials, Food, Biomes, Mobs and more",
+"description": "Extending Minecraft with new materials, food, biomes, mobs and more",
 "version": "",
-"credits": "Created by nexized & modattackz",
-"mcversion": "",
-"url": "http://www.minecraftforum.net/",
+"credits": "Implementation by nexized",
+"mcversion": "1.6.2",
+"url": "http://emec.mecanized.net/",
 "updateUrl": "",
-"authors": [ "nexized & modattackz", "EnhanceMeCraft Team" ],
+"authors": [ "nexized", "EnhanceMeCraft Team" ],
 "parent":"",
 "screenshots": [],
-"dependencies": [
-         "mod_MinecraftForge"
-]
+"dependencies": ["mod_MinecraftForge"],
+"dependants": ["emecMaterial", "emecFood"],
+"useDependencyInformation": "true"
 }
 ]

@@ -2,7 +2,7 @@ package com.emec.zero.conf;
 
 /*
  * Author: nexized
- * Last changed: 2013-08-22 by nexized
+ * Last changed: 2013-08-24 by nexized
  * Licensed under nexized cross license - see license.txt for further information
  */
 
@@ -27,15 +27,11 @@ public class idManager {
 	// value for current item
 	private int currentItemID = 0;
 	
-	// identification of childmod
-	private String modID = "";
-	
-	public idManager(FMLPreInitializationEvent event, String modID) 
+	public idManager(FMLPreInitializationEvent event) 
 	{
-		this.modID = modID;
 		
 		idmConfigurationFile = new File(event.getModConfigurationDirectory(), 
-				"/" + this.modID + "/idManager.cfg");
+				"/emecZero/idManager.cfg");
 		idmConfiguration = new Configuration(idmConfigurationFile);		
 		idmConfiguration.load();		
 		
