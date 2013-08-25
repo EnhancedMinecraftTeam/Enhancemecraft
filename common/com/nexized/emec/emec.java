@@ -94,6 +94,8 @@ public class emec {
 		armorManager.addArmor(this.idm, tabEnhanceMeCraft);
 		// @Add Food
 		foodManager.addFood(this.idm, tabEnhanceMeCraftFood);
+		// @Add Biomes
+		biomeManager.addBiome(this.idm);
 		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes

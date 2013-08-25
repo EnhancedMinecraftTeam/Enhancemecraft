@@ -14,9 +14,11 @@ public class idManager {
 	
 	private int minBlockID = 500;
 	private int minItemID = 4000;
+	private int minBiomeID = 100;
 	
 	private int currentBlockID = 0;
 	private int currentItemID = 0;
+	private int currentBiomeID = 0;
 		
 	public idManager(FMLPreInitializationEvent event) 
 	{
@@ -26,6 +28,7 @@ public class idManager {
 		
 		this.currentBlockID = minBlockID - 1;
 		this.currentItemID = minItemID - 1;
+		this.currentBiomeID = minBiomeID - 1;
 		
 		if (idmConfiguration.get("Version", "idmVersion", libInfo.updatedID).getInt() < libInfo.updatedID) {
 			idmConfigurationFile.delete();
@@ -46,6 +49,11 @@ public class idManager {
 		return this.currentItemID;
 	}
 	
+	private int getNextBiomeID() {
+		this.currentBiomeID = this.currentBiomeID + 1;
+		return this.currentBiomeID;
+	}
+	
 	public int getBlockID(String blockID) {
 		return idmConfiguration.getBlock("crossBlock", blockID, getNextBlockID()).getInt();
 	}
@@ -53,7 +61,11 @@ public class idManager {
 	public int getItemID(String itemID) {
 		return idmConfiguration.getItem("crossItem", itemID, getNextItemID()).getInt();
 	}
-
+	
+	public int getBiomeID(String biomeID) {
+		return idmConfiguration.get("crossBiome", biomeID, getNextBiomeID()).getInt();
+	}
+	
 	public void saveConf() {
 		this.idmConfiguration.save();
 	}
