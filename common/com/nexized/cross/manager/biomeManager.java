@@ -26,6 +26,7 @@ public class biomeManager {
 		iceDesert = (new BiomeIceDesert(idm.getBiomeID("BiomeIceDesert")).setBiomeName("Ice Desert").setMinMaxHeight(0.3F, 1.5F).setEnableSnow().setTemperatureRainfall(0.05F, 0.08F));
 		//redwoodForest = (new BiomeRedwoodForest(idm.getBiomeID("BiomeRedwoodForest")).setBiomeName("Redwood Forest"));
 		
+		GameRegistry.addBiome(iceDesert);
 		
 	}
 	
