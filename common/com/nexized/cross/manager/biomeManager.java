@@ -3,20 +3,18 @@ package com.nexized.cross.manager;
 import com.nexized.cross.conf.idManager;
 import com.nexized.cross.world.biome.BiomeIceDesert;
 
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.world.biome.BiomeGenBase;
 
-/**Biome Manager
- * this sets up the biomes
- * you Define, add the settings to, and register biomes here
- * @author afroraydude
+/*
+ * Author: nexized
+ * Last changed: 2013-08-18 by nexized
+ * Licensed under nexized cross license - see license.txt for further information
  */
+
 public class biomeManager {
 
-	//Define Biomes
+	// Define Biomes
 	public static BiomeGenBase iceDesert;
 	public static BiomeGenBase redwoodForest;
 		

@@ -19,7 +19,6 @@ import com.nexized.cross.localisation.localizationHandler;
 import com.nexized.cross.manager.*;
 import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.world.crossWorldGenerator;
-import com.nexized.cross.world.biome.BiomeIceDesert;
 import com.nexized.emec.lib.modInfo;
 import com.nexized.emec.proxy.proxyCommon;
 
@@ -62,14 +61,9 @@ public class emec {
     
     // @ID Manager
     idManager idm;
-    //IDK How to have the biome spawn off of the biomeManager so I did this:
-    @EventHandler
-    public void Load(FMLPreInitializationEvent event) {
-		iceDesert = (new BiomeIceDesert(idm.getBiomeID("BiomeIceDesert")).setBiomeName("Ice Desert").setMinMaxHeight(0.3F, 1.5F).setEnableSnow().setTemperatureRainfall(0.05F, 0.08F));
-		GameRegistry.addBiome(iceDesert);
-    }
+    
 	@EventHandler
-    public void preManager(FMLPreInitializationEvent event) {
+    public void preLoad(FMLPreInitializationEvent event) {
 		// @ID Manager
 		idm = new idManager(event);
 		// @Localisation
@@ -79,7 +73,7 @@ public class emec {
 	}
 	
 	@EventHandler
-	public void Manager(FMLInitializationEvent event) {
+	public void Load(FMLInitializationEvent event) {
 		// @Custom Tab
 		tabEnhanceMeCraft = new CreativeTabs("tabEnhanceMeCraft") {
 			public ItemStack getIconItemStack() {
