@@ -8,6 +8,7 @@ package com.nexized.emec;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.nexized.cross.conf.*;
@@ -18,6 +19,7 @@ import com.nexized.cross.localisation.localizationHandler;
 import com.nexized.cross.manager.*;
 import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.world.crossWorldGenerator;
+import com.nexized.cross.world.biome.BiomeIceDesert;
 import com.nexized.emec.lib.modInfo;
 import com.nexized.emec.proxy.proxyCommon;
 
@@ -46,7 +48,8 @@ public class emec {
 	// @Creative Tab
 	public static CreativeTabs tabEnhanceMeCraft;
 	public static CreativeTabs tabEnhanceMeCraftFood;
-	
+	public static BiomeGenBase iceDesert;
+	public static BiomeGenBase redwoodForest;
 	// @Armor Renders
 	public static int armorAluminumRenderer;
 	public static int armorBronzeRenderer;
@@ -55,10 +58,16 @@ public class emec {
     public static int armorSilverRenderer;
     public static int armorSteelRenderer;
     public static int armorTinRenderer;
-	    
+	
+    
     // @ID Manager
     idManager idm;
-    
+    //IDK How to have the biome spawn off of the biomeManager so I did this:
+    @EventHandler
+    public void Load(FMLPreInitializationEvent event) {
+		iceDesert = (new BiomeIceDesert(idm.getBiomeID("BiomeIceDesert")).setBiomeName("Ice Desert").setMinMaxHeight(0.3F, 1.5F).setEnableSnow().setTemperatureRainfall(0.05F, 0.08F));
+		GameRegistry.addBiome(iceDesert);
+    }
 	@EventHandler
     public void preManager(FMLPreInitializationEvent event) {
 		// @ID Manager
@@ -94,6 +103,8 @@ public class emec {
 		armorManager.addArmor(this.idm, tabEnhanceMeCraft);
 		// @Add Food
 		foodManager.addFood(this.idm, tabEnhanceMeCraftFood);
+		// @Add Biomes
+		biomeManager.addBiome(this.idm);
 		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes
