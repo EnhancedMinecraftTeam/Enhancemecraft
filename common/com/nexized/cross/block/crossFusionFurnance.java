@@ -8,8 +8,8 @@ package com.nexized.cross.block;
 
 import java.util.Random;
 
-import com.nexized.emec.emec; // @This is used for the instance @onBlockActivated - TODO: Remove further references to EMEC with crossProxy
-import com.nexized.cross.manager.blockManager;
+// import com.nexized.emec.emec; // @This is used for the instance @onBlockActivated - TODO: Remove further references to EMEC with crossProxy
+// import com.nexized.cross.manager.blockManager;
 import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.lib.libInfo;
 
@@ -66,7 +66,8 @@ public class crossFusionFurnance extends BlockContainer {
 	 */
 	public int idDropped(int par1, Random par2Random, int par3)
     {
-        return blockManager.furnanceFusion.blockID;
+        // return blockManager.furnanceFusion.blockID;
+		return 0;
     }
 	
 	/*
@@ -135,7 +136,8 @@ public class crossFusionFurnance extends BlockContainer {
         if (par1World.isRemote)
         { return true; }
         else
-        { par5EntityPlayer.openGui(emec.instance, 0, par1World, par2, par3, par4); 
+        // TODO: UNCOMMENT THIS
+        { // par5EntityPlayer.openGui(emec.instance, 0, par1World, par2, par3, par4); 
         return true; }
     }
 	
@@ -148,11 +150,14 @@ public class crossFusionFurnance extends BlockContainer {
         TileEntity tileentity = par1World.getBlockTileEntity(par2, par3, par4);
         keepFurnaceInventory = true;
 
+        // TODO: UNCOMMENT THIS
+        /*
         if (par0)
         { par1World.setBlock(par2, par3, par4, blockManager.furnanceFusionOn.blockID); }
         else
         { par1World.setBlock(par2, par3, par4, blockManager.furnanceFusion.blockID); }
-
+         */
+		
         keepFurnaceInventory = false;
         par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
 

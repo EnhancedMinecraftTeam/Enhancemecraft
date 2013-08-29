@@ -40,8 +40,8 @@ public class blockManager {
 			public static Block blockCloud;
 			
 			// @fusionFurnance
-			public static Block furnanceFusion;
-			public static Block furnanceFusionOn;
+			// public static Block furnanceFusion;
+			// public static Block furnanceFusionOn;
 			
 			public static void addBlocks(idManager idm, CreativeTabs tab)
 			{
@@ -72,8 +72,8 @@ public class blockManager {
 				blockCloud = new crossBlock(idm.getBlockID("blockCloud"), Material.rock, tab).setHardness(4.0F).setResistance(blockResistance).setUnlocalizedName("blockCloud");
 			
 				// @FusionFurnance
-				furnanceFusion = new crossFusionFurnance(idm.getBlockID("furnanceFusion"), false, tab).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
-				furnanceFusionOn = new crossFusionFurnance(idm.getBlockID("furnanceFusionOn"), true, tab).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
+				// furnanceFusion = new crossFusionFurnance(idm.getBlockID("furnanceFusion"), false, tab).setHardness(3.5F).setResistance(10.0F).setUnlocalizedName("furnanceFusion");
+				// furnanceFusionOn = new crossFusionFurnance(idm.getBlockID("furnanceFusionOn"), true, tab).setHardness(3.5F).setLightValue(1.0F).setUnlocalizedName("furnanceFusionOn");
 			}
 			
 			public static void registerBlocks() {
@@ -104,7 +104,7 @@ public class blockManager {
 				GameRegistry.registerBlock(blockFreezer, blockFreezer.getUnlocalizedName());
 				GameRegistry.registerBlock(blockCloud, blockCloud.getUnlocalizedName());
 				
-				GameRegistry.registerBlock(furnanceFusion, furnanceFusion.getUnlocalizedName());
+				// GameRegistry.registerBlock(furnanceFusion, furnanceFusion.getUnlocalizedName());
 				// GameRegistry.registerBlock(furnanceFusionOn, furnanceFusionOn.getUnlocalizedName());
 			}
 			

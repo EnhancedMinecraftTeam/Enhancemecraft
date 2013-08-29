@@ -91,9 +91,9 @@ public class recipesManager {
 	
 	public static void addFusionRecipes() {
 		// @Dust recipes
-		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
-		fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
-		fusionRecipes.smelting().addSmelting(itemManager.dustCopper.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
+		//fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		//fusionRecipes.smelting().addSmelting(itemManager.dustIron.itemID, itemManager.dustTin.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));
+		//fusionRecipes.smelting().addSmelting(itemManager.dustCopper.itemID, itemManager.dustSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotBronze));
 		
 		// @Ingot recipes
 		fusionRecipes.smelting().addSmelting(Item.ingotIron.itemID, itemManager.ingotSilver.itemID, Item.flint.itemID, new ItemStack(itemManager.ingotSteel));

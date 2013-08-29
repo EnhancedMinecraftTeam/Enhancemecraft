@@ -8,7 +8,6 @@ package com.nexized.emec;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.nexized.cross.conf.*;
@@ -47,8 +46,10 @@ public class emec {
 	// @Creative Tab
 	public static CreativeTabs tabEnhanceMeCraft;
 	public static CreativeTabs tabEnhanceMeCraftFood;
-	public static BiomeGenBase iceDesert;
-	public static BiomeGenBase redwoodForest;
+	
+	// public static BiomeGenBase iceDesert;
+	// public static BiomeGenBase redwoodForest;
+	
 	// @Armor Renders
 	public static int armorAluminumRenderer;
 	public static int armorBronzeRenderer;
@@ -98,7 +99,7 @@ public class emec {
 		// @Add Food
 		foodManager.addFood(this.idm, tabEnhanceMeCraftFood);
 		// @Add Biomes
-		biomeManager.addBiome(this.idm);
+		// biomeManager.addBiome(this.idm);
 		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes
