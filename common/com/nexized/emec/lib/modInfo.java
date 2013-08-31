@@ -5,8 +5,8 @@ public class modInfo {
 	// @MODNAME 
 	public final static String NAME = "EnhanceMeCraft";
 	// @MODID
-	public final static String ID = "emec";
+	public final static String ID = "EnhanceMeCraft";
 	// @VERSION
-	public final static String VERSION = "0.3.0";
+	public final static String VERSION = "0.4.0-pre";
 	
 }

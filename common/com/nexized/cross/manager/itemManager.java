@@ -22,7 +22,7 @@ public class itemManager {
 	public static Item ingotSilver;
 	public static Item ingotSteel;
 	public static Item ingotTin;
-	/*
+	
 	public static Item dustIron;
 	public static Item dustAluminum;
 	public static Item dustBronze;
@@ -31,7 +31,7 @@ public class itemManager {
 	public static Item dustSilver;
 	public static Item dustSteel;
 	public static Item dustTin;
-	*/
+		
 	public static void addItems(idManager idm, CreativeTabs tab) {
 		ingotAluminum = new crossItem(idm.getItemID("ingotAluminum"), tab).setUnlocalizedName("ingotAluminum");
 		ingotBronze = new crossItem(idm.getItemID("ingotBronze"), tab).setUnlocalizedName("ingotBronze");
@@ -40,7 +40,7 @@ public class itemManager {
 		ingotSilver = new crossItem(idm.getItemID("ingotSilver"), tab).setUnlocalizedName("ingotSilver");
 		ingotSteel = new crossItem(idm.getItemID("ingotSteel"), tab).setUnlocalizedName("ingotSteel");
 		ingotTin = new crossItem(idm.getItemID("ingotTin"), tab).setUnlocalizedName("ingotTin");
-		/*
+		
 		dustIron = new crossItem(idm.getItemID("dustIron"), tab).setUnlocalizedName("dustIron");
 		dustAluminum = new crossItem(idm.getItemID("dustAluminum"), tab).setUnlocalizedName("dustAluminum");
 		dustBronze = new crossItem(idm.getItemID("dustBronze"), tab).setUnlocalizedName("dustBronze");
@@ -48,6 +48,5 @@ public class itemManager {
 		dustPlatinum = new crossItem(idm.getItemID("dustPlatinum"), tab).setUnlocalizedName("dustPlatinum");
 		dustSilver = new crossItem(idm.getItemID("dustSilver"), tab).setUnlocalizedName("dustSilver");
 		dustSteel = new crossItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
-		*/
 	}
 }

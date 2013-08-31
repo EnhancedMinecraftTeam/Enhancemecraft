@@ -7,7 +7,9 @@ package com.nexized.emec;
  */
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.nexized.cross.conf.*;
@@ -33,7 +35,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-@Mod(modid = modInfo.ID, name = modInfo.NAME, version = modInfo.VERSION)
+@Mod(modid = "EnhanceMeCraft", name = "EnhanceMeCraft", version = "0.4.0-pre")
 
 public class emec {
 	
@@ -46,10 +48,8 @@ public class emec {
 	// @Creative Tab
 	public static CreativeTabs tabEnhanceMeCraft;
 	public static CreativeTabs tabEnhanceMeCraftFood;
-	
-	// public static BiomeGenBase iceDesert;
-	// public static BiomeGenBase redwoodForest;
-	
+	public static BiomeGenBase iceDesert;
+	public static BiomeGenBase redwoodForest;
 	// @Armor Renders
 	public static int armorAluminumRenderer;
 	public static int armorBronzeRenderer;
@@ -67,8 +67,8 @@ public class emec {
     public void preLoad(FMLPreInitializationEvent event) {
 		// @ID Manager
 		idm = new idManager(event);
-		// @Localisation
 		localizationHandler.loadLanguages();
+
 		proxy.addStringLocalization("itemGroup.tabEnhanceMeCraft", "en_US", libInfo.ID);
 		proxy.addStringLocalization("itemGroup.tabEnhanceMeCraftFood", "en_US", libInfo.ID);
 	}
@@ -98,9 +98,6 @@ public class emec {
 		armorManager.addArmor(this.idm, tabEnhanceMeCraft);
 		// @Add Food
 		foodManager.addFood(this.idm, tabEnhanceMeCraftFood);
-		// @Add Biomes
-		// biomeManager.addBiome(this.idm);
-		// @Save Configuration
 		idm.saveConf();
 		// @Add Recipes
 		recipesManager.addRecipes(); // recipesManager.addFusionRecipes();
@@ -119,6 +116,8 @@ public class emec {
 		armorSilverRenderer = proxy.addArmor("silver");
 		armorSteelRenderer = proxy.addArmor("steel");
 		armorTinRenderer = proxy.addArmor("tin");
+		// @Add LanguageRegistries
+		LanguageRegistry.instance().addStringLocalization("Entity.Miner.name", "en-US", "Miner");
 		// @Repair Materials
 		crossMaterials.materialAluminum.customCraftingMaterial = itemManager.ingotAluminum;
 		crossMaterials.materialCopper.customCraftingMaterial = itemManager.ingotCopper;
@@ -136,6 +135,15 @@ public class emec {
 		// @Add Tab Names
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraft", "en_US", "EnhanceMeCraft");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraftFood", "en_US", "EnhanceMeCraftFood");
+
+	}
+	@EventHandler
+	public static void preInit (FMLPreInitializationEvent event) {
+		configManager.init(event.getSuggestedConfigurationFile());
+		if (configManager.enableMobs) {
+			mobManager.init();
+			LanguageRegistry.instance().addStringLocalization("entity.EnhanceMeCraft.Miner.name", "en-US", "Miner");
+		}
 	}
 	
 }
