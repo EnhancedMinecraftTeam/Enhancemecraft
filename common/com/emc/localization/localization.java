@@ -8,7 +8,7 @@ package com.emc.localization;
  */
 
 public enum localization {
-	US("en_US") , GERMAN("de_DE"); //, FRENCH("fr_FR");
+	US("en_US") , GERMAN("de_DE"), SPANISH("es_ES"); //, FRENCH("fr_FR");
 
 	private final String locale;
 	
@@ -17,7 +17,7 @@ public enum localization {
 	    }
 	 
 	 public String filename() {
-	        return String.format("/assets/emclib/localization/%s.xml", locale);
+	        return String.format("/assets/emc/localization/%s.xml", locale);
 	    }
 
 	    public String locale() {
