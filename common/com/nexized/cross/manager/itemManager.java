@@ -9,8 +9,11 @@ package com.nexized.cross.manager;
 import com.nexized.cross.conf.*;
 import com.nexized.cross.item.*;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class itemManager {
 
@@ -22,7 +25,7 @@ public class itemManager {
 	public static Item ingotSilver;
 	public static Item ingotSteel;
 	public static Item ingotTin;
-	
+	public static Item emeraldshard;
 	public static Item dustIron;
 	public static Item dustAluminum;
 	public static Item dustBronze;
@@ -49,4 +52,11 @@ public class itemManager {
 		dustSilver = new crossItem(idm.getItemID("dustSilver"), tab).setUnlocalizedName("dustSilver");
 		dustSteel = new crossItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
 	}
+	public static void init() {
+		emeraldshard = new emeraldShard(configManager.emeraldshardID).setUnlocalizedName("emeraldshard").setCreativeTab(CreativeTabs.tabMisc);
+		GameRegistry.registerItem(emeraldshard, "emeraldshard");
+		GameRegistry.addRecipe(new ItemStack(Item.emerald), new Object [] {"EEE","EEE","EEE",'E', emeraldshard});
+		LanguageRegistry.addName(emeraldshard, "Emerald Shard");
+	}
+		
 }

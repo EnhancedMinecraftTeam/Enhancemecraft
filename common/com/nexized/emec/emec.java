@@ -135,6 +135,7 @@ public class emec {
 		// @Add Tab Names
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraft", "en_US", "EnhanceMeCraft");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabEnhanceMeCraftFood", "en_US", "EnhanceMeCraftFood");
+		LanguageRegistry.instance().addStringLocalization("entity.EnhanceMeCraft.Miner.name", "en-US", "Miner");
 
 	}
 	@EventHandler
@@ -143,6 +144,12 @@ public class emec {
 		if (configManager.enableMobs) {
 			mobManager.init();
 			LanguageRegistry.instance().addStringLocalization("entity.EnhanceMeCraft.Miner.name", "en-US", "Miner");
+		}
+		if (configManager.enableBiomes) {
+			biomeManager.init();
+		}
+		if (configManager.enableafroitems) {
+			itemManager.init();
 		}
 	}
 	
