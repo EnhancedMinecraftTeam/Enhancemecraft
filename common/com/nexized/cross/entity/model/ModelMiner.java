@@ -14,7 +14,6 @@ public class ModelMiner extends ModelBase
     ModelRenderer leftarm;
     ModelRenderer rightleg;
     ModelRenderer leftleg;
-  
   public ModelMiner()
   {
     textureWidth = 64;
@@ -57,7 +56,6 @@ public class ModelMiner extends ModelBase
       leftleg.mirror = true;
       setRotation(leftleg, 0F, 0F, 0F);
   }
-  
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
@@ -69,14 +67,12 @@ public class ModelMiner extends ModelBase
     rightleg.render(f5);
     leftleg.render(f5);
   }
-  
   private void setRotation(ModelRenderer model, float x, float y, float z)
   {
     model.rotateAngleX = x;
     model.rotateAngleY = y;
     model.rotateAngleZ = z;
   }
-  
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity par6Entity)
   {
 	  this.head.rotateAngleY = f3 / (180F / (float)Math.PI);
@@ -94,5 +90,4 @@ public class ModelMiner extends ModelBase
 	  this.rightarm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 2.0F * f1 * 0.5F;
 	  this.rightarm.rotateAngleY = 0.0F;
   }
-
 }
