@@ -1,0 +1,71 @@
+nexized cross license
+=====================
+
+Version 1.0
+
+0. Definitions
+--------------
+
+Minecraft: Denotes a copy of Minecraft licensed by Mojang AB.
+
+User: Anybody that interacts with the software in one or multiple of the following ways:
+	- play
+	- decompile
+	- recompile or compile
+	- modify
+	- distribute
+
+Modification: The modification for Minecraft designated by the present license, in source form, binary form,
+as obtained stand-alone, as part of wider distribution or resulting from the compilation of the original or
+modified sources.
+
+Dependency: Code required for the modification to work properly. This includes dependencies required to compile the code
+as well as any file or part of a file that is explicit or implicit required for the modification to be working.
+
+1. Scope
+--------
+
+The present license is granted to any user of the modification. As a prerequisite, a user must own a legally acquired copy 
+of Minecraft by Mojang AB. 
+
+2. Liability
+------------
+
+This modification is provided 'as is' with no warranties, implied or otherwise. The owner of this modification takes no 
+responsibility for any damages incurred from the use of this modification. This modification alters fundamental parts of 
+Minecraft and parts of Minecraft may not work with this modification installed. All damages caused from the use or misuse of 
+this mad fall on the user.
+
+3. Play rights
+--------------
+
+The user is allowed to install this modification on a client or a server and to play without restriction.
+
+4. Modification rights
+----------------------
+
+The user has the right to decompile the source code, look at the decompiled or the original source code, and to modify it
+for personal usage.
+
+5. Deviration rights
+--------------------
+
+The user has the rights to derive code from this mod, that is to say to write code that extends or 
+instanciate the mod classes or interfaces, refer to its objects, or calls its functions. This code 
+is known as "derived" code, and must be licensed under the same license as this mod.
+
+6. Distribution of original or modified copy rights
+---------------------------------------------------
+
+Is subject to distribution rights this entire modification in its various forms. This includes:
+   - original binary or source forms of this mod files
+   - modified versions of these binaries or source files, as well as binaries resulting from 
+   	 source modifications
+   - patch to its source or binary files
+   - any copy of a portion of its binary source files
+   
+The user is not allowed to redistribute this modification partially, in totality, or included 
+in a distribution without the permission of the modification owner (or modification-teamleader).
+
+The user is also not allowed to redistribute modificated sources, binary or patches without
+the permission of the modification owner (or modification-teamleader).

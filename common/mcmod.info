@@ -1,0 +1,18 @@
+[
+{
+"modid": "EMEC",
+"name": "EnhanceMeCraft",
+"description": "Extending Minecraft with new Materials, Food, Biomes, Mobs and more",
+"version": "",
+"credits": "Implemented by nexized",
+"mcversion": "",
+"url": "http://emec.mecanized.net",
+"updateUrl": "",
+"authors": [ "Head Coder: nextized", "Team Leader: McCricket" "EnhanceMeCraft Team" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+         "mod_MinecraftForge"
+]
+}
+]
