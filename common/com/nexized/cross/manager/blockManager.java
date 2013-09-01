@@ -34,6 +34,7 @@ public class blockManager {
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
+			public static Block emeraldShardBlock;
 			
 			// @addBlocks
 			public static Block blockFosil;
@@ -66,6 +67,8 @@ public class blockManager {
 				blockSilver = new crossBlock(idm.getBlockID("blockSilver"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
 				blockSteel = new crossBlock(idm.getBlockID("blockSteel"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
 				blockTin = new crossBlock(idm.getBlockID("blockTin"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
+				emeraldShardBlock = new emeraldShardBlock((configManager.emeraldshardblockID), Material.iron).setHardness(7.0F).setResistance(oreResistance).setUnlocalizedName("emeraldShardBlock").setCreativeTab(emec.tabEnhanceMeCraft);
+				
 			
 				// @addBlocks
 				blockFosil = new crossBlock(idm.getBlockID("blockFosil"), Material.rock, tab).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("blockFosil");
@@ -93,6 +96,7 @@ public class blockManager {
 				GameRegistry.registerBlock(oreSilver, oreSilver.getUnlocalizedName());
 				GameRegistry.registerBlock(oreTin, oreTin.getUnlocalizedName());
 				GameRegistry.registerBlock(oreExperience, oreExperience.getUnlocalizedName());
+				GameRegistry.registerBlock(emeraldShardBlock, emeraldShardBlock.getUnlocalizedName());
 				
 				GameRegistry.registerBlock(blockAluminum, blockAluminum.getUnlocalizedName());
 				GameRegistry.registerBlock(blockCopper, blockCopper.getUnlocalizedName());
