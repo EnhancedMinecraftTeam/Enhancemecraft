@@ -1,4 +1,4 @@
-package com.emc.basic;
+package com.emc.lib;
 
 /*
  * EnhanceMeCraft Basic Modification
@@ -7,7 +7,7 @@ package com.emc.basic;
  * Licensed under nextized cross license - see license.txt for more information
  */
 
-public class emclib {
+public class emcLib {
 
 	// @ Modification Name
 	public final static String NAME = "Enhancemecraft";

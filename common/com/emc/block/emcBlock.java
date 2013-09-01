@@ -1,8 +1,15 @@
 package com.emc.block;
 
+/*
+ * EnhanceMeCraft Basic Modification
+ * @Author: nextized
+ * @Last changed: 2013-09-01
+ * Licensed under nextized cross license - see license.txt for more information
+ */
+
 import java.util.Random;
 
-import com.emc.basic.emclib;
+import com.emc.lib.emcLib;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,7 +32,7 @@ public class emcBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(
-				emclib.getRessource(this.getUnlocalizedName())
+				emcLib.getRessource(this.getUnlocalizedName())
 				); 
 	}
 
