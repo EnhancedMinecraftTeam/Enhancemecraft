@@ -40,7 +40,7 @@ public class foodManager {
 		public static Item foodEggScramled;
 		
 		public static void addFood(idManager idm, CreativeTabs tab) {
-	    	if(idm.ifEnabled("food")) {
+	    	if(idm.ifEnabled("@food")) {
 				// Defined Items (@nexized)
 		    	foodRawBacon = (new emcFood(idm.getItemID("foodRawBacon"), 1, 0.1F, true, tab).setUnlocalizedName("foodRawBacon"));
 		    	foodBacon = (new emcFood(idm.getItemID("foodBacon"), 3, 0.3F, true, tab).setUnlocalizedName("foodBacon"));
