@@ -34,7 +34,6 @@ public class blockManager {
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
-			public static Block emeraldShardBlock;
 			
 			// @addBlocks
 			public static Block blockFosil;
@@ -67,7 +66,6 @@ public class blockManager {
 				blockSilver = new crossBlock(idm.getBlockID("blockSilver"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSilver");
 				blockSteel = new crossBlock(idm.getBlockID("blockSteel"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockSteel");
 				blockTin = new crossBlock(idm.getBlockID("blockTin"), Material.iron, tab).setHardness(7.0F).setResistance(blockResistance).setUnlocalizedName("blockTin");
-				emeraldShardBlock = new emeraldShardBlock((configManager.emeraldshardblockID), Material.iron).setHardness(7.0F).setResistance(oreResistance).setUnlocalizedName("emeraldShardBlock").setCreativeTab(emec.tabEnhanceMeCraft);
 				
 			
 				// @addBlocks
