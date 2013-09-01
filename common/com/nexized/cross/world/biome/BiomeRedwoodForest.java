@@ -9,6 +9,8 @@ public class BiomeRedwoodForest extends BiomeGenBase{
 		super(par1);
 		this.topBlock = (byte)Block.grass.blockID;
 		this.fillerBlock = (byte)Block.dirt.blockID;
+		theBiomeDecorator.treesPerChunk = 10;
+		
 	}
 
 
