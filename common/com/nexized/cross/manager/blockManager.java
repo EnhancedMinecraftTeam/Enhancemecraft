@@ -9,6 +9,7 @@ package com.nexized.cross.manager;
 import com.nexized.cross.block.*;
 import com.nexized.cross.conf.*;
 import com.nexized.emec.emec;
+import com.nexized.emec.configuration.emecConfigurationFile;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -34,6 +35,7 @@ public class blockManager {
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
+			public static Block emeraldShardBlock;
 			
 			// @addBlocks
 			public static Block blockFosil;
@@ -44,6 +46,14 @@ public class blockManager {
 			public static Block furnanceFusion;
 			public static Block furnanceFusionOn;
 			
+			public static void init() {
+				oreAluminum = new crossOre(emecConfigurationFile.oreAluminumID, Material.rock).setHardness(3.0F).setUnlocalizedName("oreAluminum").setCreativeTab(emec.tabEnhanceMeCraft);
+				
+				MinecraftForge.setBlockHarvestLevel(oreAluminum, "pickaxe", 2);
+				GameRegistry.registerBlock(oreAluminum, oreAluminum.getUnlocalizedName());
+				
+			}
+			
 			public static void addBlocks(idManager idm, CreativeTabs tab)
 			{
 				// @Defaults 
@@ -51,7 +61,7 @@ public class blockManager {
 				float blockResistance = 12.0F;
 				
 				// @oreBlocks
-				oreAluminum = new crossOre(configManager.oreAluminumID, Material.rock).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreAluminum").setCreativeTab(emec.tabEnhanceMeCraft);
+
 				oreCopper = new crossOre(idm.getBlockID("oreCopper"), Material.rock, tab).setHardness(1.7F).setResistance(oreResistance).setUnlocalizedName("oreCopper");
 				orePlatinum = new crossOre(idm.getBlockID("orePlatinum"), Material.rock, tab).setHardness(5.0F).setResistance(oreResistance).setUnlocalizedName("orePlatinum");
 				oreSilver = new crossOre(idm.getBlockID("oreSilver"), Material.rock, tab).setHardness(3.0F).setResistance(oreResistance).setUnlocalizedName("oreSilver");
@@ -80,7 +90,7 @@ public class blockManager {
 			
 			public static void registerBlocks() {
 				// @setBlockHarvestLevel
-				MinecraftForge.setBlockHarvestLevel(oreAluminum, "pickaxe", 2);
+
 				MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
 				MinecraftForge.setBlockHarvestLevel(orePlatinum, "pickaxe", 3);
 				MinecraftForge.setBlockHarvestLevel(oreSilver, "pickaxe", 2);
@@ -88,13 +98,12 @@ public class blockManager {
 				MinecraftForge.setBlockHarvestLevel(oreExperience, "pickaxe", 2);
 				
 				// registerBlocks
-				GameRegistry.registerBlock(oreAluminum, oreAluminum.getUnlocalizedName());
+				
 				GameRegistry.registerBlock(oreCopper, oreCopper.getUnlocalizedName());
 				GameRegistry.registerBlock(orePlatinum, orePlatinum.getUnlocalizedName());
 				GameRegistry.registerBlock(oreSilver, oreSilver.getUnlocalizedName());
 				GameRegistry.registerBlock(oreTin, oreTin.getUnlocalizedName());
 				GameRegistry.registerBlock(oreExperience, oreExperience.getUnlocalizedName());
-				GameRegistry.registerBlock(emeraldShardBlock, emeraldShardBlock.getUnlocalizedName());
 				
 				GameRegistry.registerBlock(blockAluminum, blockAluminum.getUnlocalizedName());
 				GameRegistry.registerBlock(blockCopper, blockCopper.getUnlocalizedName());

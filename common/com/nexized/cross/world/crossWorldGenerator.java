@@ -8,8 +8,6 @@ package com.nexized.cross.world;
 
 import java.util.Random;
 
-import afroraydude.mainmod.main;
-
 import com.nexized.cross.manager.blockManager;
 
 import net.minecraft.block.Block;
@@ -54,7 +52,6 @@ public class crossWorldGenerator implements IWorldGenerator {
     	this.addOreSpawn(blockManager.orePlatinum, world, random, x, z, 16, 16, 4, 12, 0, 60);
     	this.addOreSpawn(blockManager.oreSilver, world, random, x, z, 16, 16, 4, 16, 0, 60);
     	this.addOreSpawn(blockManager.oreTin, world, random, x, z, 16, 16, 4, 24, 0, 60);
-    	this.addOreSpawn(blockManager.emeraldShardBlock, world, random, x, z, 16, 16, 4, 8, 0, 256);
     	
     }
 

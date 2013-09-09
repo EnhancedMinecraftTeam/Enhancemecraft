@@ -7,6 +7,7 @@ import com.nexized.cross.entity.model.ModelMiner;
 import com.nexized.cross.entity.render.RenderMiner;
 import com.nexized.cross.world.*;
 import com.nexized.cross.world.biome.BiomeIceDesert;
+import com.nexized.emec.configuration.emecConfigurationFile;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -41,7 +42,7 @@ public class mobManager {
 		
 	public static void init() {
 		//Mob settings go here
-		EntityRegistry.registerGlobalEntityID(EntityMiner.class, "Miner", configManager.MinerID);
+		EntityRegistry.registerGlobalEntityID(EntityMiner.class, "Miner", emecConfigurationFile.MinerID);
 		EntityRegistry.addSpawn(EntityMiner.class, 128, 2, 4, EnumCreatureType.monster);
 		EntityRegistry.findGlobalUniqueEntityId();
 		registerEntityEgg(EntityMiner.class, 0x3c768c, 0xb50000);

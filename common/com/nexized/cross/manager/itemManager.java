@@ -53,10 +53,7 @@ public class itemManager {
 		dustSteel = new crossItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
 	}
 	public static void init() {
-		emeraldshard = new emeraldShard(configManager.emeraldshardID).setUnlocalizedName("emeraldshard").setCreativeTab(CreativeTabs.tabMisc);
-		GameRegistry.registerItem(emeraldshard, "emeraldshard");
-		GameRegistry.addRecipe(new ItemStack(Item.emerald), new Object [] {"EEE","EEE","EEE",'E', emeraldshard});
-		LanguageRegistry.addName(emeraldshard, "Emerald Shard");
+
 	}
 		
 }

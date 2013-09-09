@@ -20,6 +20,7 @@ import com.nexized.cross.localisation.localizationHandler;
 import com.nexized.cross.manager.*;
 import com.nexized.cross.tiles.tileFusionFurnace;
 import com.nexized.cross.world.crossWorldGenerator;
+import com.nexized.emec.configuration.emecConfigurationFile;
 import com.nexized.emec.lib.modInfo;
 import com.nexized.emec.proxy.proxyCommon;
 
@@ -38,6 +39,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid = "EnhanceMeCraft", name = "EnhanceMeCraft", version = "0.4.0-pre")
 
 public class emec {
+	
+	/**
+	 * TODO: Stop from crashing the game!!!
+	 */
 	
 	@SidedProxy(clientSide = "com.nexized.emec.proxy.proxyClient", serverSide = "com.nexized.emec.proxy.proxyCommon")
 	public static proxyCommon proxy;
@@ -62,6 +67,7 @@ public class emec {
     
     // @ID Manager
     idManager idm;
+    emecConfigurationFile emecc;
     
 	@EventHandler
     public void preLoad(FMLPreInitializationEvent event) {
@@ -140,17 +146,8 @@ public class emec {
 	}
 	@EventHandler
 	public static void preInit (FMLPreInitializationEvent event) {
-		configManager.init(event.getSuggestedConfigurationFile());
-		if (configManager.enableMobs) {
-			mobManager.init();
-			LanguageRegistry.instance().addStringLocalization("entity.EnhanceMeCraft.Miner.name", "en-US", "Miner");
-		}
-		if (configManager.enableBiomes) {
-			biomeManager.init();
-		}
-		if (configManager.enableafroitems) {
-			itemManager.init();
-		}
+		emecConfigurationFile.init(event.getModConfigurationDirectory());
 	}
-	
 }
+
+
