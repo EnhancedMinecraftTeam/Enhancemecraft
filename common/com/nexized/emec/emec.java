@@ -146,7 +146,10 @@ public class emec {
 	}
 	@EventHandler
 	public static void preInit (FMLPreInitializationEvent event) {
-		emecConfigurationFile.init(event.getModConfigurationDirectory());
+		emecConfigurationFile.init((event.getSuggestedConfigurationFile()));
+		if (emecConfigurationFile.enableBiomes) {
+			com.nexized.cross.manager.biomeManager.init();
+		}
 	}
 }
 

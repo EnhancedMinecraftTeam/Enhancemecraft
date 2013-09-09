@@ -29,8 +29,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
-@Mod(modid = emcLib.ID, name = emcLib.NAME, version = emcLib.VERSION)
+//@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+//@Mod(modid = emcLib.ID, name = emcLib.NAME, version = emcLib.VERSION)
 
 public class emc {
 
