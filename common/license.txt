@@ -1,5 +1,5 @@
-nexized cross license
-=====================
+EnhanceMeCraft License
+======================
 
 Version 1.0
 
