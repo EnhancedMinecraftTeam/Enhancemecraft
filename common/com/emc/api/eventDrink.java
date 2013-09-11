@@ -11,11 +11,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.Cancelable;
 import net.minecraftforge.event.Event;
 
-public class drinkEvent extends Event {
+public class eventDrink extends Event {
 
 
 	// Called when the player is hurt because the thirst bar is empty.
-	public static class OnPlayerHurt extends drinkEvent {
+	public static class OnPlayerHurt extends eventDrink {
 		public EntityPlayer thisPlayer;
 		public OnPlayerHurt(EntityPlayer par1) {
 			thisPlayer = par1;
@@ -24,7 +24,7 @@ public class drinkEvent extends Event {
 	
 	// Called when the player drinks from a water source on the ground by 
 	// shifting in it or by shifting when it is raining.
-	public static class OnPlayerDrinkWater extends drinkEvent {
+	public static class OnPlayerDrinkWater extends eventDrink {
 		public EntityPlayer thisPlayer;
 		public OnPlayerDrinkWater(EntityPlayer par1) {
 			thisPlayer = par1;
@@ -32,7 +32,7 @@ public class drinkEvent extends Event {
 	}
 	
 	// Called when the player is poisoned. This is not called on server side.
-	public static class OnPlayerPoisoned extends drinkEvent {
+	public static class OnPlayerPoisoned extends eventDrink {
 		public int timeRemaining;
 		public OnPlayerPoisoned(int i) {
 			timeRemaining = i;
@@ -41,7 +41,7 @@ public class drinkEvent extends Event {
 	
 	// Called when the player is about to be poisoned. Set canceled to not poison the player.
 	@Cancelable
-	public static class ShouldPoison extends drinkEvent {
+	public static class ShouldPoison extends eventDrink {
 		public ShouldPoison() {}
 	}
 	

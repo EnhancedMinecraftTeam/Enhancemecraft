@@ -13,7 +13,7 @@ import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class coreTools {
+public class toolsCore {
 
 	// @Direct output to System.Console Object / Check if on Server or Client
 	public static void print(Object obj) {

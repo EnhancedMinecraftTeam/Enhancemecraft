@@ -5,7 +5,7 @@ import net.minecraft.util.MathHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class playerTools {
+public class toolsPlayer {
 
 	// @Name of the current player
 	@SideOnly(Side.CLIENT)
