@@ -1,7 +1,7 @@
 Enhancemecraft
 ==============
 
-Enhancemecraft (Short emec) is a mod for Minecraft that was developed 
+Enhancemecraft is a mod for Minecraft that was developed 
 to make your experiences with Minecraft better than ever.
 
 Implemented functions
