@@ -35,7 +35,7 @@ public class blockManager {
 			public static Block blockSilver;
 			public static Block blockSteel;
 			public static Block blockTin;
-			public static Block emeraldShardBlock;
+			// public static Block emeraldShardBlock;
 			
 			// @addBlocks
 			public static Block blockFosil;
