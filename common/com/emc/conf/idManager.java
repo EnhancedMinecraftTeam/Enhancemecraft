@@ -70,15 +70,15 @@ public class idManager {
 	}
 	
 	public int getBlockID(String blockID) {
-		return idmConfiguration.getBlock("crossBlock", blockID, getNextBlockID()).getInt();
+		return idmConfiguration.getBlock("emcBlock", blockID, getNextBlockID()).getInt();
 	}
 	
 	public int getItemID(String itemID) {
-		return idmConfiguration.getItem("crossItem", itemID, getNextItemID()).getInt();
+		return idmConfiguration.getItem("emcItem", itemID, getNextItemID()).getInt();
 	}
 	
 	public int getBiomeID(String biomeID) {
-		return idmConfiguration.get("crossBiome", biomeID, getNextBiomeID()).getInt();
+		return idmConfiguration.get("emcBiome", biomeID, getNextBiomeID()).getInt();
 	}
 	
 	public void saveConf() {

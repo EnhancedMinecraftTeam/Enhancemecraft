@@ -14,7 +14,7 @@ public class emcLib {
 	// @Modification ID
 	public final static String ID = "emc";
 	// @Modification Version
-	public final static String VERSION = "0.3.2";
+	public final static String VERSION = "0.3.4.4";
 	
 	public static String getRessource(String unlocalizedName) {
 		return ID + ":" + unlocalizedName.substring(5);
