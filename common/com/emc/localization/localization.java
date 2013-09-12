@@ -8,7 +8,7 @@ package com.emc.localization;
  */
 
 public enum localization {
-	US("en_US") , GERMAN("de_DE"), SPANISH("es_ES"); //, FRENCH("fr_FR");
+	US("en_US"); // , GERMAN("de_DE"), SPANISH("es_ES"); , FRENCH("fr_FR");
 
 	private final String locale;
 	
