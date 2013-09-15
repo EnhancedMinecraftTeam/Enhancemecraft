@@ -3,7 +3,7 @@ package com.emc.block;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-01
+ * @Last changed: 2013-09-15
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -18,16 +18,13 @@ import net.minecraft.world.World;
 
 public class emcOreExperience extends emcOre {
 
-	public emcOreExperience(int id, Material mat) {
-		super(id, mat);
-		// TODO Auto-generated constructor stub
-	}
+	// @Default Constructor for emcOreExperience
+	public emcOreExperience(int id, Material mat) {	super(id, mat); }
 	
-	public emcOreExperience(int id, Material mat, CreativeTabs tab) {
-		super(id, mat, tab);
-		// TODO Auto-generated constructor stub
-	}
+	// @Extended Constructor for emcOreExperience
+	public emcOreExperience(int id, Material mat, CreativeTabs tab) { super(id, mat, tab); }
 	
+	// @Return dropped id
 	public int idDropped(int i, Random random, int j) { return 0; }
 	
 	public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6, int par7)

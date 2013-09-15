@@ -3,7 +3,7 @@ package com.emc.conf;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-01
+ * @Last changed: 2013-09-15
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -43,13 +43,7 @@ public class idManager {
 		this.currentItemID = minItemID - 1;
 		this.currentBiomeID = minBiomeID - 1;
 		
-		/*
-		if (idmConfiguration.get("Version", "idmVersion", libInfo.updatedID).getInt() < libInfo.updatedID) {
-			idmConfigurationFile.delete();
-			idmConfiguration = new Configuration(idmConfigurationFile);
-			idmConfiguration.load();
-		}	
-		*/	
+		// TODO: Implement a new method of version management 
 		
 		idmConfiguration.save();
 	}
