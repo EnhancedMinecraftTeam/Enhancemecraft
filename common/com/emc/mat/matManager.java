@@ -6,7 +6,9 @@ package com.emc.mat;
  * @Last changed: 2013-09-01
  * Licensed under nextized cross license - see license.txt for more information
  */
-
+/*
+ * Can we remove idm and make a new manager? Most of us do not understand coding it.
+ */
 import com.emc.emc;
 import com.emc.block.emcBlock;
 import com.emc.block.emcOre;

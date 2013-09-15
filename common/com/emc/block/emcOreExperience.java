@@ -20,12 +20,10 @@ public class emcOreExperience extends emcOre {
 
 	public emcOreExperience(int id, Material mat) {
 		super(id, mat);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public emcOreExperience(int id, Material mat, CreativeTabs tab) {
 		super(id, mat, tab);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public int idDropped(int i, Random random, int j) { return 0; }

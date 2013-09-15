@@ -17,6 +17,7 @@ import com.emc.food.foodManager;
 import com.emc.lib.emcLib;
 import com.emc.localization.localizationHandler;
 import com.emc.mat.matManager;
+import com.emc.newthings.common.configManager;
 import com.emc.proxy.commonProxy;
 import com.emc.world.emcWorldGenerator;
 
@@ -29,8 +30,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-//@NetworkMod(clientSideRequired = true, serverSideRequired = false)
-//@Mod(modid = emcLib.ID, name = emcLib.NAME, version = emcLib.VERSION)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@Mod(modid = emcLib.ID, name = emcLib.NAME, version = emcLib.VERSION)
 
 public class emc {
 
@@ -111,7 +112,17 @@ public class emc {
     	GameRegistry.registerWorldGenerator(new emcWorldGenerator());
     	}
     	
-    	
+
+    	}
+    	@EventHandler
+    	public static void preInit (FMLPreInitializationEvent event) {
+    		configManager.init((event.getSuggestedConfigurationFile()));
+    		if (configManager.enableBiomes) {
+    			com.emc.mat.biomeManager.init();
+    		}
+    		if (configManager.enableMobs) {
+    			com.emc.mat.mobManager.init();;
+    		}
     }   
 	
 }
