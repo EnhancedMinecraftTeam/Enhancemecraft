@@ -3,7 +3,7 @@ package com.emc;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-15
+ * @Last changed: 2013-09-16
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -17,8 +17,10 @@ import com.emc.food.foodManager;
 import com.emc.lib.emcLib;
 import com.emc.localization.localizationHandler;
 import com.emc.mat.matManager;
+import com.emc.mob.mobManager;
 import com.emc.proxy.commonProxy;
 import com.emc.world.emcWorldGenerator;
+import com.emc.world.biome.biomeManager;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -102,6 +104,12 @@ public class emc {
     	
     	// @Add Food
     	foodManager.addFood(idm, tabEMCFood);
+    	
+    	// @Add Mobs
+    	mobManager.addMobs(idm);
+    	
+    	// @Add Biomes
+    	biomeManager.addBiomes(idm);
     	
     	// @IDManager
     	idm.saveConf();
