@@ -3,11 +3,12 @@ package com.emc;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-16
+ * @Last changed: 2013-09-17
  * Licensed under nextized cross license - see license.txt for more information
  */
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -18,6 +19,7 @@ import com.emc.lib.emcLib;
 import com.emc.localization.localizationHandler;
 import com.emc.mat.matManager;
 import com.emc.mob.mobManager;
+import com.emc.network.*;
 import com.emc.proxy.commonProxy;
 import com.emc.world.emcWorldGenerator;
 import com.emc.world.biome.biomeManager;
@@ -38,6 +40,20 @@ public class emc {
 
 	@SidedProxy(clientSide = "com.emc.proxy.clientProxy", serverSide = "com.emc.proxy.commonProxy")
 	public static commonProxy proxy;
+	
+	// @modOff
+	public static boolean modOff = false;
+	
+	// @Networking
+	public PacketHandleSave savePacket = new PacketHandleSave();
+	public PacketPlaySound soundPacket = new PacketPlaySound();
+	public PacketPlayerPos posPacket = new PacketPlayerPos();
+	public PacketBuyDrink buyPacket = new PacketBuyDrink();
+	public PacketHurtPlayer hurtPlayer = new PacketHurtPlayer();
+	public PacketSendStats statsPacket = new PacketSendStats();
+	public PacketCommand commandPacket = new PacketCommand();
+	public PacketConfig configPacket = new PacketConfig();
+	public PacketPotionEffect potionPacket = new PacketPotionEffect();
 	
 	@Instance("emc")
     public static emc instance;
@@ -122,4 +138,16 @@ public class emc {
     	
     }   
 	
+    // @Check if Player is jumping
+    public static boolean isJumping(EntityPlayer player) {
+		return player.onGround == false;
+	}
+    
+    // @Tick Controller
+    public void onTickInGame() {
+		if (modOff == false) {
+			proxy.onTickInGame();
+		}
+	}
+    
 }

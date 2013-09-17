@@ -3,7 +3,7 @@ package com.emc.world.biome;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-16
+ * @Last changed: 2013-09-17
  * Licensed under nextized cross license - see license.txt for more information
  */
 
