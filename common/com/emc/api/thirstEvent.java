@@ -8,8 +8,7 @@ package com.emc.api;
  */
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.Cancelable;
-import net.minecraftforge.event.Event;
+import net.minecraftforge.event.*;
 
 public class thirstEvent extends Event {
 
