@@ -3,12 +3,10 @@ package com.emc.mat;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-01
+ * @Last changed: 2013-09-15
  * Licensed under nextized cross license - see license.txt for more information
  */
-/*
- * Can we remove idm and make a new manager? Most of us do not understand coding it.
- */
+
 import com.emc.emc;
 import com.emc.block.emcBlock;
 import com.emc.block.emcOre;
@@ -89,12 +87,20 @@ public class matManager {
  	public static Item ingotSteel;
  	public static Item ingotTin;
  	
- 	/* @itemArmor Aluminum
+ 	// @itemDust
+ 	public static Item dustAluminum;
+ 	public static Item dustBronze;
+ 	public static Item dustCopper;
+ 	public static Item dustPlatinum;
+ 	public static Item dustSilver;
+ 	public static Item dustSteel;
+ 	public static Item dustTin;
+ 	
+ 	// @itemArmor Aluminum
 	public static Item helmAluminum;
 	public static Item chestAluminum;
 	public static Item legsAluminum;
 	public static Item bootsAluminum;
- 	*/
  	
  	// @itemArmor Bronze
 	public static Item helmBronze;
@@ -108,31 +114,31 @@ public class matManager {
 	public static Item legsCopper;
 	public static Item bootsCopper;
 
-	/* @itemArmor Platinum	
+	// @itemArmor Platinum	
 	public static Item helmPlatinum;
 	public static Item chestPlatinum;
 	public static Item legsPlatinum;
 	public static Item bootsPlatinum;
-	*/
+
 	
-	/* @itemArmor Silver
+	// @itemArmor Silver
 	public static Item helmSilver;
 	public static Item chestSilver;
 	public static Item legsSilver;
 	public static Item bootsSilver;
-	*/
+	
 
 	public static Item helmSteel;
 	public static Item chestSteel;
 	public static Item legsSteel;
 	public static Item bootsSteel;
 
-	/* @itemArmor Tin
+	// @itemArmor Tin
 	public static Item helmTin;
 	public static Item chestTin;
 	public static Item legsTin;
 	public static Item bootsTin;
-	*/	
+		
  	
 	public static Item axeAluminum;
 	public static Item axeCopper;
@@ -262,12 +268,12 @@ public class matManager {
  		if(idm.ifEnabled("@armor")) {
  			// Initialize new @itemArmor
  			
- 			/* @itemArmor Aluminum
+ 			// @itemArmor Aluminum
  			helmAluminum = new emcArmor(idm.getItemID("helmAluminum"), armorAluminum, armorAluminumRenderer, 0, "aluminum", tab).setUnlocalizedName("helmAluminum");
  			chestAluminum = new emcArmor(idm.getItemID("chestAluminum"), armorAluminum, armorAluminumRenderer, 1, "aluminum", tab).setUnlocalizedName("chestAluminum");
  			legsAluminum = new emcArmor(idm.getItemID("legsAluminum"), armorAluminum, armorAluminumRenderer, 2, "aluminum", tab).setUnlocalizedName("legsAluminum");
  			bootsAluminum = new emcArmor(idm.getItemID("bootsAluminum"), armorAluminum, armorAluminumRenderer, 3, "aluminum", tab).setUnlocalizedName("bootsAluminum");
- 			*/
+ 			
  			
  			// @itemArmor Bronze
  			helmBronze = new emcArmor(idm.getItemID("helmBronze"), armorBronze, armorBronzeRenderer, 0, "bronze", tab).setUnlocalizedName("helmBronze");
@@ -281,19 +287,19 @@ public class matManager {
  			legsCopper = new emcArmor(idm.getItemID("legsCopper"), armorCopper, armorCopperRenderer, 2, "copper", tab).setUnlocalizedName("legsCopper");
  			bootsCopper = new emcArmor(idm.getItemID("bootsCopper"), armorCopper, armorCopperRenderer, 3, "copper", tab).setUnlocalizedName("bootsCopper");
  			
- 			/* @itemArmor Platinum
+ 			// @itemArmor Platinum
  			helmPlatinum = new emcArmor(idm.getItemID("helmPlatinum"), armorPlatinum, armorPlatinumRenderer, 0, "platinum", tab).setUnlocalizedName("helmPlatinum");
  			chestPlatinum = new emcArmor(idm.getItemID("chestPlatinum"), armorPlatinum, armorPlatinumRenderer, 1, "platinum", tab).setUnlocalizedName("chestPlatinum");
  			legsPlatinum = new emcArmor(idm.getItemID("legsPlatinum"), armorPlatinum, armorPlatinumRenderer, 2, "platinum", tab).setUnlocalizedName("legsPlatinum");
  			bootsPlatinum = new emcArmor(idm.getItemID("bootsPlatinum"), armorPlatinum, armorPlatinumRenderer, 3, "platinum", tab).setUnlocalizedName("bootsPlatinum");
- 			*/
  			
- 			/* @itemArmor Silver
+ 			
+ 			// @itemArmor Silver
  			helmSilver = new emcArmor(idm.getItemID("helmSilver"), armorSilver, armorSilverRenderer, 0, "silver", tab).setUnlocalizedName("helmSilver");
  			chestSilver = new emcArmor(idm.getItemID("chestSilver"), armorSilver, armorSilverRenderer, 1, "silver", tab).setUnlocalizedName("chestSilver");
  			legsSilver = new emcArmor(idm.getItemID("legsSilver"), armorSilver, armorSilverRenderer, 2, "silver", tab).setUnlocalizedName("legsSilver");
  			bootsSilver = new emcArmor(idm.getItemID("bootsSilver"), armorSilver, armorSilverRenderer, 3, "silver", tab).setUnlocalizedName("bootsSilver");
- 			*/
+ 		
  			
  			// @itemArmor Steel
  			helmSteel = new emcArmor(idm.getItemID("helmSteel"), armorSteel, armorSteelRenderer, 0, "steel", tab).setUnlocalizedName("helmSteel");
@@ -301,12 +307,12 @@ public class matManager {
  			legsSteel = new emcArmor(idm.getItemID("legsSteel"), armorSteel, armorSteelRenderer, 2, "steel", tab).setUnlocalizedName("legsSteel");
  			bootsSteel = new emcArmor(idm.getItemID("bootsSteel"), armorSteel, armorSteelRenderer, 3, "steel", tab).setUnlocalizedName("bootsSteel");
  			
- 			/* @itemArmor Tin
+ 			// @itemArmor Tin
  			helmTin = new emcArmor(idm.getItemID("helmTin"), armorTin, armorTinRenderer, 0, "tin", tab).setUnlocalizedName("helmTin");
  			chestTin = new emcArmor(idm.getItemID("chestTin"), armorTin, armorTinRenderer, 1, "tin", tab).setUnlocalizedName("chestTin");
  			legsTin = new emcArmor(idm.getItemID("legsTin"), armorTin, armorTinRenderer, 2, "tin", tab).setUnlocalizedName("legsTin");
  			bootsTin = new emcArmor(idm.getItemID("bootsTin"), armorTin, armorTinRenderer, 3, "tin", tab).setUnlocalizedName("bootsTin");
- 			*/
+ 		
  			
  			armorAluminumRenderer = emc.proxy.addArmor("aluminum");
  			armorBronzeRenderer = emc.proxy.addArmor("bronze");
