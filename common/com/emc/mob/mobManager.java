@@ -41,11 +41,10 @@ public class mobManager {
 	}
 
 	public static void addMobs(idManager idm) {
-		if (idm.ifEnabled("@Mobs")) {
+		if (idm.ifEnabled("@mobs")) {
 			EntityRegistry.registerGlobalEntityID(entityMiner.class, "Miner", idm.getEntityID("Miner"));
 			EntityRegistry.addSpawn(entityMiner.class, 128, 2, 4, EnumCreatureType.monster);
 			EntityRegistry.addSpawn(entityMiner.class, 1, 2, 4, EnumCreatureType.monster, biomeManager.iceDesert);
-			EntityRegistry.addSpawn(entityMiner.class, 1, 2, 4, EnumCreatureType.monster, biomeManager.octoBase);
 			EntityRegistry.addSpawn(entityMiner.class, 1, 2, 4, EnumCreatureType.monster, biomeManager.redwoodForest);
 			EntityRegistry.findGlobalUniqueEntityId();
 			registerEntityEgg(entityMiner.class, 0x3c768c, 0xb50000);
