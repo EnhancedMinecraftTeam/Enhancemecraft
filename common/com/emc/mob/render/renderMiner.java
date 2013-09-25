@@ -42,7 +42,6 @@ public class renderMiner extends RenderLiving {
 		return new ResourceLocation("emc:textures/mobs/Miner.png");
 	}
 
-	@Override
 	protected ResourceLocation func_110775_a(Entity entity) {
 		return new ResourceLocation("emc:textures/mobs/Miner.png");
 	}
