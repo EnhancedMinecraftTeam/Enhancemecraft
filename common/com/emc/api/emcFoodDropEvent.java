@@ -1,4 +1,4 @@
-package com.emc.food;
+package com.emc.api;
 
 /*
  * EnhanceMeCraft Basic Modification
@@ -6,6 +6,8 @@ package com.emc.food;
  * @Last changed: 2013-08-30
  * Licensed under nextized cross license - see license.txt for more information
  */
+
+import com.emc.food.foodManager;
 
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;

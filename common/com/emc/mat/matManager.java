@@ -3,9 +3,11 @@ package com.emc.mat;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-15
+ * @Last changed: 2013-09-27
  * Licensed under nextized cross license - see license.txt for more information
  */
+
+// TODO: Implement Armor Recipes
 
 import com.emc.emc;
 import com.emc.block.emcBlock;
@@ -260,6 +262,15 @@ public class matManager {
  			ingotSilver = new emcItem(idm.getItemID("ingotSilver"), tab).setUnlocalizedName("ingotSilver");
  			ingotSteel = new emcItem(idm.getItemID("ingotSteel"), tab).setUnlocalizedName("ingotSteel");
  			ingotTin = new emcItem(idm.getItemID("ingotTin"), tab).setUnlocalizedName("ingotTin");
+ 		}
+ 		if (idm.ifEnabled("@itemDust")) {
+ 			dustAluminum = new emcItem(idm.getItemID("dustAluminum"), tab).setUnlocalizedName("dustAluminum");
+ 			dustBronze = new emcItem(idm.getItemID("dustBronze"), tab).setUnlocalizedName("dustBronze");
+ 			dustCopper = new emcItem(idm.getItemID("dustCopper"), tab).setUnlocalizedName("dustCopper");
+ 			dustPlatinum = new emcItem(idm.getItemID("dustPlatinum"), tab).setUnlocalizedName("dustPlatinum");
+ 			dustSilver = new emcItem(idm.getItemID("dustSilver"), tab).setUnlocalizedName("dustSilver");
+ 			dustSteel = new emcItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
+ 			dustTin = new emcItem(idm.getItemID("dustTin"), tab).setUnlocalizedName("dustTin");
  		}
  	}
  	
