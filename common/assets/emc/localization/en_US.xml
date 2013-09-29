@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
-	<comment>English Translation Version 1.1</comment>
+	<comment>English Translation Version 1.2</comment>
+	<entry key="itemGroup.tabEMCBlocks">EMC Blocks</Entry>
+	<entry key="itemGroup.tabEMCItems">EMC Items</Entry>
+	<entry key="itemGroup.tabEMCArmor">EMC Armor</Entry>
+	<entry key="itemGroup.tabEMCFood">EMC Food</Entry>
 	<entry key="tile.oreAluminum.name">Aluminum Ore</entry>
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
 	<entry key="tile.orePlatinum.name">Platinum Ore</entry>
@@ -16,7 +20,6 @@
 	<entry key="tile.blockTin.name">Tin Block</entry>
 	<entry key="tile.blockBronze.name">Bronze Block</entry>
 	<entry key="tile.blockFosil.name">Fosil Block</entry>
-	<entry key="tile.blockFreezer.name">Freezer Block</entry>
 	<entry key="tile.blockCloud.name">Cloud Block</entry>
 	<entry key="tile.furnanceFusion.name">Fusion Furnance</entry>
 	<entry key="tile.furnanceFusionOn.name">Fusion Furnance</entry>

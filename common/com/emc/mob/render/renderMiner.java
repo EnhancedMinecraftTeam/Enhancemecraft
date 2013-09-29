@@ -46,4 +46,5 @@ public class renderMiner extends RenderLiving {
 		return new ResourceLocation("emc:textures/mobs/Miner.png");
 	}
 	
+	
 }
