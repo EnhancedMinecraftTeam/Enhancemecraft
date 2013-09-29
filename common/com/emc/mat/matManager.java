@@ -3,7 +3,7 @@ package com.emc.mat;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-27
+ * @Last changed: 2013-09-29
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -76,10 +76,6 @@ public class matManager {
  	public static Block blockSteel;
  	public static Block blockTin;
  	
- 	// @biomeBlocks
- 	public static Block blockFreezer;
- 	public static Block blockCloud;
-    
  	// @itemIngot
  	public static Item ingotAluminum;
  	public static Item ingotBronze;
@@ -238,17 +234,7 @@ public class matManager {
 			GameRegistry.registerBlock(blockSilver, blockSilver.getUnlocalizedName());
 			GameRegistry.registerBlock(blockSteel, blockSteel.getUnlocalizedName());
 			GameRegistry.registerBlock(blockTin, blockTin.getUnlocalizedName());
- 		}
- 		
- 		// Check if @biomeblocks are enabled
- 		if(idm.ifEnabled("@biome")) {
- 			float blockRes = 12.0F;
- 			
- 			// Initialize new @biomeblocks
- 			blockFreezer = new emcBlock(idm.getBlockID("blockFreezer"), Material.rock, tab).setHardness(4.0F).setResistance(blockRes).setUnlocalizedName("blockFreezer");
-			blockCloud = new emcBlock(idm.getBlockID("blockCloud"), Material.rock, tab).setHardness(4.0F).setResistance(blockRes).setUnlocalizedName("blockCloud");
- 		}
- 		
+ 		} 		
 	}
  	
  	public static void addItems(idManager idm, CreativeTabs tab) {

@@ -18,6 +18,7 @@ public class localizationHandler {
 				emc.proxy.loadLocalization(localeFile.filename(), localeFile.locale());
 	}
 	
+	@Deprecated
 	public static void addTabLocalization(String tab, String local) {
     	LanguageRegistry.instance().addStringLocalization("itemGroup." + tab, local);
     }
