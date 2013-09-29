@@ -17,7 +17,6 @@ import com.emc.food.foodManager;
 import com.emc.lib.emcLib;
 import com.emc.localization.localizationHandler;
 import com.emc.mat.matManager;
-import com.emc.mob.mobManager;
 import com.emc.proxy.commonProxy;
 import com.emc.world.emcWorldGenerator;
 import com.emc.world.biome.biomeManager;
@@ -68,7 +67,6 @@ public class emc {
 	               	return new ItemStack(matManager.oreExperience, 1, 0);
 					}
 	    		};
-	    		localizationHandler.addTabLocalization("tabEMCBlocks", "EMC Blocks");
     		}
     	if(idm.ifEnabled("@itemIngot") || idm.ifEnabled("@toolAxe")
     		|| idm.ifEnabled("@toolHoe") || idm.ifEnabled("@toolPick")
@@ -78,7 +76,6 @@ public class emc {
     			return new ItemStack(matManager.ingotAluminum, 1, 0);
     			}
     		};
-    		localizationHandler.addTabLocalization("tabEMCItems", "EMC Items");
     	}
     	if(idm.ifEnabled("@armor")) {
     		tabEMCArmor = new CreativeTabs("tabEMCArmor") {
@@ -86,7 +83,6 @@ public class emc {
         			return new ItemStack(matManager.chestSilver, 1, 0);
         		}
         	};
-        	localizationHandler.addTabLocalization("tabEMCArmor", "EMC Armor");
     	}
     	if(idm.ifEnabled("@food")) {
     		tabEMCFood = new CreativeTabs("tabEMCFood") {
@@ -94,7 +90,6 @@ public class emc {
         			return new ItemStack(foodManager.foodBacon, 1, 0);
         		}
         	};
-        	localizationHandler.addTabLocalization("tabEMCFood", "EMC Food");
         	// Enable FoodDropEvent for @food
         	MinecraftForge.EVENT_BUS.register(new emcFoodDropEvent());
     	}
@@ -113,7 +108,8 @@ public class emc {
     	biomeManager.addBiomes(idm);
     	
     	// @Add Mobs
-    	mobManager.addMobs(idm);
+    	// TODO: Fix EntityMiner & Enable AddMobs
+    	// mobManager.addMobs(idm);
     	
     	// @IDManager
     	idm.saveConf();

@@ -28,3 +28,5 @@ b:implement new textures for the current items (@texturers)
   - ingots (for each material)
   - tools (for each material)
   - armor (for each material)
+
+b:update translations 

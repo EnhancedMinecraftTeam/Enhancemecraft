@@ -54,6 +54,13 @@ public class entityMiner extends EntityMob {
 	// @AI is Enabled
 	protected boolean isAIEnabled() { return true; }
 	
+	protected void func_110147_ax()
+	{
+	  // super.func_110147_ax();
+	  // this.func_110148_a(SharedMonsterAttributes.field_111267_a).func_111128_a(25.0D); //Health
+	  // this.func_110148_a(SharedMonsterAttributes.field_111264_e).func_111128_a(5.0D); //Attack      
+	} 
+	
 	// @Hurt Sound
 	protected String HurtSound() { return "mob.zombie.death"; }
 	
