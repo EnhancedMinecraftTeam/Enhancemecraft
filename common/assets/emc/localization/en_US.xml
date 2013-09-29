@@ -2,10 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
 	<comment>English Translation Version 1.2</comment>
-	<entry key="itemGroup.tabEMCBlocks">EMC Blocks</Entry>
-	<entry key="itemGroup.tabEMCItems">EMC Items</Entry>
-	<entry key="itemGroup.tabEMCArmor">EMC Armor</Entry>
-	<entry key="itemGroup.tabEMCFood">EMC Food</Entry>
+	<entry key="itemGroup.tabEMCBlocks">EMC Blocks</entry>
+	<entry key="itemGroup.tabEMCItems">EMC Items</entry>
+	<entry key="itemGroup.tabEMCArmor">EMC Armor</entry>
+	<entry key="itemGroup.tabEMCFood">EMC Food</entry>
 	<entry key="tile.oreAluminum.name">Aluminum Ore</entry>
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
 	<entry key="tile.orePlatinum.name">Platinum Ore</entry>
