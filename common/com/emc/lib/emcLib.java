@@ -3,7 +3,7 @@ package com.emc.lib;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-27
+ * @Last changed: 2013-09-29
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -14,7 +14,7 @@ public class emcLib {
 	// @Modification ID
 	public final static String ID = "emc";
 	// @Modification Version
-	public final static String VERSION = "0.3.5.2";
+	public final static String VERSION = "0.3.5.3";
 	
 	public static String getRessource(String unlocalizedName) {
 		return ID + ":" + unlocalizedName.substring(5);
