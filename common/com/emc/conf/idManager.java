@@ -98,4 +98,10 @@ public class idManager {
 		return ret;
 	}
 	
+	public int getTemperature(String Biome, int defaultTemperature) { 
+		int ret = subConfiguration.get("biomeTemperatures", Biome, defaultTemperature).getInt();
+		subConfiguration.save();
+		return ret;
+	}
+	
 }
