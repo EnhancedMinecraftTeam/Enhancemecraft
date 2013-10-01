@@ -8,6 +8,7 @@ Implemented functions
 
 - [x] Find new ores and update your toolset with new tools and weapons based on the new materials.
 - [x] New food for even more possibility's to satisfy your hunger.
+- [x] Easy configuration, so you can disable the parts of the mod you don't need.
 
 Not yet implemented functions
 
@@ -15,7 +16,6 @@ Not yet implemented functions
 - [ ] So many biomes, that Notch will think about implement them into the game itself.
 - [ ] Other dimensions with their very own bosses.
 - [ ] Hypothermia- / Thirst-bar (This is just for the hardcore survivors out there).
-- [ ] Easy configuration, so you can disable the parts of the mod you don't need.
 - [ ] API (So you can use our stuff to make your stuff better).
 
 Team
