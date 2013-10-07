@@ -3,7 +3,7 @@ package com.emc;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-27
+ * @Last changed: 2013-10-06
  * Licensed under nextized cross license - see license.txt for more information
  */
 
@@ -23,10 +23,8 @@ import com.emc.world.biome.biomeManager;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.Mod.*;
+import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -107,10 +105,6 @@ public class emc {
     	// @Add Biomes
     	biomeManager.addBiomes(idm);
     	
-    	// @Add Mobs
-    	// TODO: Fix EntityMiner & Enable AddMobs
-    	// mobManager.addMobs(idm);
-    	
     	// @IDManager
     	idm.saveConf();
     	
@@ -118,8 +112,11 @@ public class emc {
     	if(idm.ifEnabled("@oreBlock")) {
     	GameRegistry.registerWorldGenerator(new emcWorldGenerator());
     	}
-    	
-    	
     }   
-	
+    
+	@EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+    	
+    }
+    
 }

@@ -3,52 +3,58 @@ package com.emc.conf;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-16
+ * @Last changed: 2013-10-06
  * Licensed under nextized cross license - see license.txt for more information
  */
 
 import java.io.File;
 
 import net.minecraftforge.common.Configuration;
-
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class idManager {
 
+	// subConfiguration (@/config/emc.cfg)
 	private File subConfigurationFile;
 	private Configuration subConfiguration;
 	
+	// idmConfiguration (@/config/emc/idManager.cfg)
 	private File idmConfigurationFile;
 	private Configuration idmConfiguration;
 	
+	// min id (for autoincrement)
 	private int minBlockID = 500;
 	private int minItemID = 4000;
 	private int minBiomeID = 100;
 	private int minEntityID = 20;
 	
-	private int currentBlockID = 0;
+	// current id (for autoincrement)
+	private int currentBlockID = 0; 
 	private int currentItemID = 0;
 	private int currentBiomeID = 0;
 	private int currentEntityID = 0;
 		
 	public idManager(FMLPreInitializationEvent event) 
 	{
-		idmConfigurationFile = new File(event.getModConfigurationDirectory(), "/emcLib/idManager.cfg");
+		// idManager configuration
+		idmConfigurationFile = new File(event.getModConfigurationDirectory(), "/emc/idManager.cfg");
 		idmConfiguration = new Configuration(idmConfigurationFile);		
 		idmConfiguration.load();		
 		
+		// Sub configuration
 		subConfigurationFile = event.getSuggestedConfigurationFile();
 		subConfiguration = new Configuration(subConfigurationFile);
 		subConfiguration.load();
 		
-		this.currentBlockID = minBlockID - 1;
-		this.currentItemID = minItemID - 1;
-		this.currentBiomeID = minBiomeID - 1;
-		this.currentEntityID = minEntityID -1;
+		// Current ID
+		currentBlockID = idmConfiguration.get("idManager", "minBlockID", minBlockID - 1).getInt();
+		currentItemID = idmConfiguration.get("idManager", "minItemID", minItemID - 1).getInt(); 
+		currentBiomeID = idmConfiguration.get("idManager", "minBiomeID", minBiomeID - 1).getInt();
+		currentEntityID = idmConfiguration.get("idManager", "minEntityID", minEntityID - 1).getInt();
 		
-		// TODO: Implement a new method of version management 
-		
+		// Save configuration
 		idmConfiguration.save();
+		subConfiguration.save();
 	}
 	
 	private int getNextBlockID() {
