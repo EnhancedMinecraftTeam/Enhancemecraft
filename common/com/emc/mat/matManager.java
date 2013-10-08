@@ -3,11 +3,10 @@ package com.emc.mat;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: nextized
- * @Last changed: 2013-09-29
+ * @Last changed: 2013-10-08
  * Licensed under nextized cross license - see license.txt for more information
  */
 
-// TODO: Implement Armor Recipes
 
 import com.emc.emc;
 import com.emc.block.emcBlock;
@@ -320,7 +319,12 @@ public class matManager {
  			armorTinRenderer = emc.proxy.addArmor("tin");
  			
  			
- 			if(idm.ifEnabled("@ingotBlock")) {
+ 			if(idm.ifEnabled("@Armor")) {
+ 				// @itemArmor Aluminum
+ 				GameRegistry.addRecipe(new ItemStack(helmAluminum), new Object[]{"XXX", "X X", 'X', ingotAluminum});
+ 				GameRegistry.addRecipe(new ItemStack(chestAluminum), new Object[]{"X X", "XXX", "XXX", 'X', ingotAluminum});
+ 				GameRegistry.addRecipe(new ItemStack(legsAluminum), new Object[]{"XXX", "X X", "X X", 'X', ingotAluminum});
+ 				GameRegistry.addRecipe(new ItemStack(bootsAluminum), new Object[]{"X X", "X X", 'X', ingotAluminum});
  				// @itemArmor Bronze
  				GameRegistry.addRecipe(new ItemStack(helmBronze), new Object[]{"XXX", "X X", 'X', ingotBronze});
  				GameRegistry.addRecipe(new ItemStack(chestBronze), new Object[]{"X X", "XXX", "XXX", 'X', ingotBronze});
@@ -331,11 +335,22 @@ public class matManager {
  				GameRegistry.addRecipe(new ItemStack(chestCopper), new Object[]{"X X", "XXX", "XXX", 'X', ingotCopper});
  				GameRegistry.addRecipe(new ItemStack(legsCopper), new Object[]{"XXX", "X X", "X X", 'X', ingotCopper});
  				GameRegistry.addRecipe(new ItemStack(bootsCopper), new Object[]{"X X", "X X", 'X', ingotCopper});
+ 				// @itemArmor Platinum
+ 				GameRegistry.addRecipe(new ItemStack(helmPlatinum), new Object[]{"XXX", "X X", 'X', ingotPlatinum});
+ 				GameRegistry.addRecipe(new ItemStack(chestPlatinum), new Object[]{"X X", "XXX", "XXX", 'X', ingotPlatinum});
+ 				GameRegistry.addRecipe(new ItemStack(legsPlatinum), new Object[]{"XXX", "X X", "X X", 'X', ingotPlatinum});
+ 				GameRegistry.addRecipe(new ItemStack(bootsPlatinum), new Object[]{"X X", "X X", 'X', ingotPlatinum});
+ 				// @itemArmor Silver
+ 				GameRegistry.addRecipe(new ItemStack(helmSilver), new Object[]{"XXX", "X X", 'X', ingotSilver});
+ 				GameRegistry.addRecipe(new ItemStack(chestSilver), new Object[]{"X X", "XXX", "XXX", 'X', ingotSilver});
+ 				GameRegistry.addRecipe(new ItemStack(legsSilver), new Object[]{"XXX", "X X", "X X", 'X', ingotSilver});
+ 				GameRegistry.addRecipe(new ItemStack(bootsSilver), new Object[]{"X X", "X X", 'X', ingotSilver});
  				// @itemArmor Steel
  				GameRegistry.addRecipe(new ItemStack(helmSteel), new Object[]{"XXX", "X X", 'X', ingotSteel});
  				GameRegistry.addRecipe(new ItemStack(chestSteel), new Object[]{"X X", "XXX", "XXX", 'X', ingotSteel});
  				GameRegistry.addRecipe(new ItemStack(legsSteel), new Object[]{"XXX", "X X", "X X", 'X', ingotSteel});
  				GameRegistry.addRecipe(new ItemStack(bootsSteel), new Object[]{"X X", "X X", 'X', ingotSteel});
+ 				
  			}
  		}
  	}
@@ -481,7 +496,14 @@ public class matManager {
 			GameRegistry.addSmelting(oreSilver.blockID, new ItemStack(ingotSilver), 1.0F);
 			GameRegistry.addSmelting(oreTin.blockID, new ItemStack(ingotTin), 1.0F);
 		}
- 		if(idm.ifEnabled("@itemIngot")) {
+ 		if(idm.ifEnabled("@itemDust") & idm.ifEnabled("@itemIngot")) {
+ 			GameRegistry.addSmelting(dustAluminum.itemID, new ItemStack(ingotAluminum), 1.0F);
+			GameRegistry.addSmelting(dustCopper.itemID, new ItemStack(ingotCopper), 1.0F);
+			GameRegistry.addSmelting(dustPlatinum.itemID, new ItemStack(ingotPlatinum), 1.0F);
+			GameRegistry.addSmelting(dustSilver.itemID, new ItemStack(ingotSilver), 1.0F);
+			GameRegistry.addSmelting(dustTin.itemID, new ItemStack(ingotTin), 1.0F);
+ 		}
+ 		if(idm.ifEnabled("@itemIngot") & idm.ifEnabled("@ingotBlock")) {
 			GameRegistry.addRecipe(new ItemStack(blockAluminum), new Object[] {"XXX", "XXX", "XXX", 'X', ingotAluminum});
 			GameRegistry.addRecipe(new ItemStack(blockCopper), new Object[] {"XXX", "XXX", "XXX", 'X', ingotCopper});
 			GameRegistry.addRecipe(new ItemStack(blockPlatinum), new Object[] {"XXX", "XXX", "XXX", 'X', ingotPlatinum});
