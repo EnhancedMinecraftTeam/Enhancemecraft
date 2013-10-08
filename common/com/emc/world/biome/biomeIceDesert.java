@@ -1,4 +1,4 @@
-package com.emc.world.biome.type;
+package com.emc.world.biome;
 
 /*
  * EnhanceMeCraft Basic Modification
@@ -10,13 +10,12 @@ package com.emc.world.biome.type;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeGenBase;
 
-public class biomeRedwoodForest extends BiomeGenBase {
+public class biomeIceDesert extends BiomeGenBase {
 
-	public biomeRedwoodForest(int par1) {
+	public biomeIceDesert(int par1) {
 		super(par1);
-		this.topBlock = (byte)Block.grass.blockID;
-		this.fillerBlock = (byte)Block.dirt.blockID;
-		theBiomeDecorator.treesPerChunk = 10;
+		this.topBlock = (byte)Block.ice.blockID;
+		this.fillerBlock = (byte)Block.blockSnow.blockID;
 }
 	
 }

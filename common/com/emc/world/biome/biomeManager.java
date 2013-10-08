@@ -8,7 +8,6 @@ package com.emc.world.biome;
  */
 
 import com.emc.conf.idManager;
-import com.emc.world.biome.type.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.world.biome.BiomeGenBase;
