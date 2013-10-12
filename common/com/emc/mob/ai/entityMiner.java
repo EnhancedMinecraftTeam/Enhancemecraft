@@ -3,11 +3,12 @@ package com.emc.mob.ai;
 /*
  * EnhanceMeCraft Basic Modification
  * @Author: afrodaydude, nextized
- * @Last changed: 2013-09-16
+ * @Last changed: 2013-10-11
  * Licensed under nextized cross license - see license.txt for more information
  */
 
 import net.minecraft.entity.EnumCreatureAttribute;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
@@ -54,13 +55,6 @@ public class entityMiner extends EntityMob {
 	// @AI is Enabled
 	protected boolean isAIEnabled() { return true; }
 	
-	protected void func_110147_ax()
-	{
-	  // super.func_110147_ax();
-	  // this.func_110148_a(SharedMonsterAttributes.field_111267_a).func_111128_a(25.0D); //Health
-	  // this.func_110148_a(SharedMonsterAttributes.field_111264_e).func_111128_a(5.0D); //Attack      
-	} 
-	
 	// @Hurt Sound
 	protected String HurtSound() { return "mob.zombie.death"; }
 	
@@ -68,9 +62,18 @@ public class entityMiner extends EntityMob {
     protected void playStepSound(int par1, int par2, int par3, int par4) {
     	this.playSound("mob.zombie.step", 0.15F, 1.0F);
     }
-    
+        
     // @Standard Drop Item
     protected int getDropItemId() { return Item.pickaxeIron.itemID; }
+    
+    @Override
+    protected void applyEntityAttributes()
+    {
+    	super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(20.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.followRange).setAttribute(80.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.699D);
+    }
     
     // @Rare Drop Item
     protected void dropRareDrop(int par1) {
