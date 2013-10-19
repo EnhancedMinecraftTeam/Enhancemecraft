@@ -16,12 +16,12 @@ public class biomeManager {
 
 	// Define Biomes
 	public static BiomeGenBase iceDesert;
-	public static BiomeGenBase redwoodForest;
+	public static BiomeGenBase Volcan;
 	
 	public static void addBiomes(idManager idm) {
 		iceDesert = (new biomeIceDesert(idm.getBiomeID("iceDesert")).setBiomeName("Ice Desert").setMinMaxHeight(0.3F, 1.5F).setEnableSnow().setTemperatureRainfall(0.05F, 0.08F));
-		redwoodForest = (new biomeRedwoodForest(idm.getBiomeID("redwoodForest")).setBiomeName("Redwood Forest"));
 		GameRegistry.addBiome(iceDesert);
+		Volcan = (new biomeVolcan(idm.getBiomeID("Volcan")).setBiomeName("Volcan").setMinMaxHeight(0.4F, 1.7F));
 	}
 	
 }

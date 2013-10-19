@@ -45,7 +45,6 @@ public class mobManager {
 			EntityRegistry.registerGlobalEntityID(entityMiner.class, "Miner", idm.getEntityID("Miner"));
 			EntityRegistry.addSpawn(entityMiner.class, 128, 2, 4, EnumCreatureType.monster);
 			EntityRegistry.addSpawn(entityMiner.class, 1, 2, 4, EnumCreatureType.monster, biomeManager.iceDesert);
-			EntityRegistry.addSpawn(entityMiner.class, 1, 2, 4, EnumCreatureType.monster, biomeManager.redwoodForest);
 			EntityRegistry.findGlobalUniqueEntityId();
 			registerEntityEgg(entityMiner.class, 0x3c768c, 0xb50000);
 			RenderingRegistry.registerEntityRenderingHandler(entityMiner.class, new renderMiner(new modelMiner(), 0.3F));

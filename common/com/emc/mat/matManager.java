@@ -8,15 +8,6 @@ package com.emc.mat;
  */
 
 
-import com.emc.emc;
-import com.emc.block.emcBlock;
-import com.emc.block.emcOre;
-import com.emc.conf.idManager;
-import com.emc.item.emcArmor;
-import com.emc.item.emcItem;
-import com.emc.item.tools.*;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,6 +19,23 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.emc.emc;
+import com.emc.block.emcBlock;
+import com.emc.block.emcOre;
+import com.emc.block.emcOreExperience;
+import com.emc.conf.idManager;
+import com.emc.item.emcArmor;
+import com.emc.item.emcItem;
+import com.emc.item.tools.toolAxe;
+import com.emc.item.tools.toolHoe;
+import com.emc.item.tools.toolPick;
+import com.emc.item.tools.toolShovel;
+import com.emc.item.tools.toolSword;
+import com.emc.mob.ai.entityMiner;
+import com.emc.weapons.weaponKatana;
+import com.emc.block.Blender;
+import cpw.mods.fml.common.registry.GameRegistry;
+
 public class matManager {
 
 	// @EnumToolMaterial (For itemTool Object)
@@ -38,6 +46,8 @@ public class matManager {
 	public static EnumToolMaterial materialSilver = EnumHelper.addToolMaterial("SILVER", 2, 1600, 6.0F, 2, 14);
 	public static EnumToolMaterial materialSteel = EnumHelper.addToolMaterial("STEEL", 3, 2400, 16.0F, 6, 10);
     public static EnumToolMaterial materialTin = EnumHelper.addToolMaterial("TIN", 2, 200, 6.0F, 2, 14);
+    public static EnumToolMaterial materialFreezirite = EnumHelper.addToolMaterial("FREEZERITE", 4, 2570, 12.5F, 8, 40);
+    public static EnumToolMaterial materialKatchin = EnumHelper.addToolMaterial("KATCHIN", 2, 3200, 4.0F, 26, 40);
     
     // @EnumArmorMaterial (for itemArmor Object)
     public static EnumArmorMaterial armorAluminum = EnumHelper.addArmorMaterial("ALUMINUM", 8, new int[] {2, 3, 2, 1}, 8);
@@ -46,8 +56,9 @@ public class matManager {
     public static EnumArmorMaterial armorPlatinum = EnumHelper.addArmorMaterial("PLATINUM", 16, new int[] {4, 6, 4, 2}, 16);
     public static EnumArmorMaterial armorSilver = EnumHelper.addArmorMaterial("SILVER", 12, new int[] {3, 4, 3, 2}, 12);
     public static EnumArmorMaterial armorSteel = EnumHelper.addArmorMaterial("STEEL", 32, new int[] {8, 12, 8, 4}, 32);
-    public static EnumArmorMaterial armorTin= EnumHelper.addArmorMaterial("TIN", 8, new int[] {2, 3, 2, 1}, 8);
-	
+    public static EnumArmorMaterial armorTin = EnumHelper.addArmorMaterial("TIN", 8, new int[] {2, 3, 2, 1}, 8);
+    public static EnumArmorMaterial armorMysterious = EnumHelper.addArmorMaterial("MYSTERIOUS", 8, new int[] {3, 5, 3, 2}, 30);
+    
     // @Armor Renders
  	public static int armorAluminumRenderer;
  	public static int armorBronzeRenderer;
@@ -56,7 +67,8 @@ public class matManager {
     public static int armorSilverRenderer;
     public static int armorSteelRenderer;
     public static int armorTinRenderer;
-    
+	public static int armorMysteriousRenderer;
+
     // @oreBlocks
  	public static Block oreAluminum;
  	public static Block oreCopper;
@@ -65,6 +77,7 @@ public class matManager {
  	public static Block oreTin;
  	public static Block oreExperience;
  	public static Block blockFosil;
+ 	public static Block oreVolcan;
  	
  	// @ingotBlocks
  	public static Block blockAluminum;
@@ -74,6 +87,13 @@ public class matManager {
  	public static Block blockSilver;
  	public static Block blockSteel;
  	public static Block blockTin;
+ 	public static Block blockVolcan;
+
+ 	// @Blocks
+ 	public static Block VolcanRock;
+ 	public static Block VolcanStone;
+ 	public static Blender BlenderIdle;
+ 	public static Blender BlenderActive;
  	
  	// @itemIngot
  	public static Item ingotAluminum;
@@ -83,6 +103,10 @@ public class matManager {
  	public static Item ingotSilver;
  	public static Item ingotSteel;
  	public static Item ingotTin;
+ 	
+ 	// @Items
+ 	public static Item Fur;
+ 	public static Item VolcanGem;
  	
  	// @itemDust
  	public static Item dustAluminum;
@@ -135,8 +159,14 @@ public class matManager {
 	public static Item chestTin;
 	public static Item legsTin;
 	public static Item bootsTin;
-		
- 	
+
+	// @itemArmor Mysterious
+	public static Item hoodMysterious;
+	public static Item jacketMysterious;
+	public static Item trousersMysterious;
+	public static Item shoesMysterious;
+	
+    // @toolsAxe
 	public static Item axeAluminum;
 	public static Item axeCopper;
 	public static Item axePlatinum;
@@ -145,6 +175,7 @@ public class matManager {
 	public static Item axeTin;
 	public static Item axeBronze;
 	
+	// @toolsHoe
 	public static Item hoeAluminum;
 	public static Item hoeCopper;
 	public static Item hoePlatinum;
@@ -152,7 +183,8 @@ public class matManager {
 	public static Item hoeSteel;
 	public static Item hoeTin;
 	public static Item hoeBronze;
-	
+
+	// @toolsShovel
 	public static Item shovelAluminum;
 	public static Item shovelCopper;
 	public static Item shovelPlatinum;
@@ -161,6 +193,7 @@ public class matManager {
 	public static Item shovelTin;
 	public static Item shovelBronze;
 	
+	// @toolsPick
 	public static Item pickAluminum;
 	public static Item pickCopper;
 	public static Item pickPlatinum;
@@ -169,6 +202,7 @@ public class matManager {
 	public static Item pickTin;
 	public static Item pickBronze;
 	
+	// @toolsSword
 	public static Item swordAluminum;
 	public static Item swordCopper;
 	public static Item swordPlatinum;
@@ -176,7 +210,24 @@ public class matManager {
 	public static Item swordSteel;
 	public static Item swordTin;
 	public static Item swordBronze;
+	public static Item swordEmerald;
+	public static entityMiner Miner;
 	
+	// @Special
+	public static weaponKatana Katana;
+	public static Item Katchin;
+	public static Item KatanaHilt;
+
+	// @Snowgate
+	public static Item Freezerite;
+	public static Block oreFreezer;
+	public static Item pickaxeFreezerite;
+	public static Item axeFreezerite;
+	public static Item shovelFreezerite;
+	public static Item hoeFreezerite;
+	public static Item swordFreezerite;
+	public static Item FreezeriteRod;
+		
  	public static void addBlocks(idManager idm, CreativeTabs tab)
 	{
  		// Check if @oreBlocks are enabled
@@ -189,15 +240,18 @@ public class matManager {
 			orePlatinum = new emcOre(idm.getBlockID("orePlatinum"), Material.rock, tab).setHardness(5.0F).setResistance(oreRes).setUnlocalizedName("orePlatinum");
 			oreSilver = new emcOre(idm.getBlockID("oreSilver"), Material.rock, tab).setHardness(3.0F).setResistance(oreRes).setUnlocalizedName("oreSilver");
 			oreTin = new emcOre(idm.getBlockID("oreTin"), Material.rock, tab).setHardness(1.7F).setResistance(oreRes).setUnlocalizedName("oreTin");
-			oreExperience = new emcOre(idm.getBlockID("oreExperience"), Material.rock, tab).setHardness(3.0F).setResistance(oreRes).setUnlocalizedName("oreExperience");
-			blockFosil = new emcBlock(idm.getBlockID("blockFosil"), Material.rock, tab).setHardness(1.7F).setResistance(oreRes).setUnlocalizedName("blockFosil");
-			
+			oreExperience = new emcOreExperience(idm.getBlockID("oreExperience"), Material.rock, tab).setHardness(3.0F).setResistance(oreRes).setUnlocalizedName("oreExperience");
+ 			oreFreezer = new emcOre(idm.getBlockID("oreFreezer"), Material.rock, emc.tabEMCSnowgate).setHardness(6.0F).setResistance(oreRes).setUnlocalizedName("oreFreezer");
+			oreVolcan = new emcOre(2013, Material.rock, emc.tabEMCBlocks).setHardness(6.0F).setResistance(oreRes).setUnlocalizedName("VolcanOre");
+ 			
 			MinecraftForge.setBlockHarvestLevel(oreAluminum, "pickaxe", 2);
 			MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
 			MinecraftForge.setBlockHarvestLevel(orePlatinum, "pickaxe", 3);
 			MinecraftForge.setBlockHarvestLevel(oreSilver, "pickaxe", 2);
 			MinecraftForge.setBlockHarvestLevel(oreTin, "pickaxe", 1);
 			MinecraftForge.setBlockHarvestLevel(oreExperience, "pickaxe", 2);
+			MinecraftForge.setBlockHarvestLevel(oreFreezer, "pickaxe", 2);
+			MinecraftForge.setBlockHarvestLevel(oreVolcan, "pickaxe", 2);
 			
 			GameRegistry.registerBlock(oreAluminum, oreAluminum.getUnlocalizedName());
 			GameRegistry.registerBlock(oreCopper, oreCopper.getUnlocalizedName());
@@ -205,13 +259,16 @@ public class matManager {
 			GameRegistry.registerBlock(oreSilver, oreSilver.getUnlocalizedName());
 			GameRegistry.registerBlock(oreTin, oreTin.getUnlocalizedName());
 			GameRegistry.registerBlock(oreExperience, oreExperience.getUnlocalizedName());
-			GameRegistry.registerBlock(blockFosil, blockFosil.getUnlocalizedName());
-			
+ 			GameRegistry.registerBlock(oreFreezer, oreFreezer.getUnlocalizedName());
+ 			GameRegistry.registerBlock(oreVolcan, oreVolcan.getUnlocalizedName());
+ 			
+			OreDictionary.registerOre("oreFreezer", new ItemStack(oreFreezer));
 			OreDictionary.registerOre("oreAluminum", new ItemStack(oreAluminum));
 			OreDictionary.registerOre("oreCopper", new ItemStack(oreCopper));
 			OreDictionary.registerOre("orePlatinum", new ItemStack(orePlatinum));
 			OreDictionary.registerOre("oreSilver", new ItemStack(oreSilver));
 			OreDictionary.registerOre("oreTin", new ItemStack(oreTin));
+			OreDictionary.registerOre("oreVolcan", new ItemStack(oreVolcan));
  		}
  		
  		// Check if @ingotBlocks are enabled
@@ -226,6 +283,9 @@ public class matManager {
 			blockSilver = new emcBlock(idm.getBlockID("blockSilver"), Material.iron, tab).setHardness(7.0F).setResistance(blockRes).setUnlocalizedName("blockSilver");
 			blockSteel = new emcBlock(idm.getBlockID("blockSteel"), Material.iron, tab).setHardness(7.0F).setResistance(blockRes).setUnlocalizedName("blockSteel");
 			blockTin = new emcBlock(idm.getBlockID("blockTin"), Material.iron, tab).setHardness(7.0F).setResistance(blockRes).setUnlocalizedName("blockTin");
+			VolcanRock = new emcBlock(idm.getBlockID("VolcanRock"), Material.rock, tab).setHardness(6.0F).setResistance(5.0F).setUnlocalizedName("VolcanoRock");
+			VolcanStone = new emcBlock(idm.getBlockID("VolcanStone"), Material.rock, tab).setHardness(6.0F).setResistance(6.0F).setUnlocalizedName("VolcanoStone");
+			blockVolcan = new emcBlock(idm.getBlockID("blockVolcan"), Material.rock, tab).setHardness(7.0F).setResistance(blockRes).setUnlocalizedName("VolcanBlock");
 			
 			GameRegistry.registerBlock(blockAluminum, blockAluminum.getUnlocalizedName());
 			GameRegistry.registerBlock(blockCopper, blockCopper.getUnlocalizedName());
@@ -233,8 +293,20 @@ public class matManager {
 			GameRegistry.registerBlock(blockSilver, blockSilver.getUnlocalizedName());
 			GameRegistry.registerBlock(blockSteel, blockSteel.getUnlocalizedName());
 			GameRegistry.registerBlock(blockTin, blockTin.getUnlocalizedName());
- 		} 		
+			GameRegistry.registerBlock(VolcanRock, VolcanRock.getUnlocalizedName());
+			GameRegistry.registerBlock(VolcanStone, VolcanStone.getUnlocalizedName());
+			GameRegistry.registerBlock(blockVolcan, blockVolcan.getUnlocalizedName());
+			
+			if(idm.ifEnabled("@MultiTexture")) {
+	 			BlenderIdle = new Blender(2014, false, tab).setHardness(3.0F).setUnlocalizedName("Blender");
+	 			BlenderActive = new Blender(2015, true).setHardness(3.0f).setUnlocalizedName("Blender");
+			}} 		
+ 		
+ 			GameRegistry.registerBlock(BlenderIdle, BlenderIdle.getUnlocalizedName());
+ 			GameRegistry.registerBlock(BlenderActive, BlenderActive.getUnlocalizedName());
+ 		
 	}
+ 		
  	
  	public static void addItems(idManager idm, CreativeTabs tab) {
  		// Check if @itemIngots are enabled 
@@ -248,6 +320,7 @@ public class matManager {
  			ingotSteel = new emcItem(idm.getItemID("ingotSteel"), tab).setUnlocalizedName("ingotSteel");
  			ingotTin = new emcItem(idm.getItemID("ingotTin"), tab).setUnlocalizedName("ingotTin");
  		}
+ 		
  		if (idm.ifEnabled("@itemDust")) {
  			dustAluminum = new emcItem(idm.getItemID("dustAluminum"), tab).setUnlocalizedName("dustAluminum");
  			dustBronze = new emcItem(idm.getItemID("dustBronze"), tab).setUnlocalizedName("dustBronze");
@@ -257,14 +330,19 @@ public class matManager {
  			dustSteel = new emcItem(idm.getItemID("dustSteel"), tab).setUnlocalizedName("dustSteel");
  			dustTin = new emcItem(idm.getItemID("dustTin"), tab).setUnlocalizedName("dustTin");
  		}
+ 		
+ 		if(idm.ifEnabled("@items")) {
+ 			Fur = new emcItem(4845, tab).setUnlocalizedName("Fur");
+ 			VolcanGem = new emcItem(4856, tab).setUnlocalizedName("Volcan Gem");
+ 		}
  	}
- 	
+ 		 	
  	public static void addArmor(idManager idm, CreativeTabs tab) {
  		// Check if @armor is enabled
  		if(idm.ifEnabled("@armor")) {
  			// Initialize new @itemArmor
  			
- 			// @itemArmor Aluminum
+ 			// @itemArmor Aluminium
  			helmAluminum = new emcArmor(idm.getItemID("helmAluminum"), armorAluminum, armorAluminumRenderer, 0, "aluminum", tab).setUnlocalizedName("helmAluminum");
  			chestAluminum = new emcArmor(idm.getItemID("chestAluminum"), armorAluminum, armorAluminumRenderer, 1, "aluminum", tab).setUnlocalizedName("chestAluminum");
  			legsAluminum = new emcArmor(idm.getItemID("legsAluminum"), armorAluminum, armorAluminumRenderer, 2, "aluminum", tab).setUnlocalizedName("legsAluminum");
@@ -308,16 +386,21 @@ public class matManager {
  			chestTin = new emcArmor(idm.getItemID("chestTin"), armorTin, armorTinRenderer, 1, "tin", tab).setUnlocalizedName("chestTin");
  			legsTin = new emcArmor(idm.getItemID("legsTin"), armorTin, armorTinRenderer, 2, "tin", tab).setUnlocalizedName("legsTin");
  			bootsTin = new emcArmor(idm.getItemID("bootsTin"), armorTin, armorTinRenderer, 3, "tin", tab).setUnlocalizedName("bootsTin");
- 		
- 			
+ 	 					
+ 			// @itemArmor Mysterious
+	 		hoodMysterious = new emcArmor(4840, armorMysterious, armorMysteriousRenderer, 0, "mysterious", tab).setUnlocalizedName("Mysterious Hood");
+	 		jacketMysterious = new emcArmor(4841, armorMysterious, armorMysteriousRenderer, 1, "mysterious", tab).setUnlocalizedName("Mysterious Jacket");
+	 		trousersMysterious = new emcArmor(4842, armorMysterious, armorMysteriousRenderer, 2, "mysterious", tab).setUnlocalizedName("Mysterious Trousers");
+	 		shoesMysterious = new emcArmor(4843, armorMysterious, armorMysteriousRenderer, 3, "mysterious", tab).setUnlocalizedName("Mysterious Shoes");
+ 			 		
  			armorAluminumRenderer = emc.proxy.addArmor("aluminum");
  			armorBronzeRenderer = emc.proxy.addArmor("bronze");
  			armorCopperRenderer = emc.proxy.addArmor("copper");
  			armorPlatinumRenderer = emc.proxy.addArmor("platinum");
  			armorSilverRenderer = emc.proxy.addArmor("silver");
  			armorSteelRenderer = emc.proxy.addArmor("steel");
- 			armorTinRenderer = emc.proxy.addArmor("tin");
- 			
+ 			armorTinRenderer = emc.proxy.addArmor("tin"); 			
+ 			armorMysteriousRenderer = emc.proxy.addArmor("mysterious");
  			
  			if(idm.ifEnabled("@Armor")) {
  				// @itemArmor Aluminum
@@ -350,7 +433,11 @@ public class matManager {
  				GameRegistry.addRecipe(new ItemStack(chestSteel), new Object[]{"X X", "XXX", "XXX", 'X', ingotSteel});
  				GameRegistry.addRecipe(new ItemStack(legsSteel), new Object[]{"XXX", "X X", "X X", 'X', ingotSteel});
  				GameRegistry.addRecipe(new ItemStack(bootsSteel), new Object[]{"X X", "X X", 'X', ingotSteel});
- 				
+ 				// @itemArmor Mysterious
+ 				GameRegistry.addRecipe(new ItemStack(hoodMysterious), new Object[]{"RLR", "RSR", "R R", 'R', Fur, 'L', Item.leather, 'S', Item.spiderEye});
+ 				GameRegistry.addRecipe(new ItemStack(jacketMysterious), new Object[]{"F F", "FBF", "FBF", 'F', Fur, 'B', Item.ingotGold});
+ 				GameRegistry.addRecipe(new ItemStack(trousersMysterious), new Object[]{"FFF", "F F", "F F", 'F', Fur});
+ 				GameRegistry.addRecipe(new ItemStack(shoesMysterious), new Object[]{"FXF", "FXF",  'F', Fur, 'X', Item.feather});
  			}
  		}
  	}
@@ -484,9 +571,38 @@ public class matManager {
  				GameRegistry.addRecipe(new ItemStack(swordSteel), new Object[] {" X ", " X ", " * ", 'X', ingotSteel, '*', Item.stick});
  				GameRegistry.addRecipe(new ItemStack(swordTin), new Object[] {" X ", " X ", " * ", 'X', ingotTin, '*', Item.stick});
  				GameRegistry.addRecipe(new ItemStack(swordBronze), new Object[] {" X ", " X ", " * ", 'X', ingotBronze, '*', Item.stick});
- 			}
+ 			}}
  		} 		
+ 	//Added By HackerTDog
+ 	public static void addSpecial(idManager idm, CreativeTabs tab) {
+        if(idm.ifEnabled("@Special")) {
+		    Katana = (weaponKatana) new weaponKatana(4831, materialKatchin, tab).setUnlocalizedName("Katana");
+            Katchin = new emcItem(4833, tab).setUnlocalizedName("Katchin");
+            KatanaHilt = new emcItem(4832, tab).setUnlocalizedName("Katana Hilt");
+        }
+ 	
  	}
+ 	public static void addSnowgate(idManager idm, CreativeTabs tab) {
+ 		if(idm.ifEnabled("@Snowgate")) {
+ 			float oreRes = 5.0F;
+ 			Freezerite = new emcItem(4846, tab).setUnlocalizedName("freezirite");
+ 			pickaxeFreezerite = new toolPick(4847, materialFreezirite, tab).setUnlocalizedName("pickFreezerite");
+ 			axeFreezerite = new toolAxe(4848, materialFreezirite, tab).setUnlocalizedName("axeFreezerite");
+ 			shovelFreezerite = new toolShovel(4849, materialFreezirite, tab).setUnlocalizedName("shovelFreezerite");
+ 			hoeFreezerite = new toolHoe(4850, materialFreezirite, tab).setUnlocalizedName("hoeFreezerite");
+ 			swordFreezerite = new toolSword(4851, materialFreezirite, tab).setUnlocalizedName("swordFreezerite");
+ 			FreezeriteRod = new emcItem(4852, tab).setUnlocalizedName("Freezirite Rod");
+ 			
+ 			
+ 			// Tool Classes
+ 			MinecraftForge.setToolClass(pickaxeFreezerite, "pickaxe", 4);
+ 			MinecraftForge.setToolClass(axeFreezerite, "Axe", 4);
+ 			MinecraftForge.setToolClass(shovelFreezerite, "shovel", 4);
+ 			MinecraftForge.setToolClass(swordFreezerite, "sword", 4);
+ 			MinecraftForge.setToolClass(hoeFreezerite, "hoe", 4);
+ 		}
+ 	}
+ 	
  	
  	public static void addRecipes(idManager idm) {
  		if(idm.ifEnabled("@itemIngot")) {
@@ -511,6 +627,7 @@ public class matManager {
 			GameRegistry.addRecipe(new ItemStack(blockSteel), new Object[] {"XXX", "XXX", "XXX", 'X', ingotSteel});
 			GameRegistry.addRecipe(new ItemStack(blockTin), new Object[] {"XXX", "XXX", "XXX", 'X', ingotTin});
 			GameRegistry.addRecipe(new ItemStack(blockBronze), new Object[] {"XXX", "XXX", "XXX", 'X', ingotBronze});
+			GameRegistry.addRecipe(new ItemStack(blockVolcan), new Object[] {"XXX", "XXX", "XXX", 'X', VolcanGem});
 		}
  		if(idm.ifEnabled("@ingotBlock")) {
  			GameRegistry.addRecipe(new ItemStack(ingotCopper, 9), new Object[] {"X", 'X', blockCopper});
@@ -519,6 +636,20 @@ public class matManager {
  			GameRegistry.addRecipe(new ItemStack(ingotSteel, 9), new Object[] {"X", 'X', blockSteel});
  			GameRegistry.addRecipe(new ItemStack(ingotTin, 9), new Object[] {"X", 'X', blockTin});
  			GameRegistry.addRecipe(new ItemStack(ingotBronze, 9), new Object[] {"X", 'X', blockBronze});
+ 			GameRegistry.addSmelting(VolcanRock.blockID, new ItemStack(VolcanStone), 2.0F);
 			}
- 	}
-}
+        if(idm.ifEnabled("@Special")) {
+        	GameRegistry.addRecipe(new ItemStack(KatanaHilt), new Object[]{"XXX", " X ", 'X', Katchin});
+        	GameRegistry.addRecipe(new ItemStack(Katana), new Object[]{"X", "X", "*", 'X', Item.ingotIron, '*', KatanaHilt});
+        	
+        if(idm.ifEnabled("@Snowgate")) {
+        	GameRegistry.addRecipe(new ItemStack(pickaxeFreezerite), new Object[]{"FFF", " B ", " B ", 'F', Freezerite, 'B', FreezeriteRod});
+        	GameRegistry.addRecipe(new ItemStack(swordFreezerite), new Object[]{" F ", " F ", " B ", 'F', Freezerite, 'B', FreezeriteRod});
+        	
+        	// Smelting Recipes
+        	GameRegistry.addSmelting(oreFreezer.blockID, new ItemStack(Freezerite), 1.3F);
+        }
+        if(idm.ifEnabled("@items")) {
+        	GameRegistry.addSmelting(oreVolcan.blockID, new ItemStack(VolcanGem), 1.8F);
+        }
+        }}}

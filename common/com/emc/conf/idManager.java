@@ -23,17 +23,19 @@ public class idManager {
 	private Configuration idmConfiguration;
 	
 	// min id (for autoincrement)
-	private int minBlockID = 500;
+	private int minBlockID = 300;
 	private int minItemID = 4000;
 	private int minBiomeID = 100;
 	private int minEntityID = 20;
+	private int minFoodID = 2020;
 	
 	// current id (for autoincrement)
 	private int currentBlockID = 0; 
 	private int currentItemID = 0;
 	private int currentBiomeID = 0;
 	private int currentEntityID = 0;
-		
+	private int currentFoodID = 2020;
+	
 	public idManager(FMLPreInitializationEvent event) 
 	{
 		// idManager configuration
@@ -47,10 +49,11 @@ public class idManager {
 		subConfiguration.load();
 		
 		// Current ID
-		currentBlockID = idmConfiguration.get("idManager", "minBlockID", minBlockID - 1).getInt();
-		currentItemID = idmConfiguration.get("idManager", "minItemID", minItemID - 1).getInt(); 
-		currentBiomeID = idmConfiguration.get("idManager", "minBiomeID", minBiomeID - 1).getInt();
-		currentEntityID = idmConfiguration.get("idManager", "minEntityID", minEntityID - 1).getInt();
+		currentBlockID = idmConfiguration.get("idManager", "minBlockID", minBlockID + 1).getInt();
+		currentItemID = idmConfiguration.get("idManager", "minItemID", minItemID + 1).getInt(); 
+		currentBiomeID = idmConfiguration.get("idManager", "minBiomeID", minBiomeID + 1).getInt();
+		currentEntityID = idmConfiguration.get("idManager", "minEntityID", minEntityID + 1).getInt();
+		currentFoodID = idmConfiguration.get("idManager", "minFoodID", minFoodID + 1).getInt(2020);
 		
 		// Save configuration
 		idmConfiguration.save();
@@ -77,6 +80,11 @@ public class idManager {
 		return this.currentEntityID;
 	}
 	
+	public int getFoodID() {
+		this.currentFoodID = this.currentFoodID + 1;
+		return this.currentFoodID;
+	}
+	
 	public int getBlockID(String blockID) {
 		return idmConfiguration.getBlock("emcBlock", blockID, getNextBlockID()).getInt();
 	}
@@ -93,6 +101,9 @@ public class idManager {
 		return idmConfiguration.get("emcMob", entityID, getNextEntityID()).getInt();
 	}
 	
+	public int getFoodID(String foodID) {
+		return idmConfiguration.get("emcFood", foodID, getNextItemID()).getInt();
+	}
 	public void saveConf() {
 		this.idmConfiguration.save();
 		this.subConfiguration.save();
@@ -109,5 +120,6 @@ public class idManager {
 		subConfiguration.save();
 		return ret;
 	}
+
 	
 }

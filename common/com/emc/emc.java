@@ -8,28 +8,33 @@ package com.emc;
  */
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.emc.api.emcFoodDropEvent;
 import com.emc.conf.idManager;
 import com.emc.food.foodManager;
-import com.emc.lib.emcLib;
 import com.emc.localization.localizationHandler;
 import com.emc.mat.matManager;
+import com.emc.block.emcBlock;
 import com.emc.proxy.commonProxy;
 import com.emc.world.emcWorldGenerator;
 import com.emc.world.biome.biomeManager;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.Mod.*;
-import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
+@Mod(modid = "emc", name = "EnhanceMeCraft", version = "0.3.6.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-@Mod(modid = emcLib.ID, name = emcLib.NAME, version = emcLib.VERSION)
 
 public class emc {
 
@@ -44,7 +49,8 @@ public class emc {
 	public static CreativeTabs tabEMCItems;
 	public static CreativeTabs tabEMCArmor;
 	public static CreativeTabs tabEMCFood;
-	
+    public static CreativeTabs tabEMCSpecial;	
+    public static CreativeTabs tabEMCSnowgate;
 	// @ID Manager
     idManager idm;
     
@@ -59,7 +65,7 @@ public class emc {
     @EventHandler
 	public void Load(FMLInitializationEvent event) {
     	// Custom Tabs
-    	if(idm.ifEnabled("@oreBlock") || idm.ifEnabled("@ingotBlock")) {
+    	if(idm.ifEnabled("@oreBlock") || idm.ifEnabled("@ingotBlock") || idm.ifEnabled("@MultiTexture")) {
 	    		tabEMCBlocks = new CreativeTabs("tabEMCBlocks") {
 	    		public ItemStack getIconItemStack() {
 	               	return new ItemStack(matManager.oreExperience, 1, 0);
@@ -88,15 +94,32 @@ public class emc {
         			return new ItemStack(foodManager.foodBacon, 1, 0);
         		}
         	};
+        }
+    	if(idm.ifEnabled("@Special")) {
+    		tabEMCSpecial = new CreativeTabs("tabEMCSpecial") {
+    			public ItemStack getIconItemStack() {
+    				return new ItemStack(matManager.Katana,1, 0);
+    			}
+    		};
+    	}
+    	if(idm.ifEnabled("@Snowgate")) {
+    		tabEMCSnowgate = new CreativeTabs("tabEMCSnowgate") {
+    			public ItemStack getIconItemStack() {
+    				return new ItemStack(matManager.Freezerite,1, 0);
+    			}
+    		};
+    	}
         	// Enable FoodDropEvent for @food
         	MinecraftForge.EVENT_BUS.register(new emcFoodDropEvent());
-    	}
+    	
     	
     	// @Add Stuff
     	matManager.addBlocks(idm, tabEMCBlocks);
     	matManager.addItems(idm, tabEMCItems);
     	matManager.addArmor(idm, tabEMCArmor);
     	matManager.addTools(idm, tabEMCItems);
+    	matManager.addSpecial(idm, tabEMCSpecial);
+    	matManager.addSnowgate(idm, tabEMCSnowgate);
     	matManager.addRecipes(idm);
     	
     	// @Add Food

@@ -45,13 +45,14 @@ public class emcWorldGenerator implements IWorldGenerator {
 	
 	private void generateSurface(World world, Random random, int x, int z)
     {
-    	this.addOreSpawn(matManager.blockFosil, world, random, x, z, 16, 16, 1, 8, 0, 45);
     	this.addOreSpawn(matManager.oreExperience, world, random, x, z, 16, 16, 4, 24, 0, 90);
     	this.addOreSpawn(matManager.oreAluminum, world, random, x, z, 16, 16, 4, 16, 30, 60);
-    	this.addOreSpawn(matManager.oreCopper, world, random, x, z, 16, 16, 4, 16, 0, 60);
+    	this.addOreSpawn(matManager.oreCopper, world, random, x, z, 16, 16, 4, 24, 0, 60);
     	this.addOreSpawn(matManager.orePlatinum, world, random, x, z, 16, 16, 4, 12, 0, 60);
     	this.addOreSpawn(matManager.oreSilver, world, random, x, z, 16, 16, 4, 16, 0, 60);
     	this.addOreSpawn(matManager.oreTin, world, random, x, z, 16, 16, 4, 24, 0, 60);
+    	this.addOreSpawn(matManager.oreFreezer, world, random, x, z, 32, 16, 2, 24, 0, 50);
+    	this.addOreSpawn(matManager.oreVolcan, world, random, x, z, 16, 16, 4, 18, 0, 30);
     }	
 	
 private void generateNether(World world, Random random, int x, int z) {}
