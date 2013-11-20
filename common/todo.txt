@@ -18,15 +18,3 @@ work
 ----
 
 w:implemented hypothermia and thirst (@nextized)
-w:implemented new biomes (@modders)
-
-b:implement new textures for the current blocks (@texturers)
-  - Biome blocks (ask the biome team)
-  - Ingot blocks (for each material)
-
-b:implement new textures for the current items (@texturers)
-  - ingots (for each material)
-  - tools (for each material)
-  - armor (for each material)
-
-b:update translations 

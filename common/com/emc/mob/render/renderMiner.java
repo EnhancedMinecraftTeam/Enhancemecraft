@@ -20,6 +20,8 @@ public class renderMiner extends RenderLiving {
 	
 	protected modelMiner model;
 
+    private static final ResourceLocation MinerTextures = new ResourceLocation("emc:textures/mobs/Miner.png");
+	
 	public renderMiner(ModelBase par1ModelBase, float par2) {
 		super(par1ModelBase, par2);
 		model = ((modelMiner)mainModel);
@@ -39,11 +41,11 @@ public class renderMiner extends RenderLiving {
 	}
 	
 	protected ResourceLocation getEntityTexture(Entity entity) {
-		return new ResourceLocation("emc:textures/mobs/Miner.png");
+		return MinerTextures;
 	}
 
 	protected ResourceLocation func_110775_a(Entity entity) {
-		return new ResourceLocation("emc:textures/mobs/Miner.png");
+		return MinerTextures;
 	}
 	
 	

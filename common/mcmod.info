@@ -4,11 +4,11 @@
 "name": "EnhanceMeCraft",
 "description": "Makes your experiences with Minecraft better than ever",
 "version": "",
-"credits": "Implemented by nexized and afrodaydude",
+"credits": "Implemented by HackerTDog, nexized and afrodaydude",
 "mcversion": "",
 "url": "http://www.minecraftforum.net",
 "updateUrl": "",
-"authors": [ "Head Coder: nextized", "Team Leader: McCricket", "EnhanceMeCraft Team" ],
+"authors": ["Team Leader: McCricket", "EnhanceMeCraft Team" ],
 "parent":"",
 "screenshots": [],
 "dependencies": [

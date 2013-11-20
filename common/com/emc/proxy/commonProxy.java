@@ -29,5 +29,12 @@ public class commonProxy {
 	 * Armor Renderer (disabled on the server)
 	 */
 	public int addArmor(String armor) { return 0; }
+
+	public void RegisterRenderers() {
+		
+	}
+
+	public void registerServerTickHandler() {		
+	}
 	
 }

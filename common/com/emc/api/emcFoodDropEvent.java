@@ -8,7 +8,9 @@ package com.emc.api;
  */
 
 import com.emc.food.foodManager;
+import com.emc.mat.matManager;
 
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraftforge.event.ForgeSubscribe;
@@ -30,6 +32,13 @@ public class emcFoodDropEvent {
 			double rand = Math.random();
 			if (rand < 0.5d) {
 				event.entityLiving.dropItem(foodManager.foodRawBacon.itemID, 2);
+			}
+		}
+		// Add @Drop on @EntityBlaze with chance of 10%
+		if (event.entityLiving instanceof EntityBlaze) {
+			double rand = Math.random();
+			if (rand < 0.2d) {
+				event.entityLiving.dropItem(matManager.SatanicRod.itemID, 1);
 			}
 		}
 	}
