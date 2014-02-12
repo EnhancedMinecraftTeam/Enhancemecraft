@@ -16,7 +16,7 @@ Not yet implemented functions
 - [ ] So many biomes, that Notch will think about implement them into the game itself.
 - [ ] Other dimensions with their very own bosses.
 - [ ] Hypothermia- / Thirst-bar (This is just for the hardcore survivors out there).
-- [ ] API (So you can use our stuff to make your stuff better).
+- [x] API (So you can use our stuff to make your stuff better).
 
 Team
 
